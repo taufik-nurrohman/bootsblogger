@@ -1,0 +1,13 @@
+<b:loop values='data:posts' var='post'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <!-- Content -->
+    <div class='post-content'>
+      <!-- Post title -->
+      <b:if cond='data:post.title'>
+        <h1 itemprop='name headline'><data:post.title/></h1>
+      </b:if>
+      <!-- Post body -->
+      <data:post.body/>
+    </div><!-- /.post-content -->
+  </article><!-- /.post -->
+</b:loop>

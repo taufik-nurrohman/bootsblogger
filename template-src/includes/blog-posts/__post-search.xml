@@ -1,0 +1,17 @@
+<div class='post-group'>
+  <b:loop values='data:posts' var='post'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+      <!-- Content -->
+      <div class='post-content'>
+        <!-- Post title -->
+        <b:if cond='data:post.title'>
+          <h2 class='post-title' itemprop='name headline'>
+            <a class='post-title-link' expr:href='data:post.url' expr:title='data:post.title' itemprop='url'><data:post.title/></a>
+          </h2>
+        </b:if>
+        <!-- Post snippet -->
+        <p itemprop='articleBody description'><data:post.snippet/></p>
+      </div><!-- /.post-content -->
+    </article><!-- /.post -->
+  </b:loop>
+</div>

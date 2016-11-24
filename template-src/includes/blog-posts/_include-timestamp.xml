@@ -1,0 +1,7 @@
+<b:if cond='data:top.showTimestamp'>
+  <i aria-hidden='true' class='fa fa-clock-o icon-date-time'/>
+  <span><data:top.timestampLabel/></span>
+  <time expr:datetime='data:post.timestampISO8601' expr:title='data:post.timestampISO8601' itemprop='datePublished'>
+    <data:post.timestamp/>
+  </time>
+</b:if>

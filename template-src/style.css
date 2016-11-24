@@ -1,0 +1,103 @@
+/*
+-------------------------------------------------
+Template details
+-------------------------------------------------
+Template Name : {{ blog.about.templateName }}
+Template URI  : {{ blog.about.templateURI }}
+Author Name   : {{ blog.about.templateAuthorName }}
+Author URI    : {{ blog.about.templateAuthorURI }}
+Date          : {{ blog.about.templateDate }}
+Version       : {{ blog.about.templateVersion }}
+License       : {{ blog.about.templateLicense }}
+License URI   : {{ blog.about.templateLicenseURI }}
+-------------------------------------------------
+Built with Bootsblogger
+-------------------------------------------------
+Bootsblogger v1.0.0-alpha.1 (https://bootsblogger.github.io)
+Copyright 2016 Igoy Nawamreh (@igoynawamreh)
+Licensed under MIT (https://github.com/bootsblogger/bootsblogger/blob/master/LICENSE)
+------------------------------------------------- */
+
+
+/*
+ * Global styles
+ */
+
+body {}
+
+
+/*
+ * Skip navigation
+ */
+
+#main:focus {
+  outline: none;
+}
+
+
+/*
+ * Navbar
+ */
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+
+/*
+ * Jumbotron
+ */
+
+.jumbotron {
+  margin-top: -1rem;
+  background-color: #f7f7f9;
+}
+
+
+/*
+ * Widget 1
+ */
+
+.widget-1 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: #f7f7f9;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 85%;
+  color: #777;
+  text-align: center;
+  background-color: #eee;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+
+.footer a {
+  font-weight: 500;
+  color: #333;
+}
+.footer a:hover,
+.footer a:focus {
+  color: #0275d8;
+}
+
+.footer-links {
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.footer-links li {
+  display: inline-block;
+}
+.footer-links li + li {
+  margin-left: 1rem;
+}

@@ -1,0 +1,44 @@
+<b:loop values='data:posts' var='post'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <!-- Header -->
+    <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
+      <header class='post-header'>
+        <ul class='post-header-list'>
+          <!-- Author -->
+          <b:if cond='data:top.showAuthor'>
+            <li>
+              <b:include name='include-author'/>
+            </li>
+          </b:if>
+          <!-- Timestamp -->
+          <b:if cond='data:top.showTimestamp'>
+            <li>
+              <b:include name='include-timestamp'/>
+            </li>
+          </b:if>
+          <!-- Num comments -->
+          <b:if cond='data:post.allowComments'>
+            <li>
+              <b:include name='include-num-comments'/>
+            </li>
+          </b:if>
+        </ul>
+      </header><!-- /.post-header -->
+    </b:if>
+    <!-- Content -->
+    <div class='post-content'>
+      <!-- Post title -->
+      <b:if cond='data:post.title'>
+        <h1 itemprop='name headline'><data:post.title/></h1>
+      </b:if>
+      <!-- Post body -->
+      <data:post.body/>
+    </div><!-- /.post-content -->
+    <!-- Footer -->
+    <b:if cond='data:top.showPostLabels'>
+      <footer class='post-footer'>
+        <b:include name='include-labels'/>
+      </footer><!-- /.post-footer -->
+    </b:if>
+  </article><!-- /.post -->
+</b:loop>

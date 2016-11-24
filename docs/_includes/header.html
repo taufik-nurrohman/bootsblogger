@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>
+  {% if page.title %}
+    {{ page.title }} &middot; {{ site.title }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+</title>
+
+{% include social.html %}
+
+<!-- Bootstrap core CSS -->
+<link href="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootsblogger core CSS -->
+<link href="{{ site.baseurl }}/assets/bootsblogger/css/bootsblogger.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="{{ site.baseurl }}/assets/icon-fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="{{ site.baseurl }}/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Bootsblogger JSON -->
+<script src="{{ site.baseurl }}/assets/bootsblogger/js/bootsblogger-json.min.js"></script>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+<link rel="icon" href="{{ site.baseurl }}/favicon.ico">

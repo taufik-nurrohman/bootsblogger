@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<HTML lang='en'>
+  <head>
+    <!-- Required meta tags always come first -->
+    <!--(bake /includes/head-content/meta-tags-required.xml)-->
+
+
+    <!-- BLOGGER CSS HACK
+    ================================================= -->
+    <!--(bake /includes/head-content/blogger-css-hack.xml)-->
+
+
+    <!-- CUSTOM ALL-HEAD-CONTENT
+    ================================================= -->
+    <!--(bake /includes/head-content/custom-all-head-content.xml)-->
+
+
+    <!-- TITLE
+    ================================================= -->
+    <!--(bake /includes/head-content/title.xml)-->
+
+
+    <!-- META AND LINK TAGS FOR DATA INFORMATION
+    ================================================= -->
+    <!-- DEFAULT
+    ========================= -->
+    <!--(bake /includes/head-content/meta-tags-default.xml)-->
+
+    <!-- TWITTER CARDS
+    ========================= -->
+    <!--(bake /includes/head-content/meta-tags-twitter.xml)-->
+
+    <!-- FACEBOOK OPEN GRAPH
+    ========================= -->
+    <!--(bake /includes/head-content/meta-tags-facebook.xml)-->
+
+
+    <!-- CSS
+    ================================================= -->
+    <!--(bake /includes/head-content/head-css.xml)-->
+
+
+    <!-- MAIN CSS
+    ================================================= -->
+    <style type='text/css'>
+    <!--(bake style.css)-->
+    </style>
+
+
+    <!-- JavaScript
+    ================================================= -->
+    <!--(bake /includes/head-content/head-js.xml)-->
+  </head>
+  <body expr:class='data:blog.pageType == &quot;item&quot; ? &quot;blog-page-item&quot; : data:blog.pageType == &quot;static_page&quot; ? &quot;blog-page-static&quot; : data:blog.searchLabel ? &quot;blog-page-label&quot; : data:blog.searchQuery ? &quot;blog-page-search&quot; : data:blog.pageType == &quot;archive&quot; ? &quot;blog-page-archive&quot; : data:blog.pageType == &quot;error_page&quot; ? &quot;blog-page-error&quot; : &quot;blog-page-home&quot;'>
+
+
+    <!-- SKIPPY
+    ================================================== -->
+    <a class='sr-only sr-only-focusable' href='#main' id='skippy'>
+      <div class='container'>
+        <span class='skiplink-text'>Skip to main content</span>
+      </div>
+    </a>
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <!--(bake /includes/navbar.xml)-->
+
+
+    <!-- JUMBOTRON
+    ================================================== -->
+    <!--(bake /includes/jumbotron.xml)-->
+
+
+    <!-- MAIN AND SIDEBAR
+    ================================================== -->
+    <div class='container blogger-container'>
+      <div class='row blogger-row'>
+        <!-- Main -->
+        <main class='main col-md-9 blogger-col-8' id='main' role='main' tabindex='-1'>
+          <b:section id='main-section' maxwidgets='1' showaddelement='no'>
+            <!--(bake /includes/blog-posts.xml)-->
+          </b:section>
+        </main><!-- /.main -->
+
+        <!-- Sidebar -->
+        <aside class='sidebar col-md-3 blogger-col-4' id='sidebar' role='complementary'>
+          <b:section class='wg-box wg-box-faded wg-md-12 wg-sm-6' id='sidebar-section'>
+            <b:widget id='HTML1' locked='false' title='Bootsblogger' type='HTML'>
+              <b:includable id='main'>
+                <!-- only display title if it's non-empty -->
+                <b:if cond='data:title != &quot;&quot;'>
+                  <h2 class='title'><data:title/></h2>
+                </b:if>
+                <div class='widget-content'>
+                  <p><a href='https://bootsblogger.github.io'>Currently v1.0.0-alpha.1</a></p>
+                </div>
+              </b:includable>
+            </b:widget>
+            <b:widget id='HTML2' locked='false' title='Tested' type='HTML'>
+              <b:includable id='main'>
+                <!-- only display title if it's non-empty -->
+                <b:if cond='data:title != &quot;&quot;'>
+                  <h2 class='title'><data:title/></h2>
+                </b:if>
+                <div class='widget-content'>
+                  <ul class='list-unstyled'>
+                    <li><strong>PageSpeed Insights</strong></li>
+                    <li><span class='tag tag-success'>100/100</span> Speed (Mobile).</li>
+                    <li><span class='tag tag-success'>100/100</span> User Experience (Mobile).</li>
+                    <li><span class='tag tag-success'>100/100</span> Suggestions Summary (Desktop).</li>
+                    <li><a href='https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbootsblogger-demo.blogspot.co.id%2F'>Analyze</a></li>
+                    <li><strong>Accessibility</strong></li>
+                    <li><a href='http://wave.webaim.org/report#/https://bootsblogger-demo.blogspot.co.id/'>Test accessibility</a></li>
+                    <li><strong>Validation</strong></li>
+                    <li><a href='https://validator.w3.org/nu/?doc=https%3A%2F%2Fbootsblogger-demo.blogspot.com%2F'>Test validation</a> (you'll receive a warning, read <a href='http://a11yproject.com/checklist.html#aria-roles'>this article</a>).</li>
+                  </ul>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+        </aside><!-- /.sidebar -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+    <!-- WIDGET 1
+    ================================================== -->
+    <div class='widget-1' id='widget-1'>
+      <div class='container'>
+        <b:section class='wg-box wg-box-white wg-md-4 wg-sm-6' id='widget-1-section'>
+          <b:widget id='HTML3' locked='false' title='HTML/JavaScript' type='HTML'>
+            <b:includable id='main'>
+              <!-- only display title if it's non-empty -->
+              <b:if cond='data:title != &quot;&quot;'>
+                <h2 class='title'><data:title/></h2>
+              </b:if>
+              <div class='widget-content'>
+                <ul class='nav'>
+                  <li class='nav-item'><a class='nav-link' href="#">Cras justo odio</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Dapibus ac facilisis in</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Morbi leo risus</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Porta ac consectetur ac</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Vestibulum at eros</a></li>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+          <b:widget id='HTML4' locked='false' title='HTML/JavaScript' type='HTML'>
+            <b:includable id='main'>
+              <!-- only display title if it's non-empty -->
+              <b:if cond='data:title != &quot;&quot;'>
+                <h2 class='title'><data:title/></h2>
+              </b:if>
+              <div class='widget-content'>
+                <ul class='nav'>
+                  <li class='nav-item'><a class='nav-link' href="#">Cras justo odio</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Dapibus ac facilisis in</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Morbi leo risus</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Porta ac consectetur ac</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Vestibulum at eros</a></li>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+          <b:widget id='HTML5' locked='false' title='HTML/JavaScript' type='HTML'>
+            <b:includable id='main'>
+              <!-- only display title if it's non-empty -->
+              <b:if cond='data:title != &quot;&quot;'>
+                <h2 class='title'><data:title/></h2>
+              </b:if>
+              <div class='widget-content'>
+                <ul class='nav'>
+                  <li class='nav-item'><a class='nav-link' href="#">Cras justo odio</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Dapibus ac facilisis in</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Morbi leo risus</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Porta ac consectetur ac</a></li>
+                  <li class='nav-item'><a class='nav-link' href="#">Vestibulum at eros</a></li>
+                </ul>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+    </div>
+
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class='footer' id='footer' role='contentinfo'>
+      <div class='container'>
+        <!--(bake /includes/foot-content/foot-info.xml)-->
+      </div>
+    </footer>
+
+
+    <!-- JavaScript
+    ================================================== -->
+    <!--(bake /includes/foot-content/foot-js.xml)-->
+
+
+  <!-- Remove Blogger's default JavaScript -->
+  &lt;!--</body>--&gt;
+  &lt;/body&gt;
+  <!-- Or you can use normal `</body>` tag -->
+</HTML>

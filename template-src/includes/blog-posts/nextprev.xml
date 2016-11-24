@@ -1,0 +1,15 @@
+<nav class='text-xs-center mb-1' role='navigation'>
+  <b:if cond='data:newerPageUrl'>
+    <a class='btn btn-secondary float-xs-left' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' role='button'>Newer</a>
+  <b:else/>
+    <a class='btn btn-secondary disabled float-xs-left' href='javascript:;' role='button'>Newer</a>
+  </b:if>
+
+  <a class='btn btn-secondary' expr:href='data:blog.homepageUrl' role='button'>Home</a>
+
+  <b:if cond='data:olderPageUrl'>
+    <a class='btn btn-secondary float-xs-right' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' role='button'>Older</a>
+  <b:else/>
+    <a class='btn btn-secondary disabled float-xs-right' href='javascript:;' role='button'>Older</a>
+  </b:if>
+</nav>

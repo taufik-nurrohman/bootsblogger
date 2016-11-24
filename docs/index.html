@@ -1,0 +1,40 @@
+---
+layout: home
+---
+
+<main class="bd-masthead" id="content">
+  <div class="container">
+    <p class="lead">{{ site.formula | escape_once }}</p>
+    <p class="lead">{{ site.description }}</p>
+    <p class="lead">
+      <a href="{{ site.baseurl }}/getting-started/download/" class="btn btn-outline-inverse btn-lg">Unduh Bootsblogger</a>
+    </p>
+    <p class="version">Saat ini v{{ site.current_version }} (Bootstrap v{{ site.bootstrap_version }})</p>
+    {% include ads.html %}
+  </div>
+</main>
+
+<div class="bd-featurette">
+  <div class="container">
+    <h2 class="bd-featurette-title">Dirancang untuk siapapun, dimanapun.</h2>
+    <p class="lead">Bootsblogger membantu proses pembuatan template Blogger menjadi lebih cepat, lebih mudah, dan lebih indah.</p>
+
+    <div class="row">
+      <div class="col-sm-4 mb-3">
+        <img src="{{ site.baseurl }}/assets/img/sass.png" alt="Sass support" class="img-fluid">
+        <h4>Preprocessor</h4>
+        <p>Kode sumber CSS dibangun menggunakan <a href="http://sass-lang.com">Sass</a> (Sass Bootstrap + Sass Bootsblogger).</p>
+      </div>
+      <div class="col-sm-4 mb-3">
+        <img src="{{ site.baseurl }}/assets/img/devices.png" alt="Responsive across devices" class="img-fluid">
+        <h4>Satu template, untuk semua perangkat.</h4>
+        <p>Template yang tampil responsif di semua perangkat.</p>
+      </div>
+      <div class="col-sm-4 mb-3">
+        <img src="{{ site.baseurl }}/assets/img/components.png" alt="Components" class="img-fluid">
+        <h4>Menyediakan banyak komponen.</h4>
+        <p>Banyaknya komponen yang disediakan (komponen Bootstrap + komponen Bootsblogger).</p>
+      </div>
+    </div>
+  </div>
+</div>

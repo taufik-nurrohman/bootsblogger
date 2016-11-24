@@ -1,0 +1,13 @@
+<b:if cond='data:top.showAuthor'>
+  <span itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+    <span itemprop='name'>
+      <i aria-hidden='true' class='fa fa-user icon-author'/>
+      <span><data:top.authorLabel/></span>
+      <b:if cond='data:post.authorProfileUrl'>
+        <a expr:href='data:post.authorProfileUrl' title='Author profile' itemprop='url'><data:post.author/></a>
+      <b:else/>
+        <data:post.author/>
+      </b:if>
+    </span>
+  </span>
+</b:if>

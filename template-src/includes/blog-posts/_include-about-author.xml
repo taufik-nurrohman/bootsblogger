@@ -1,0 +1,23 @@
+<b:if cond='data:post.authorAboutMe'>
+  <div class='media' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+    <div class='media-left'>
+      <b:if cond='data:post.authorPhoto.url'>
+        <img alt='Author profile' class='rounded-circle' expr:src='data:post.authorPhoto.url' height='50' width='50' itemprop='image'/>
+      <b:else/>
+        <img alt='Author profile' class='rounded-circle' height='50' src='https://img1.blogblog.com/img/blank.gif' width='50' itemprop='image'/>
+      </b:if>
+    </div>
+    <div class='media-body'>
+      <b:if cond='data:post.authorProfileUrl'>
+        <h4 class='media-heading' itemprop='name'>
+          <a expr:href='data:post.authorProfileUrl' itemprop='url' title='Author profile'>
+            <data:post.author/>
+          </a>
+        </h4>
+      <b:else/>
+        <h4 class='media-heading' itemprop='name'><data:post.author/></h4>
+      </b:if>
+      <p itemprop='description'><data:post.authorAboutMe/></p>
+    </div>
+  </div>
+</b:if>

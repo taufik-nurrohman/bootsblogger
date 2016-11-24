@@ -1,0 +1,52 @@
+<ol class='breadcrumb' itemprop='breadcrumb'>
+  <li class='breadcrumb-item'><a expr:href='data:blog.homepageUrl'>Home</a></li>
+  <!-- Item/single page -->
+  <b:if cond='data:blog.pageType == &quot;item&quot;'>
+    <b:loop values='data:posts' var='post'>
+      <b:if cond='data:post.labels'>
+        <li class='breadcrumb-item dropdown'>
+          <a class='dropdown-toggle' href='javascript:;' id='dropdownMenuLabels' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Labels</a>
+          <div class='dropdown-menu' aria-labelledby='dropdownMenuLabels'>
+            <b:loop values='data:post.labels' var='label'>
+              <b:if cond='data:label.isLast'>
+                <a class='dropdown-item label-is-last' expr:href='data:label.url'><data:label.name/></a>
+              <b:else/>
+                <a class='dropdown-item' expr:href='data:label.url'><data:label.name/></a>
+              </b:if>
+            </b:loop>
+          </div>
+        </li>
+      <b:else/>
+        <li class='breadcrumb-item label-unlabelled active'>Unlabelled</li>
+      </b:if>
+      <li class='breadcrumb-item active'><data:post.title/></li>
+    </b:loop>
+
+  <!-- Static page -->
+  <b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+    <li class='breadcrumb-item active'>Pages</li>
+    <li class='breadcrumb-item active'><b:loop values='data:posts' var='post'><data:post.title/></b:loop></li>
+
+  <!-- Label/category page -->
+  <b:elseif cond='data:blog.searchLabel'/>
+    <li class='breadcrumb-item active'>Category</li>
+    <li class='breadcrumb-item active'><data:blog.pageName/></li>
+
+  <!-- Search results page -->
+  <b:elseif cond='data:blog.searchQuery'/>
+    <li class='breadcrumb-item active'>Search results</li>
+
+  <!-- Archive page -->
+  <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+    <li class='breadcrumb-item active'>Archive</li>
+    <li class='breadcrumb-item active'><data:blog.pageName/></li>
+
+  <!-- Error page -->
+  <b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+    <li class='breadcrumb-item active'>404</li>
+
+  <!-- Homepage -->
+  <b:else/>
+    <li class='breadcrumb-item active'>All posts</li>
+  </b:if>
+</ol>

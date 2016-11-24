@@ -1,0 +1,13 @@
+<b:if cond='data:top.showPostLabels and data:post.labels'>
+  <i aria-hidden='true' class='fa fa-tags icon-labels'/>
+  <span><data:postLabelsLabel/></span>
+  <b:loop values='data:post.labels' var='label'>
+    <b:if cond='data:label.isLast'>
+      <a expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a>
+    <b:else/>
+      <a expr:href='data:label.url + &quot;?max-results=10&quot;'><data:label.name/></a>,
+    </b:if>
+  </b:loop>
+<b:else/>
+  <i aria-hidden='true' class='fa fa-tags icon-labels'/> <span>Unlabelled</span>
+</b:if>

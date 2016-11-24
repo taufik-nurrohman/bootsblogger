@@ -1,0 +1,126 @@
+<b:if cond='data:blog.searchLabel'>
+<script>
+//<![CDATA[
+function labelMsg(json) {
+  'use strict';
+
+  var tr = json.feed.openSearch$totalResults.$t
+
+  if (tr == 1) {
+    document.write(tr + ' post')
+  }
+  if (tr > 1) {
+    document.write(tr + ' posts')
+  }
+}
+//]]>
+</script>
+</b:if>
+
+<b:if cond='data:blog.searchQuery'>
+<script>
+//<![CDATA[
+function searchMsg(json) {
+  'use strict';
+
+  var tr = json.feed.openSearch$totalResults.$t
+
+  if (tr == 1) {
+    document.write(tr + ' result')
+  }
+  if (tr > 1) {
+    document.write(tr + ' results')
+  }
+}
+//]]>
+</script>
+</b:if>
+
+<!-- Homepage -->
+<b:if cond='data:blog.url == data:blog.homepageUrl and data:numPosts == 0'>
+  <div class='alert alert-warning' role='alert'>No posts yet.</div>
+</b:if>
+
+<!-- Label/category page -->
+<b:if cond='data:blog.searchLabel'>
+  <b:if cond='data:numPosts &gt;= 1'>
+    <div class='alert alert-success' role='alert'>
+      Showing posts with label <strong><data:blog.searchLabel/></strong> : <script expr:src='&quot;/feeds/posts/summary/-/&quot; + data:blog.searchLabel + &quot;?max-results=0&amp;alt=json-in-script&amp;callback=labelMsg&quot;'/>
+    </div>
+  <b:else/>
+    <div class='alert alert-warning' role='alert'>
+      No posts with label <strong><data:blog.searchLabel/></strong>.
+    </div>
+  </b:if>
+</b:if>
+
+<!-- Search results page -->
+<b:if cond='data:blog.searchQuery'>
+  <b:if cond='data:numPosts &gt;= 1'>
+    <div class='alert alert-success' role='alert'>
+      <i aria-hidden='true' class='fa fa-search-plus'/> Search Results for <strong>&quot;<data:blog.searchQuery/>&quot;</strong> : <script expr:src='&quot;/feeds/posts/summary?q=&quot; + data:blog.searchQuery + &quot;&amp;alt=json-in-script&amp;callback=searchMsg&quot;'/>
+    </div>
+  <b:else/>
+    <div class='alert alert-warning' role='alert'>
+      <i aria-hidden='true' class='fa fa-search-minus'/> Your search <strong>&quot;<data:blog.searchQuery/>&quot;</strong> did not match any documents.
+    </div>
+  	<!-- Search form -->
+    <div class='card'>
+      <div class='card-block'>
+        <form action='/search' method='get' role='search'>
+          <div class='input-group'>
+            <span class='input-group-addon'><i aria-hidden='true' class='fa fa-search'/></span>
+            <label class="sr-only" for="status-message-search-form">Search</label>
+            <input class='form-control' name='q' placeholder='Search' type='text' id='status-message-search-form'/>
+            <span class='input-group-btn'>
+              <button class='btn btn-secondary' type='submit'>Search</button>
+            </span>
+          </div><!-- /input-group -->
+        </form>
+      </div>
+      <ul class='list-group list-group-flush'>
+        <li class='list-group-item'>Make sure all words are spelled correctly.</li>
+        <li class='list-group-item'>Try different keywords.</li>
+        <li class='list-group-item'>Try more general keywords.</li>
+        <li class='list-group-item'>Try fewer keywords.</li>
+      </ul>
+    </div>
+  </b:if>
+</b:if>
+
+<!-- Archive page -->
+<b:if cond='data:blog.pageType == &quot;archive&quot;'>
+  <b:if cond='data:numPosts &gt;= 1'>
+    <div class='alert alert-success' role='alert'>Archive for <strong><data:blog.pageName/></strong></div>
+  <b:else/>
+    <div class='alert alert-warning' role='alert'>No archive found.</div>
+  </b:if>
+</b:if>
+
+<!-- Error page -->
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+  <div class='alert alert-danger' role='alert'>
+    <strong>404: sorry, the page you were looking for in this blog does not exist.</strong>
+  </div>
+  <!-- Search form -->
+  <div class='card'>
+    <div class='card-block'>
+      <form action='/search' method='get' role='search'>
+        <div class='input-group'>
+          <span class='input-group-addon'><i aria-hidden='true' class='fa fa-search'/></span>
+          <label class="sr-only" for="status-message-search-form">Search</label>
+          <input class='form-control' name='q' placeholder='Search' type='text' id='status-message-search-form'/>
+          <span class='input-group-btn'>
+            <button class='btn btn-secondary' type='submit'>Search</button>
+          </span>
+        </div><!-- /input-group -->
+      </form>
+    </div>
+    <ul class='list-group list-group-flush'>
+      <li class='list-group-item'>Make sure all words are spelled correctly.</li>
+      <li class='list-group-item'>Try different keywords.</li>
+      <li class='list-group-item'>Try more general keywords.</li>
+      <li class='list-group-item'>Try fewer keywords.</li>
+    </ul>
+  </div>
+</b:if>

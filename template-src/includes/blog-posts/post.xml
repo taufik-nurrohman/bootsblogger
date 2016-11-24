@@ -1,0 +1,69 @@
+<!-- For <b:includable id='include-summary'></b:includable> -->
+<b:if cond='data:blog.pageType not in [&quot;item&quot;, &quot;static_page&quot;]'>
+<script>
+//<![CDATA[
+function removeHtmlTag(strx, chop) {
+  'use strict';
+
+  if (strx.indexOf('<') != -1) {
+    var s = strx.split('<')
+    for (var i = 0; i < s.length; i++) {
+      if (s[i].indexOf('>') != -1) {
+        s[i] = s[i].substring(s[i].indexOf('>') + 1, s[i].length)
+      }
+    }
+    strx = s.join(' ')
+  }
+  chop = (chop < strx.length - 1) ? chop : strx.length - 2
+  while (strx.charAt(chop - 1) != ' ' && strx.indexOf(' ', chop) != -1) chop++
+  strx = strx.substring(0, chop - 1)
+  return strx + '...'
+}
+
+function createSummary(id) {
+  'use strict';
+
+  var content = document.getElementById(id)
+  var newContent = '<p>' + removeHtmlTag(content.innerHTML, summary) + '</p>'
+
+  content.innerHTML = newContent
+}
+//]]>
+</script>
+</b:if>
+
+<!-- Item/single page -->
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <b:include name='post-item'/>
+
+<!-- Static page -->
+<b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+  <b:include name='post-static'/>
+
+  <!-- Label/category page -->
+<b:elseif cond='data:blog.searchLabel'/>
+  <b:include cond='data:numPosts != 0' name='post-label'/>
+
+<!-- Search results page -->
+<b:elseif cond='data:blog.searchQuery'/>
+  <b:include cond='data:numPosts != 0' name='post-search'/>
+
+<!-- Archive page -->
+<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+  <b:include cond='data:numPosts != 0' name='post-archive'/>
+
+<!-- Error page -->
+<b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+  <!-- None -->
+
+<!-- Homepage -->
+<b:else/>
+  <b:include cond='data:numPosts != 0' name='post-home'/>
+</b:if>
+
+<!-- Comments -->
+<b:loop values='data:posts' var='post'>
+  <b:if cond='data:blog.pageType in [&quot;item&quot;, &quot;static_page&quot;]'>
+    <b:include data='post' name='custom-comments'/>
+  </b:if>
+</b:loop>

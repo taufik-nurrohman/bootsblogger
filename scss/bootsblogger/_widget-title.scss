@@ -1,0 +1,55 @@
+//
+// Hide
+//
+
+.wg-title-hidden > .widget > h2 {
+  display: none !important;
+}
+
+
+//
+// Font size
+//
+
+.wg-title-h1 > .widget > h2 {
+  font-size: $font-size-h1;
+}
+.wg-title-h2 > .widget > h2 {
+  font-size: $font-size-h2;
+}
+.wg-title-h3 > .widget > h2 {
+  font-size: $font-size-h3;
+}
+.wg-title-h4 > .widget > h2 {
+  font-size: $font-size-h4;
+}
+.wg-title-h5 > .widget > h2 {
+  font-size: $font-size-h5;
+}
+.wg-title-h6 > .widget > h2 {
+  font-size: $font-size-h6;
+}
+
+
+//
+// Alignment
+//
+
+// Left
+.wg-title-left > .widget > h2 {
+  text-align: left;
+}
+
+// Center
+.wg-title-center > .widget > h2 {
+  text-align: center;
+}
+
+// Right
+.wg-title-right > .widget > h2 {
+  text-align: right;
+
+  > .indicator {
+    float: left !important;
+  }
+}

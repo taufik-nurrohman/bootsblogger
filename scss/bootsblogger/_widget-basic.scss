@@ -1,0 +1,134 @@
+// scss-lint:disable QualifyingElement
+
+.wg-basic > .widget {
+  margin-bottom: $wg-basic-spacer-y;
+}
+
+
+//
+// Widget title
+//
+
+.wg-basic > .widget > h2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: $wg-basic-heading-font-size;
+  font-weight: $wg-basic-heading-font-weight;
+  line-height: 1.1;
+  background-color: transparent;
+
+  // Title only
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+//
+// Widget content
+//
+
+.wg-basic > .widget > .widget-content {
+  background-color: transparent;
+}
+
+// Remove margin top and bottom for first and last element in widget content.
+.wg-basic > .widget .widget-content {
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+//
+// Collapse
+//
+
+// Styling content
+
+.wg-basic > .widget > .widget-collapse > .widget-content {
+  background-color: transparent;
+}
+
+// Collapse support
+
+.wg-basic.wg-collapse > .widget,
+.wg-basic.wg-accordion > .widget {
+  // Title
+  > h2.collapsed,
+  > h2.wg-title-hide-collapsing {
+    margin-bottom: 0;
+  }
+  // Content
+  > h2.wg-title-hide-collapsing + .collapsing > .widget-content {
+    margin-top: .5rem;
+  }
+}
+
+// Card reset
+.wg-basic > .card {
+  background-color: transparent;
+  @include border-radius(0);
+  border: 0;
+}
+
+
+//
+// Colors
+//
+
+// Faded
+.wg-basic-faded {
+  @include wg-basic-variant($wg-basic-faded);
+}
+// Blue
+.wg-basic-blue {
+  @include wg-basic-variant($wg-basic-blue);
+}
+// Green
+.wg-basic-green {
+  @include wg-basic-variant($wg-basic-green);
+}
+// Teal
+.wg-basic-teal {
+  @include wg-basic-variant($wg-basic-teal);
+}
+// Red
+.wg-basic-red {
+  @include wg-basic-variant($wg-basic-red);
+}
+// Orange
+.wg-basic-orange {
+  @include wg-basic-variant($wg-basic-orange);
+}
+// Purple
+.wg-basic-purple {
+  @include wg-basic-variant($wg-basic-purple);
+}
+// Yellow
+.wg-basic-yellow {
+  @include wg-basic-variant($wg-basic-yellow);
+}
+// Pink
+.wg-basic-pink {
+  @include wg-basic-variant($wg-basic-pink);
+}
+// gray
+.wg-basic-gray {
+  @include wg-basic-variant($wg-basic-gray);
+}
+// Brown
+.wg-basic-brown {
+  @include wg-basic-variant($wg-basic-brown);
+}
+// Black
+.wg-basic-black {
+  @include wg-basic-variant($wg-basic-black);
+}
+// White
+.wg-basic-white {
+  @include wg-basic-variant($wg-basic-white);
+}

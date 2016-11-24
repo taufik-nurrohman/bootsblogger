@@ -1,0 +1,112 @@
+//
+// Colors
+//
+
+@include text-emphasis-variant('.text-faded', $color-faded);
+@include text-emphasis-variant('.text-blue', $color-blue);
+@include text-emphasis-variant('.text-green', $color-green);
+@include text-emphasis-variant('.text-teal', $color-teal);
+@include text-emphasis-variant('.text-red', $color-red);
+@include text-emphasis-variant('.text-orange', $color-orange);
+@include text-emphasis-variant('.text-purple', $color-purple);
+@include text-emphasis-variant('.text-yellow', $color-yellow);
+@include text-emphasis-variant('.text-pink', $color-pink);
+@include text-emphasis-variant('.text-gray', $color-gray);
+@include text-emphasis-variant('.text-brown', $color-brown);
+@include text-emphasis-variant('.text-black', $color-black);
+@include text-emphasis-variant('.text-white', $color-white);
+
+
+//
+// Backgrounds
+//
+
+@include bg-variant('.bg-faded', $color-faded);
+@include bg-variant('.bg-blue', $color-blue);
+@include bg-variant('.bg-green', $color-green);
+@include bg-variant('.bg-teal', $color-teal);
+@include bg-variant('.bg-red', $color-red);
+@include bg-variant('.bg-orange', $color-orange);
+@include bg-variant('.bg-purple', $color-purple);
+@include bg-variant('.bg-yellow', $color-yellow);
+@include bg-variant('.bg-pink', $color-pink);
+@include bg-variant('.bg-gray', $color-gray);
+@include bg-variant('.bg-brown', $color-brown);
+@include bg-variant('.bg-black', $color-black);
+@include bg-variant('.bg-white', $color-white);
+
+
+//
+// Width
+//
+
+@include media-breakpoint-up(xs) {
+  .w-xs-25 { width: 25% !important; }
+  .w-xs-50 { width: 50% !important; }
+  .w-xs-75 { width: 75% !important; }
+  .w-xs-100 { width: 100% !important; }
+}
+
+@include media-breakpoint-up(sm) {
+  .w-sm-25 { width: 25% !important; }
+  .w-sm-50 { width: 50% !important; }
+  .w-sm-75 { width: 75% !important; }
+  .w-sm-100 { width: 100% !important; }
+}
+
+@include media-breakpoint-up(md) {
+  .w-md-25 { width: 25% !important; }
+  .w-md-50 { width: 50% !important; }
+  .w-md-75 { width: 75% !important; }
+  .w-md-100 { width: 100% !important; }
+}
+
+@include media-breakpoint-up(lg) {
+  .w-lg-25 { width: 25% !important; }
+  .w-lg-50 { width: 50% !important; }
+  .w-lg-75 { width: 75% !important; }
+  .w-lg-100 { width: 100% !important; }
+}
+
+@include media-breakpoint-up(xl) {
+  .w-xl-25 { width: 25% !important; }
+  .w-xl-50 { width: 50% !important; }
+  .w-xl-75 { width: 75% !important; }
+  .w-xl-100 { width: 100% !important; }
+}
+
+
+//
+// Figures
+//
+
+.figure-align-right {
+  float: right;
+  margin-left: 1rem;
+}
+.figure-align-left {
+  float: left;
+  margin-right: 1rem;
+}
+.figure-align-none {
+  display: block;
+  float: none;
+  padding: 1rem;
+  clear: both;
+  background-color: $color-faded;
+}
+
+.figure-align-right,
+.figure-align-left,
+.figure-align-none {
+  .figure-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .figure-caption {
+    text-align: center;
+  }
+}

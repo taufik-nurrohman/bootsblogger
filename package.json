@@ -1,0 +1,52 @@
+{
+  "name": "bootsblogger",
+  "description": "Bootsblogger adalah sebuah template dasar, dengan fitur-fitur yang luar biasa, untuk menciptakan template Blogger yang luar biasa.",
+  "version": "1.0.0-alpha.1",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "blog",
+    "blogger"
+  ],
+  "homepage": "https://bootsblogger.github.io",
+  "author": "Igoy Nawamreh (@igoynawamreh)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bootsblogger/bootsblogger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bootsblogger/bootsblogger/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "grunt": "^1.0.1",
+    "grunt-bake": "^1.7.2",
+    "grunt-build-control": "^0.7.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-html": "^8.0.2",
+    "grunt-htmlhint": "^0.9.13",
+    "grunt-jekyll": "^0.4.4",
+    "grunt-jscs": "^3.0.1",
+    "grunt-postcss": "^0.8.0",
+    "grunt-scss-lint": "^0.5.0",
+    "grunt-stamp": "^0.3.0",
+    "load-grunt-tasks": "^3.5.2",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "time-grunt": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}

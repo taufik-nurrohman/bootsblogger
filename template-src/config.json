@@ -1,0 +1,74 @@
+{
+  "blog": {
+    "about": {
+      "templateName": "Template name",
+      "templateURI": "https://example.com/template",
+      "templateAuthorName": "Your name",
+      "templateAuthorURI": "https://example.com/you",
+      "templateDate": "August 17, 1945",
+      "templateVersion": "1.0",
+      "templateLicense": "MIT",
+      "templateLicenseURI": "https://opensource.org/licenses/MIT"
+    },
+
+    "social": {
+      "twitterUsernameWebsite": "@username_of_website",
+      "twitterUsernameCreator": "@username_of_content_creator",
+      "image": "https://example.com/path/to/image.png"
+    },
+
+    "meta": {
+      "_comment_": "!! Title and description is used in `meta-tags-default.xml`, `meta-tags-facebook.xml, and `meta-tags-twitter.xml` !!",
+      "title": {
+        "homePage": "data:blog.title",
+        "_output_": "Blog Title",
+
+        "itemPage": "data:blog.pageName + &quot; | &quot; + data:blog.title",
+        "_output_": "Post Title | Blog Title",
+
+        "staticPage": "data:blog.pageName + &quot; | &quot; + data:blog.title",
+        "_output_": "Page Title | Blog Title",
+
+        "labelPage": "data:blog.pageName + &quot; | &quot; + data:blog.title",
+        "_output_": "Label Name | Blog Title",
+
+        "searchResultsPage": "&quot;Search Results for -&quot; + data:blog.searchQuery + &quot;- | &quot; + data:blog.title",
+        "_output_": "Search Results for -Query- | Blog Title",
+
+        "archivePage": "&quot;Archive for &quot; + data:blog.pageName + &quot; | &quot; + data:blog.title",
+        "_output_": "Archive for `Month` `Year` | Blog Title",
+
+        "errorPage": "Page Not Found",
+        "_output_": "Page Not Found"
+      },
+      "description": {
+        "homePage": "Default blog description",
+        "_output_": "Default blog description",
+
+        "itemPage": "!! Item page use `data:blog.metaDescription` !!",
+
+        "staticPage": "!! Static page use `data:blog.metaDescription` too !!",
+
+        "labelPage": "&quot;Showing posts with label -&quot; + data:blog.pageName + &quot;-&quot;",
+        "_output_": "Showing posts with label -Label Name-",
+
+        "searchResultsPage": "&quot;Search Results for -&quot; + data:blog.searchQuery + &quot;-&quot;",
+        "_output_": "Search Results for -Query-",
+
+        "archivePage": "&quot;Archive for &quot; + data:blog.pageName",
+        "_output_": "Archive for `Month` `Year`",
+
+        "errorPage": "404: sorry, the page you were looking for in this blog does not exist.",
+        "_output_": "404: sorry, the page you were looking for in this blog does not exist."
+      },
+      "keywords": "keyword1, keyword2, ..."
+    },
+
+    "cdn": {
+      "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js",
+      "jquery_hash": "sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7",
+      "tether": "https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js",
+      "tether_hash": "sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8"
+    }
+  }
+}

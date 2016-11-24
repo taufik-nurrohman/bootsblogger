@@ -1,0 +1,21 @@
+<b:if cond='!data:mobile'>
+
+  <!-- Status message
+  ==================== -->
+  <b:include data='top' name='status-message'/>
+
+  <!-- Posts
+  ==================== -->
+  <b:if cond='data:numPosts != 0'>
+    <div class='blog-posts' id='blog-posts'>
+      <b:include name='post'/>
+    </div>
+  </b:if>
+
+  <!-- Navigation
+  ==================== -->
+  <b:include cond='data:blog.pageType != &quot;static_page&quot; and data:numPosts != 0' name='nextprev'/>
+
+<b:else/><!-- Mobile -->
+  <p>Mobile version not available. <a expr:href='data:blog.homepageUrl'>View Desktop Version</a>.</p>
+</b:if>

@@ -1,0 +1,45 @@
+<header class='navbar navbar-full navbar-dark bg-orange navbar-static-top' role='banner'>
+  <div class='container'>
+    <nav role='navigation'>
+      <div class='clearfix float-md-left'>
+        <button class='navbar-toggler float-xs-right hidden-md-up' type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation'></button>
+        <a class='navbar-brand' expr:href='data:blog.homepageUrl'>
+          <data:blog.title/>
+        </a>
+      </div>
+      <div class='collapse navbar-toggleable-sm' id='navbar'>
+        <ul class='nav navbar-nav'>
+          <li class='nav-item'><a class='nav-link' href='/search/label/Test'>Test</a></li>
+          <li class='nav-item'><a class='nav-link' href='/search/label/Sample'>Sample</a></li>
+          <li class='nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' href='javascript:;'>Demo</a>
+            <div class='dropdown-menu'>
+              <a class='dropdown-item' href='/search/label/Sample?max-results=10'>Category page (yes)</a>
+              <a class='dropdown-item' href='/search/label/Nope?max-results=10'>Category page (nope)</a>
+              <div class='dropdown-divider'></div>
+              <a class='dropdown-item' href='/search?q=lorem+ipsum'>Search results page (yes)</a>
+              <a class='dropdown-item' href='/search?q=nope'>Search results page (nope)</a>
+              <div class='dropdown-divider'></div>
+              <a class='dropdown-item' href='/2016_11_01_archive.html'>Archive page (yes)</a>
+              <a class='dropdown-item' href='/1945_08_17_archive.html'>Archive page (nope)</a>
+              <div class='dropdown-divider'></div>
+              <a class='dropdown-item' href='/2016/11/sample-blog-post-03.html'>Item page</a>
+              <a class='dropdown-item' href='/p/static-page.html'>Static page</a>
+              <a class='dropdown-item' href='/404'>Error page</a>
+              <div class='dropdown-divider'></div>
+              <h6 class='dropdown-header'>Comments</h6>
+              <a class='dropdown-item' href='/2016/11/sample-blog-post-01.html#comments'>No comments</a>
+              <a class='dropdown-item' href='/2016/11/sample-blog-post-02.html#comments'>Not allowed</a>
+              <a class='dropdown-item' href='/2016/11/sample-blog-post-03.html#comments'>Test comment</a>
+            </div>
+          </li>
+        </ul>
+        <form action='/search' class='form-inline float-md-right' method='get' role='search'>
+          <label class="sr-only" for="search-form">Search</label>
+          <input class='form-control' name='q' placeholder='Search' id='search-form'/>
+          <button type='submit' class='btn btn-secondary'>Search</button>
+        </form>
+      </div><!-- / navbar toggleable -->
+    </nav>
+  </div><!-- /.container -->
+</header><!-- /.navbar -->

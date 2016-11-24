@@ -1,0 +1,9 @@
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <b:if cond='data:post.showBacklinks'>
+    <i aria-hidden='true' class='fa fa-link icon-link-post'/> <a href='https://blogger.com/blog-this.g' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank' title='Create link'>Create link</a>
+  </b:if>
+<b:else/>
+  <b:if cond='data:post.showBacklinks'>
+    <i aria-hidden='true' class='fa fa-link icon-link-post'/> <a data-container='body' data-placement='bottom' data-toggle='popover' expr:data-content='data:post.url' href='javascript:;'><data:top.backlinkLabel/></a>
+  </b:if>
+</b:if>

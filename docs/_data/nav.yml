@@ -1,0 +1,54 @@
+- title: Getting started
+  pages:
+    - title: Introduction
+    - title: Download
+    - title: Contents
+    - title: Build tools
+
+- title: Core template
+  pages:
+    - title: Overview
+    - title: Head
+    - title: Body class
+    - title: Blog posts
+
+- title: Components
+  pages:
+    - title: Posts
+    - title: Navmenu
+    - title: Widget basic
+    - title: Widget box
+    - title: Widget panel
+    - title: Widget title
+    - title: Widget columns
+    - title: Widget grid
+
+- title: Utilities
+  pages:
+    - title: Colors
+    - title: Backgrounds
+    - title: Width
+    - title: Figures
+
+- title: Blogger JSON feeds
+  pages:
+    - title: Retrieving JSON feeds
+    - title: Posts default
+    - title: Posts card
+    - title: Labels lists
+    - title: Labels custom
+    - title: Labels select
+    - title: Count
+
+- title: Best practices
+  pages:
+    - title: Template precompiled
+    - title: Template source code
+    - title: Sass files
+
+- title: About
+  pages:
+    - title: History
+    - title: Team
+    - title: License
+    - title: Donation

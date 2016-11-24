@@ -1,0 +1,39 @@
+<!-- jQuery -->
+<script src='{{ blog.cdn.jquery }}' integrity='{{ blog.cdn.jquery_hash }}' crossorigin='anonymous'></script>
+
+<!-- Tether -->
+<script src='{{ blog.cdn.tether }}' integrity='{{ blog.cdn.tether_hash }}' crossorigin='anonymous'></script>
+
+<!-- Bootstrap JavaScript -->
+<script>
+//<![CDATA[
+<!--(bake /includes/assets/bootstrap/js/bootstrap.min.js)-->
+//]]>
+</script>
+
+ <!-- Bootsblogger JavaScript -->
+<script>
+//<![CDATA[
+<!--(bake /includes/assets/bootsblogger/js/bootsblogger.min.js)-->
+//]]>
+</script>
+
+<!-- Template JavaScript -->
+<script>
+//<![CDATA[
+(function ($) {
+  'use strict';
+
+  $(function () {
+
+    // Initialize Bootstrap tooltip with `data-toggle="tooltip"`.
+    $('[data-toggle="tooltip"]').tooltip()
+
+    // Initialize Bootstrap popover with `data-toggle="popover"`.
+    $('[data-toggle="popover"]').popover()
+
+  })
+
+}(jQuery));
+//]]>
+</script>

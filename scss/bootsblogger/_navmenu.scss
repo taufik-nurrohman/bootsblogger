@@ -1,0 +1,175 @@
+//
+// Base class
+//
+
+.navmenu {
+  padding: $navmenu-padding-y $navmenu-padding-x;
+  margin-bottom: $navmenu-spacer-y;
+  @include border-radius($navmenu-border-radius);
+}
+
+
+//
+// Fixed navmenu
+//
+
+.navmenu-fixed-right,
+.navmenu-fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: $zindex-navbar-fixed;
+  margin-bottom: 0;
+  overflow-y: auto;
+  border-radius: 0;
+}
+.navmenu-fixed-right {
+  right: 0;
+}
+.navmenu-fixed-left {
+  left: 0;
+}
+
+
+//
+// Brand
+//
+
+.navmenu-brand {
+  display: block;
+  padding: $navmenu-brand-padding-y $navmenu-brand-padding-x;
+  margin-right: -$navmenu-padding-x;
+  margin-left: -$navmenu-padding-x;
+  font-size: $navmenu-brand-font-size;
+  line-height: inherit;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+
+//
+// Navmenu nav
+//
+
+.navmenu-nav {
+  margin-right: -$navmenu-padding-x;
+  margin-left: -$navmenu-padding-x;
+}
+.navmenu-nav .nav-link {
+  display: block;
+  padding: $navmenu-link-padding-y $navmenu-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+
+//
+// Contents
+//
+
+.navmenu-form,
+.navmenu-btn,
+.navmenu-text {
+  padding-right: $navmenu-padding-x;
+  padding-left: $navmenu-padding-x;
+  margin-right: -$navmenu-padding-x;
+  margin-left: -$navmenu-padding-x;
+}
+
+// Navmenu text
+.navmenu-text p:last-child {
+  margin-bottom: 0;
+}
+
+// Spacer
+.navmenu-nav + .navmenu-nav,
+.navmenu-nav + .navmenu-form,
+.navmenu-nav + .navmenu-btn,
+.navmenu-nav + .navmenu-text,
+.navmenu-form + .navmenu-form, //
+.navmenu-form + .navmenu-nav,
+.navmenu-form + .navmenu-btn,
+.navmenu-form + .navmenu-text,
+.navmenu-btn + .navmenu-btn, //
+.navmenu-btn + .navmenu-nav,
+.navmenu-btn + .navmenu-form,
+.navmenu-btn + .navmenu-text,
+.navmenu-text + .navmenu-text, //
+.navmenu-text + .navmenu-nav,
+.navmenu-text + .navmenu-form,
+.navmenu-text + .navmenu-btn {
+  margin-top: 1rem;
+}
+
+
+//
+// Alternate
+//
+
+// Dark links against a light background
+.navmenu-light {
+  .navmenu-brand {
+    color: $navmenu-light-active-color;
+
+    @include hover-focus {
+      color: $navmenu-light-active-color;
+    }
+  }
+
+  .navmenu-nav {
+    .nav-link {
+      color: $navmenu-light-color;
+
+      @include hover-focus {
+        color: $navmenu-light-hover-color;
+      }
+    }
+    .nav-link[data-toggle="collapse"]:not(.collapsed),
+    .nav-link.active {
+      @include plain-hover-focus {
+        color: $navmenu-light-active-color;
+      }
+    }
+    .nav-link.disabled {
+      @include plain-hover-focus {
+        color: $navmenu-light-disabled-color;
+      }
+    }
+  }
+}
+
+// White links against a dark background
+.navmenu-dark {
+  .navmenu-brand {
+    color: $navmenu-dark-active-color;
+
+    @include hover-focus {
+      color: $navmenu-dark-active-color;
+    }
+  }
+
+  .navmenu-nav {
+    .nav-link {
+      color: $navmenu-dark-color;
+
+      @include hover-focus {
+        color: $navmenu-dark-hover-color;
+      }
+    }
+    .nav-link[data-toggle="collapse"]:not(.collapsed),
+    .nav-link.active {
+      @include plain-hover-focus {
+        color: $navmenu-dark-active-color;
+      }
+    }
+    .nav-link.disabled {
+      @include plain-hover-focus {
+        color: $navmenu-dark-disabled-color;
+      }
+    }
+  }
+}

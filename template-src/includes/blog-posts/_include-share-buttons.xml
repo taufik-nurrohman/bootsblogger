@@ -1,0 +1,23 @@
+<b:if cond='data:post.sharePostUrl'>
+  <div class='btn-group btn-group-sm' role='group'>
+    <b:if cond='data:top.showTwitterButton'>
+      <a class='btn btn-secondary' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' role='button' target='_blank'><i aria-hidden='true' class='fa fa-twitter icon-share-twitter'/></a>
+    </b:if>
+
+    <b:if cond='data:top.showFacebookButton'>
+      <a class='btn btn-secondary' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:title='data:top.shareToFacebookMsg' role='button' target='_blank'><i aria-hidden='true' class='fa fa-facebook icon-share-facebook'/></a>
+    </b:if>
+
+    <b:if cond='data:top.showPinterestButton'>
+      <a class='btn btn-secondary' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' role='button' target='_blank'><i aria-hidden='true' class='fa fa-pinterest icon-share-pinterest'/></a>
+    </b:if>
+
+    <b:if cond='data:top.showEmailButton'>
+      <a class='btn btn-secondary' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' role='button' target='_blank'><i aria-hidden='true' class='fa fa-envelope icon-share-email'/></a>
+    </b:if>
+
+    <b:if cond='data:top.showBlogThisButton'>
+      <a class='btn btn-secondary' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:title='data:top.blogThisMsg' role='button' target='_blank'><i aria-hidden='true' class='fa fa-pencil icon-share-blog'/></a>
+    </b:if>
+  </div>
+</b:if>

@@ -1,0 +1,8 @@
+<b:if cond='data:post.editUrl'>
+  <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
+    <i aria-hidden='true' class='fa fa-pencil-square icon-edit-post'/>
+    <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
+      <data:top.editPostMsg/>
+    </a>
+  </span>
+</b:if>

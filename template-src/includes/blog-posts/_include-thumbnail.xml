@@ -1,0 +1,12 @@
+<b:if cond='data:post.firstImageUrl'>
+  <a expr:href='data:post.url' itemprop='url'>
+    <img expr:alt='data:post.title' expr:src='data:post.firstImageUrl' expr:title='data:post.title' itemprop='image'/>
+    <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
+  </a>
+<b:else/>
+  <!-- Default, no image -->
+  <a expr:href='data:post.url' itemprop='url'>
+    <img expr:alt='data:post.title' expr:title='data:post.title' src='https://placehold.it/600x400/eee/777?text=NO+IMAGE+AVAILABLE' itemprop='image'/>
+    <meta content='https://placehold.it/600x400/eee/777?text=NO+IMAGE+AVAILABLE' itemprop='image_url'/>
+  </a>
+</b:if>

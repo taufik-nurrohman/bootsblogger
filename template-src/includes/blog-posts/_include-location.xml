@@ -1,0 +1,5 @@
+<b:if cond='data:top.showLocation and data:post.location'>
+  <i aria-hidden='true' class='fa fa-location-arrow icon-location'/>
+  <span><data:postLocationLabel/></span>
+  <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
+</b:if>

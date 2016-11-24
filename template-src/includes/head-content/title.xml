@@ -1,0 +1,28 @@
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <!-- Item page -->
+  <title><data:blog.pageName/> | <data:blog.title/></title>
+
+<b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+  <!-- Static page -->
+  <title><data:blog.pageName/> | <data:blog.title/></title>
+
+<b:elseif cond='data:blog.searchLabel'/>
+  <!-- Label/category page -->
+  <title><data:blog.pageName/> | <data:blog.title/></title>
+
+<b:elseif cond='data:blog.searchQuery'/>
+  <!-- Search results page -->
+  <title>Search Results for -<data:blog.searchQuery/>- | <data:blog.title/></title>
+
+<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+  <!-- Archive page -->
+  <title>Archive for <data:blog.pageName/> | <data:blog.title/></title>
+
+<b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+  <!-- Error page -->
+  <title>Page Not Found</title>
+
+<b:else/>
+  <!-- Homepage -->
+  <title><data:blog.title/></title>
+</b:if>

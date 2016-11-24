@@ -1,0 +1,185 @@
+// scss-lint:disable QualifyingElement
+
+.wg-box > .widget {
+  padding: $wg-box-padding;
+  margin-bottom: $wg-box-spacer-y;
+  border: $wg-box-border-width solid transparent;
+  @include border-radius($wg-box-border-radius);
+  @include box-shadow($wg-box-box-shadow);
+}
+
+
+//
+// Widget title
+//
+
+.wg-box > .widget > h2 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: $wg-box-heading-font-size;
+  font-weight: $wg-box-heading-font-weight;
+  line-height: 1.1;
+
+  // Title only
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+//
+// Widget content
+//
+
+// Remove margin top and bottom for first and last element in widget content.
+.wg-box > .widget .widget-content {
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+//
+// Collapse
+//
+
+.wg-box.wg-collapse > .widget,
+.wg-box.wg-accordion > .widget {
+  // Title
+  > h2.collapsed,
+  > h2.wg-title-hide-collapsing {
+    margin-bottom: 0;
+  }
+  // Content
+  > h2.wg-title-hide-collapsing + .collapsing > .widget-content {
+    margin-top: .5rem;
+  }
+}
+
+
+//
+// No rounded
+//
+
+.wg-box-norounded > .widget {
+  @include border-radius(0 !important);
+}
+
+
+//
+// Background variants
+//
+
+// Faded
+.wg-box-faded {
+  @include wg-box-variant($wg-box-faded-bg, $wg-box-faded-border, $wg-box-faded-text);
+}
+// Blue
+.wg-box-blue {
+  @include wg-box-variant($wg-box-blue-bg, $wg-box-blue-border, $wg-box-blue-text);
+}
+// Green
+.wg-box-green {
+  @include wg-box-variant($wg-box-green-bg, $wg-box-green-border, $wg-box-green-text);
+}
+// Teal
+.wg-box-teal {
+  @include wg-box-variant($wg-box-teal-bg, $wg-box-teal-border, $wg-box-teal-text);
+}
+// Red
+.wg-box-red {
+  @include wg-box-variant($wg-box-red-bg, $wg-box-red-border, $wg-box-red-text);
+}
+// Orange
+.wg-box-orange {
+  @include wg-box-variant($wg-box-orange-bg, $wg-box-orange-border, $wg-box-orange-text);
+}
+// Purple
+.wg-box-purple {
+  @include wg-box-variant($wg-box-purple-bg, $wg-box-purple-border, $wg-box-purple-text);
+}
+// Yellow
+.wg-box-yellow {
+  @include wg-box-variant($wg-box-yellow-bg, $wg-box-yellow-border, $wg-box-yellow-text);
+}
+// Pink
+.wg-box-pink {
+  @include wg-box-variant($wg-box-pink-bg, $wg-box-pink-border, $wg-box-pink-text);
+}
+// gray
+.wg-box-gray {
+  @include wg-box-variant($wg-box-gray-bg, $wg-box-gray-border, $wg-box-gray-text);
+}
+// Brown
+.wg-box-brown {
+  @include wg-box-variant($wg-box-brown-bg, $wg-box-brown-border, $wg-box-brown-text);
+}
+// Black
+.wg-box-black {
+  @include wg-box-variant($wg-box-black-bg, $wg-box-black-border, $wg-box-black-text);
+}
+// White
+.wg-box-white {
+  @include wg-box-variant($wg-box-white-bg, $wg-box-white-border, $wg-box-white-text);
+}
+
+
+//
+// Outline variants
+//
+
+// Faded
+.wg-box-outline-faded {
+  @include wg-box-outline-variant($wg-box-faded-bg);
+}
+// Blue
+.wg-box-outline-blue {
+  @include wg-box-outline-variant($wg-box-blue-bg);
+}
+// Green
+.wg-box-outline-green {
+  @include wg-box-outline-variant($wg-box-green-bg);
+}
+// Teal
+.wg-box-outline-teal {
+  @include wg-box-outline-variant($wg-box-teal-bg);
+}
+// Red
+.wg-box-outline-red {
+  @include wg-box-outline-variant($wg-box-red-bg);
+}
+// Orange
+.wg-box-outline-orange {
+  @include wg-box-outline-variant($wg-box-orange-bg);
+}
+// Purple
+.wg-box-outline-purple {
+  @include wg-box-outline-variant($wg-box-purple-bg);
+}
+// Yellow
+.wg-box-outline-yellow {
+  @include wg-box-outline-variant($wg-box-yellow-bg);
+}
+// Pink
+.wg-box-outline-pink {
+  @include wg-box-outline-variant($wg-box-pink-bg);
+}
+// gray
+.wg-box-outline-gray {
+  @include wg-box-outline-variant($wg-box-gray-bg);
+}
+// Brown
+.wg-box-outline-brown {
+  @include wg-box-outline-variant($wg-box-brown-bg);
+}
+// Black
+.wg-box-outline-black {
+  @include wg-box-outline-variant($wg-box-black-bg);
+}
+// White
+.wg-box-outline-white {
+  @include wg-box-outline-variant($wg-box-white-bg);
+}

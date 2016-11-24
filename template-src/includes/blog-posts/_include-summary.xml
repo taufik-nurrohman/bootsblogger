@@ -1,0 +1,20 @@
+<!-- Label/category page -->
+<b:if cond='data:blog.searchLabel'>
+  <script>var summary=100</script>
+
+<!-- Search results page -->
+<b:elseif cond='data:blog.searchQuery'/>
+  <script>var summary=100</script>
+
+<!-- Archive page -->
+<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+  <script>var summary=100</script>
+
+<!-- Homepage -->
+<b:else/>
+  <script>var summary=100</script>
+</b:if>
+
+<!-- Create summary -->
+<div expr:id='&quot;summary-&quot; + data:post.id'><data:post.body/></div>
+<script>createSummary(&quot;summary-<data:post.id/>&quot;)</script>

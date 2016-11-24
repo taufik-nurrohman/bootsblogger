@@ -1,0 +1,61 @@
+<b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+  <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+  <link expr:href='data:blog.homepageUrl + &quot;404&quot;' rel='canonical'/>
+</b:if>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <!-- Item/single page -->
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+  <b:else/>
+    <meta expr:content='data:blog.pageName' name='description'/>
+  </b:if>
+  <b:if cond='data:blog.postImageUrl'><!-- Original size -->
+    <link expr:href='data:blog.postImageUrl' rel='image_src'/>
+  <b:elseif cond='data:blog.postImageThumbnailUrl'/><!-- 72 x 72 -->
+    <link expr:href='data:blog.postThumbnailUrl' rel='image_src'/>
+  <b:else/><!-- No image -->
+    <link href='https://placehold.it/512/eee/777?text=NO+IMAGE+AVAILABLE' rel='image_src'/>
+  </b:if>
+
+<b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+  <!-- Static page -->
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+  <b:else/>
+    <meta expr:content='data:blog.pageName' name='description'/>
+  </b:if>
+  <link href='https://placehold.it/256/eee/777?text=Page' rel='image_src'/>
+
+<b:elseif cond='data:blog.searchLabel'/>
+  <!-- Label/category page -->
+  <meta expr:content='{{ blog.meta.description.labelPage }}' name='description'/>
+  <link expr:href='&quot;https://placehold.it/512/eee/777?text=&quot; + data:blog.pageName' rel='image_src'/>
+
+<b:elseif cond='data:blog.searchQuery'/>
+  <!-- Search results page -->
+  <meta expr:content='{{ blog.meta.description.searchResultsPage }}' name='description'/>
+  <link href='https://placehold.it/256/eee/777?text=Search' rel='image_src'/>
+
+<b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
+  <!-- Archive page -->
+  <meta expr:content='{{ blog.meta.description.archivePage }}' name='description'/>
+  <link expr:href='&quot;https://placehold.it/512/eee/777?text=&quot; + data:blog.pageName' rel='image_src'/>
+
+<b:elseif cond='data:blog.pageType == &quot;error_page&quot;'/>
+  <!-- Error page -->
+  <meta content='{{ blog.meta.description.errorPage }}' name='description'/>
+  <link href='https://placehold.it/256/eee/777?text=404' rel='image_src'/>
+
+<b:else/>
+  <!-- Homepage -->
+  <b:if cond='data:blog.metaDescription'>
+    <meta expr:content='data:blog.metaDescription' name='description'/>
+  <b:else/>
+    <meta content='{{ blog.meta.description.homePage }}' name='description'/>
+  </b:if>
+  <meta content='{{ blog.meta.keywords }}' name='keywords'/>
+  <link href='{{ blog.social.image }}' rel='image_src'/>
+</b:if>

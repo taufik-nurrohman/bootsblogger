@@ -1,0 +1,23 @@
+@include media-breakpoint-up(sm) {
+  .wg-columns {
+    column-count: 2;
+    column-gap: $wg-columns-sm-up-column-gap;
+
+    > .widget {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .wg-columns {
+    column-count: 3;
+    column-gap: $wg-columns-md-up-column-gap;
+
+    > .widget {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}

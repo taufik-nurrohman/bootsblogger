@@ -1,0 +1,222 @@
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+  <b:includable id='main' var='top'>
+
+    <!--(bake /includes/blog-posts/main.xml)-->
+
+  </b:includable>
+  <b:includable id='backlinkDeleteIcon' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='backlinks' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='comment-form' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='commentDeleteIcon' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='comment_count_picker' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='comment_picker' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='comments' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='custom-comments' var='post'>
+
+    <!--(bake /includes/blog-posts/custom-comments.xml)-->
+
+  </b:includable>
+  <b:includable id='feedLinks' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='feedLinksBody' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='iframe_comments' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='include-about-author'>
+
+    <!--(bake /includes/blog-posts/_include-about-author.xml)-->
+
+  </b:includable>
+  <b:includable id='include-author'>
+
+    <!--(bake /includes/blog-posts/_include-author.xml)-->
+
+  </b:includable>
+  <b:includable id='include-breadcrumb'>
+
+    <!--(bake /includes/blog-posts/_include-breadcrumb.xml)-->
+
+  </b:includable>
+  <b:includable id='include-edit-post'>
+
+    <!--(bake /includes/blog-posts/_include-edit-post.xml)-->
+
+  </b:includable>
+  <b:includable id='include-email-post'>
+
+    <!--(bake /includes/blog-posts/_include-email-post.xml)-->
+
+  </b:includable>
+  <b:includable id='include-labels'>
+
+    <!--(bake /includes/blog-posts/_include-labels.xml)-->
+
+  </b:includable>
+  <b:includable id='include-link-post'>
+
+    <!--(bake /includes/blog-posts/_include-link-post.xml)-->
+
+  </b:includable>
+  <b:includable id='include-location'>
+
+    <!--(bake /includes/blog-posts/_include-location.xml)-->
+
+  </b:includable>
+  <b:includable id='include-num-comments'>
+
+    <!--(bake /includes/blog-posts/_include-num-comments.xml)-->
+
+  </b:includable>
+  <b:includable id='include-reactions'>
+
+    <!--(bake /includes/blog-posts/_include-reactions.xml)-->
+
+  </b:includable>
+  <b:includable id='include-share-buttons'>
+
+    <!--(bake /includes/blog-posts/_include-share-buttons.xml)-->
+
+  </b:includable>
+  <b:includable id='include-summary'>
+
+    <!--(bake /includes/blog-posts/_include-summary.xml)-->
+
+  </b:includable>
+  <b:includable id='include-thumbnail'>
+
+    <!--(bake /includes/blog-posts/_include-thumbnail.xml)-->
+
+  </b:includable>
+  <b:includable id='include-timestamp'>
+
+    <!--(bake /includes/blog-posts/_include-timestamp.xml)-->
+
+  </b:includable>
+  <b:includable id='mobile-index-post' removed='removed' var='post'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='mobile-main' removed='removed' var='top'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='mobile-nextprev' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='mobile-post' removed='removed' var='post'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='nextprev'>
+
+    <!--(bake /includes/blog-posts/nextprev.xml)-->
+
+  </b:includable>
+  <b:includable id='post' var='post'>
+
+    <!--(bake /includes/blog-posts/post.xml)-->
+
+  </b:includable>
+  <b:includable id='post-archive' var='post'>
+
+    <!--(bake /includes/blog-posts/__post-archive.xml)-->
+
+  </b:includable>
+  <b:includable id='post-home' var='post'>
+
+    <!--(bake /includes/blog-posts/__post-home.xml)-->
+
+  </b:includable>
+  <b:includable id='post-item' var='post'>
+
+    <!--(bake /includes/blog-posts/__post-item.xml)-->
+
+  </b:includable>
+  <b:includable id='post-label' var='post'>
+
+    <!--(bake /includes/blog-posts/__post-label.xml)-->
+
+  </b:includable>
+  <b:includable id='post-search' var='post'>
+
+    <!--(bake /includes/blog-posts/__post-search.xml)-->
+
+  </b:includable>
+  <b:includable id='post-static' var='post'>
+
+    <!--(bake /includes/blog-posts/__post-static.xml)-->
+
+  </b:includable>
+  <b:includable id='postQuickEdit' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='shareButtons' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='status-message'>
+
+    <!--(bake /includes/blog-posts/status-message.xml)-->
+
+  </b:includable>
+  <b:includable id='threaded-comment-form' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='threaded_comment_js' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+  <b:includable id='threaded_comments' removed='removed'>
+
+    <!-- Removed -->
+
+  </b:includable>
+</b:widget>

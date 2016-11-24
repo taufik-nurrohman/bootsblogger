@@ -1,0 +1,48 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+kramdown:
+  auto_ids: true
+
+# Permalinks
+permalink:        pretty
+
+# Server
+source:           docs
+destination:      _gh_pages
+host:             0.0.0.0
+port:             9001
+baseurl:          ""
+url:              https://bootsblogger.github.io
+encoding:         UTF-8
+exclude:          [assets/scss/]
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Social
+title: Bootsblogger
+formula: Blogger + Bootstrap + <3 = Bootsblogger
+description: Bootsblogger adalah sebuah template dasar, dengan fitur-fitur yang luar biasa, untuk menciptakan template Blogger yang luar biasa.
+authors: Igoy Nawamreh
+twitter: #
+googleplus: #
+facebook: #
+social_logo_path: /assets/brand/bootstrap-social-logo.png
+social_image_path: /assets/brand/bootstrap-social.png
+
+# Custom vars
+current_version:   1.0.0-alpha.1
+bootstrap_version: 4.0.0-alpha.5
+repo:              https://github.com/bootsblogger/bootsblogger
+
+download:
+  source:         #
+  dist:           #
+
+demo:             https://bootsblogger-demo.blogspot.com
+blog:             https://bootsbloggerblog.blogspot.com
+expo:             https://bootsbloggerexpo.blogspot.com
+templates:        #

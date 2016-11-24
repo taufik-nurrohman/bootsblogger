@@ -1,0 +1,47 @@
+@mixin navmenu-nav-variant($link-color, $link-hover-color, $link-hover-bg, $link-active-color, $link-active-bg, $link-disabled-color, $link-disabled-bg, $link-collapse-in-color, $link-collapse-in-bg) {
+  .navmenu-nav {
+    .nav-link {
+      color: $link-color;
+
+      @include hover-focus {
+        color: $link-hover-color;
+        background-color: $link-hover-bg;
+      }
+    }
+    .nav-link[data-toggle="collapse"]:not(.collapsed) {
+      @include plain-hover-focus {
+        color: $link-collapse-in-color;
+        background-color: $link-collapse-in-bg;
+      }
+    }
+    .nav-link.active {
+      @include plain-hover-focus {
+        color: $link-active-color;
+        background-color: $link-active-bg;
+      }
+    }
+    .nav-link.disabled {
+      @include plain-hover-focus {
+        color: $link-disabled-color;
+        background-color: $link-disabled-bg;
+      }
+    }
+  }
+}
+
+@mixin navmenu-badge-variant($color, $bg, $active-color, $active-bg, $disabled-color, $disabled-bg) {
+  .navmenu-nav {
+    .nav-link .badge {
+      color: $color;
+      background-color: $bg;
+    }
+    .nav-link.active .badge {
+      color: $active-color;
+      background-color: $active-bg;
+    }
+    .nav-link.disabled .badge {
+      color: $disabled-color;
+      background-color: $disabled-bg;
+    }
+  }
+}

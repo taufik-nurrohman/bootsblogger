@@ -1,0 +1,234 @@
+.comments {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f8f8f8;
+  border: 1px solid rgba(0,0,0,.125);
+  @include border-radius($border-radius);
+}
+
+.comments-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: $font-weight-bold;
+  color: #555;
+
+  small {
+    font-size: 60%;
+    color: #777;
+  }
+}
+
+
+//
+// Avatar
+//
+
+.comment-avatar img {
+  width: 50px;
+  height: 50px;
+  @include border-radius($border-radius);
+}
+
+
+//
+// Header
+//
+
+// Name
+.comment-name {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  color: #333;
+}
+.comment-name-link {
+  color: #333;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #3b94d9;
+    text-decoration: underline;
+  }
+}
+
+// Permalink
+.comment-permalink {
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  color: #8899a6;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #3b94d9;
+    text-decoration: underline;
+  }
+}
+
+// Timestamp
+.comment-timestamp {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  color: #8899a6;
+}
+
+// Dropdown icon
+.comment-dropdown {
+  padding: .5rem;
+  color: #8899a6;
+
+  &:hover,
+  &:focus {
+    color: #3b94d9;
+  }
+
+  .comment-dropdown-icon {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-normal;
+  }
+}
+
+// MOD
+.comment-mod {
+  font-size: $font-size-xs;
+  vertical-align: middle;
+}
+
+
+//
+// Content
+//
+
+// Body
+.comment-body {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: #333;
+
+  a {
+    color: #3b94d9;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #3b94d9;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Hide double `<br>` after block elements
+.comment-body {
+  div,
+  ul,
+  ol,
+  blockquote,
+  pre {
+    + br + br {
+      display: none;
+    }
+  }
+}
+
+
+//
+// Footer
+//
+
+// Reply link
+.comment-reply {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  color: #8899a6;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #3b94d9;
+    text-decoration: none;
+  }
+}
+
+
+//
+// Comment form
+//
+
+// Original container
+// .comment-form-container-original {}
+
+// Reply container
+.comment-form-container-reply {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Comment form
+.comment-form {
+  background-color: #f8f8f8;
+  border-color: rgba(0,0,0,.125);
+}
+
+// Message
+.comment-form-message {
+  background-color: #f5f5f5;
+  border-color: rgba(0,0,0,.125);
+
+  .card-title {
+    color: #333;
+  }
+  .card-title:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-text {
+    color: #777;
+  }
+}
+
+// Editor
+.comment-form-editor {
+  background-color: #f5f5f5;
+  border-color: rgba(0,0,0,.125);
+}
+.comment-form-editor iframe {
+  position: relative;
+  width: 100%;
+  border: 0;
+}
+
+// Loading
+.comment-form-loading-icon {
+  display: none !important;
+}
+.comment-form-loading {
+  text-align: center;
+
+  .comment-form-loading-icon {
+    display: inline-block !important;
+  }
+
+  .comment-form-message,
+  .comment-form-editor,
+  .comment-form-help {
+    display: none;
+  }
+}
+
+
+//
+// Wrapper for add comment and cancel reply button
+//
+
+.comment-add,
+.comment-cancel {
+  display: none;
+
+  &.open {
+    display: block;
+  }
+}

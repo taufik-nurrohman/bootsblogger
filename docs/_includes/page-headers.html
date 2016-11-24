@@ -1,0 +1,34 @@
+{% if page.group == "getting-started" %}
+  <h1>Getting started</h1>
+  <p class="lead">
+    Sebuah gambaran dari Bootsblogger, meliputi cara mengunduh dan menggunakannya, membangun template, dan lain-lain.
+  </p>
+{% elsif page.group == "core-template" %}
+  <h1>Core template</h1>
+  <p class="lead">
+    Fitur-fitur yang ada di dalam template dasar Bootsblogger.
+  </p>
+{% elsif page.group == "components" %}
+  <h1>Components</h1>
+  <p class="lead">
+    Selain banyaknya komponen dari Bootstrap, Bootsblogger meliputi komponen yang dispesifikasikan untuk memenuhi kebutuhan pada Blogger, seperti posting, widget, dan lainnya.
+  </p>
+{% elsif page.group == "utilities" %}
+  <h1>Utilities</h1>
+  <p class="lead">
+    Kelas-kelas utilitas untuk membantu mengurangi deklarasi yang sering digunakan.
+  </p>
+{% elsif page.group == "blogger-json-feeds" %}
+<h1>Blogger JSON feeds</h1>
+<p class="lead">
+  Mengambil data JSON dari Blogger Data API dan mengubahnya menjadi markup HTML menggunakan plugin yang tersedia.
+</p>
+{% elsif page.group == "javascript" %}
+  <h1>JavaScript plugins</h1>
+  <p class="lead">
+    JavaScript.
+  </p>
+{% elsif page.group == "about" %}
+  <h1>About</h1>
+  <p class="lead"></p>
+{% endif %}

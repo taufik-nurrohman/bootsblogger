@@ -1,0 +1,76 @@
+// scss-lint:disable QualifyingElement
+
+//
+// Docs examples
+//
+
+// Widgets
+.bd-example {
+  .wg-basic:not(.wg-columns),
+  .wg-box:not(.wg-columns),
+  .wg-panel:not(.wg-columns) {
+    max-width: 20rem;
+  }
+
+  .wg-basic,
+  .wg-box,
+  .wg-panel:not(.wg-panel-group) {
+    &:last-child {
+      margin-bottom: -1rem;
+    }
+  }
+
+  .wg-panel-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .wg-grid-example {
+    display: inline-block;
+    max-width: none !important;
+    margin-bottom: -1.25rem !important;
+  }
+}
+
+// Navmenu
+.bd-example {
+  .navmenu {
+    max-width: 20rem;
+  }
+
+  .navmenu-fixed-left,
+  .navmenu-fixed-right {
+    position: static;
+  }
+
+  .navmenu-fixed-left {
+    float: left;
+    width: 15rem;
+    margin-top: -1.5rem;
+    margin-bottom: -1.5rem;
+    margin-left: -1.5rem;
+  }
+  .navmenu-fixed-right {
+    float: right;
+    width: 15rem;
+    margin-top: -1.5rem;
+    margin-right: -1.5rem;
+    margin-bottom: -1.5rem;
+  }
+}
+
+// Table post includes
+.table-includes {
+  .highlight {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .highlight pre {
+    white-space: pre;
+  }
+
+  .btn-clipboard {
+    top: 0;
+  }
+}

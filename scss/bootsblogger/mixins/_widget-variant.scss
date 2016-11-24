@@ -1,0 +1,64 @@
+// Widget basic
+@mixin wg-basic-variant($heading-text-color) {
+  > .widget > h2 {
+    color: $heading-text-color;
+  }
+}
+
+// Widget box
+@mixin wg-box-variant($bg, $border, $color) {
+  > .widget {
+    background-color: $bg;
+    border-color: $border;
+  }
+  > .widget > h2 {
+    color: $color;
+  }
+}
+// Widget box outline
+@mixin wg-box-outline-variant($color) {
+  > .widget {
+    background-color: transparent;
+    border-color: $color;
+  }
+  > .widget > h2 {
+    color: $color;
+  }
+}
+
+// Widget panel
+@mixin wg-panel-variant($border, $heading-text-color, $heading-bg-color) {
+  > .widget > .widget-content,
+  > .widget > .widget-collapse {
+    border-color: $border;
+  }
+
+  > .widget > .widget-content,
+  > .widget > .widget-collapse > .widget-content {
+    background-color: $wg-panel-content-bg;
+  }
+
+  > .widget > h2 {
+    color: $heading-text-color;
+    background-color: $heading-bg-color;
+    border-color: $border;
+  }
+}
+// Widget panel outline
+@mixin wg-panel-outline-variant($color) {
+  > .widget > .widget-content,
+  > .widget > .widget-collapse {
+    border-color: $color;
+  }
+
+  > .widget > .widget-content,
+  > .widget > .widget-collapse > .widget-content {
+    background-color: transparent;
+  }
+
+  > .widget > h2 {
+    color: $color;
+    background-color: transparent;
+    border-color: $color;
+  }
+}

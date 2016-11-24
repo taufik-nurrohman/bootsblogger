@@ -1,0 +1,30 @@
+<!-- Load style sheet -->
+<script>
+//&lt;![CDATA[
+function loadStyleSheet(src){
+  if (document.createStyleSheet) {
+    document.createStyleSheet(src)
+  } else {
+    var stylesheet = document.createElement(&#39;link&#39;)
+    stylesheet.href = src
+    stylesheet.rel = &#39;stylesheet&#39;
+    stylesheet.type = &#39;text/css&#39;
+    document.getElementsByTagName(&#39;head&#39;)[0].appendChild(stylesheet)
+  }
+}
+window.onload = function() {
+  // Blogger Authorization CSS
+  loadStyleSheet(&#39;https://www.blogger.com/dyn-css/authorization.css?targetBlogID=<data:blog.blogId/>&#39;)
+  // Font Awesome
+  loadStyleSheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+}
+//]]&gt;
+</script>
+
+<!-- Bootsblogger JSON plugins -->
+<!-- This plugins should be placed in `<head>`. -->
+<script>
+//<![CDATA[
+<!--(bake /includes/assets/bootsblogger/js/bootsblogger-json.min.js)-->
+//]]>
+</script>

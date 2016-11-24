@@ -1,0 +1,6 @@
+<b:if cond='data:post.emailPostUrl'>
+  <i aria-hidden='true' class='fa fa-envelope-square icon-email-post'/>
+  <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg' target='_blank'>
+    <data:top.emailPostMsg/>
+  </a>
+</b:if>

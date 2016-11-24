@@ -1,0 +1,50 @@
+<b:loop values='data:posts' var='post'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <div class='post-horizontal'>
+      <!-- Content -->
+      <div class='post-content'>
+        <!-- Post title -->
+        <b:if cond='data:post.title'>
+          <h2 class='post-title' itemprop='name headline'>
+            <a class='post-title-link' expr:href='data:post.url' itemprop='url'><data:post.title/></a>
+          </h2>
+        </b:if>
+        <!-- Metadata -->
+        <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
+          <div class='post-meta'>
+            <ul class='post-meta-list'>
+              <!-- Author -->
+              <b:if cond='data:top.showAuthor'>
+                <li>
+                  <b:include name='include-author'/>
+                </li>
+              </b:if>
+              <!-- Timestamp -->
+              <b:if cond='data:top.showTimestamp'>
+                <li>
+                  <b:include name='include-timestamp'/>
+                </li>
+              </b:if>
+              <!-- Num comments -->
+              <b:if cond='data:post.allowComments'>
+                <li>
+                  <b:include name='include-num-comments'/>
+                </li>
+              </b:if>
+            </ul>
+          </div><!-- /.post-meta -->
+        </b:if>
+        <!-- Post snippet -->
+        <p itemprop='articleBody description'><data:post.snippet/></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      </div><!-- /.post-content -->
+      <!-- Image -->
+      <b:if cond='data:post.firstImageUrl'>
+        <div class='post-img-right post-img-cover' expr:style='&quot;min-height: 150px; background-image: url(&quot; + data:post.firstImageUrl + &quot;);&quot;'></div><!-- /.post-img-right -->
+      <b:else/>
+        <!-- Default no image -->
+        <div class='post-img-right post-img-cover' style='min-height: 150px; background-image: url(https://placehold.it/600x400/eee/777?text=NO+IMAGE+AVAILABLE);'></div><!-- /.post-img-right -->
+      </b:if>
+    </div><!-- /.post-horizontal -->
+  </article><!-- /.post -->
+</b:loop>

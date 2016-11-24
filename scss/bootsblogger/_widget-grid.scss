@@ -1,0 +1,346 @@
+.wg-xs-1,
+.wg-xs-2,
+.wg-xs-3,
+.wg-xs-4,
+.wg-xs-5,
+.wg-xs-6,
+.wg-xs-7,
+.wg-xs-8,
+.wg-xs-9,
+.wg-xs-10,
+.wg-xs-11,
+.wg-xs-12,
+.wg-sm-1,
+.wg-sm-2,
+.wg-sm-3,
+.wg-sm-4,
+.wg-sm-5,
+.wg-sm-6,
+.wg-sm-7,
+.wg-sm-8,
+.wg-sm-9,
+.wg-sm-10,
+.wg-sm-11,
+.wg-sm-12,
+.wg-md-1,
+.wg-md-2,
+.wg-md-3,
+.wg-md-4,
+.wg-md-5,
+.wg-md-6,
+.wg-md-7,
+.wg-md-8,
+.wg-md-9,
+.wg-md-10,
+.wg-md-11,
+.wg-md-12,
+.wg-lg-1,
+.wg-lg-2,
+.wg-lg-3,
+.wg-lg-4,
+.wg-lg-5,
+.wg-lg-6,
+.wg-lg-7,
+.wg-lg-8,
+.wg-lg-9,
+.wg-lg-10,
+.wg-lg-11,
+.wg-lg-12,
+.wg-xl-1,
+.wg-xl-2,
+.wg-xl-3,
+.wg-xl-4,
+.wg-xl-5,
+.wg-xl-6,
+.wg-xl-7,
+.wg-xl-8,
+.wg-xl-9,
+.wg-xl-10,
+.wg-xl-11,
+.wg-xl-12 {
+  margin-right: -($wg-grid-gutter-width-base / 2);
+  margin-left: -($wg-grid-gutter-width-base / 2);
+
+  @include clearfix;
+
+  .widget {
+    min-height: 1px;
+    margin-right: ($wg-grid-gutter-width-base / 2);
+    margin-left: ($wg-grid-gutter-width-base / 2);
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  .wg-xs-1,
+  .wg-xs-2,
+  .wg-xs-3,
+  .wg-xs-4,
+  .wg-xs-5,
+  .wg-xs-6,
+  .wg-xs-7,
+  .wg-xs-8,
+  .wg-xs-9,
+  .wg-xs-10,
+  .wg-xs-11,
+  .wg-xs-12 {
+    .widget {
+      float: left;
+    }
+  }
+  .wg-xs-12 .widget {
+    width: calc(100% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-11 .widget {
+    width: calc(91.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-10 .widget {
+    width: calc(83.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-9 .widget {
+    width: calc(75% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-8 .widget {
+    width: calc(66.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-7 .widget {
+    width: calc(58.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-6 .widget {
+    width: calc(50% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-5 .widget {
+    width: calc(41.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-4 .widget {
+    width: calc(33.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-3 .widget {
+    width: calc(25% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-2 .widget {
+    width: calc(16.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xs-1 .widget {
+    width: calc(8.33333333% - #{$wg-grid-gutter-width-base});
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .wg-sm-1,
+  .wg-sm-2,
+  .wg-sm-3,
+  .wg-sm-4,
+  .wg-sm-5,
+  .wg-sm-6,
+  .wg-sm-7,
+  .wg-sm-8,
+  .wg-sm-9,
+  .wg-sm-10,
+  .wg-sm-11,
+  .wg-sm-12 {
+    .widget {
+      float: left;
+    }
+  }
+  .wg-sm-12 .widget {
+    width: calc(100% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-11 .widget {
+    width: calc(91.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-10 .widget {
+    width: calc(83.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-9 .widget {
+    width: calc(75% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-8 .widget {
+    width: calc(66.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-7 .widget {
+    width: calc(58.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-6 .widget {
+    width: calc(50% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-5 .widget {
+    width: calc(41.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-4 .widget {
+    width: calc(33.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-3 .widget {
+    width: calc(25% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-2 .widget {
+    width: calc(16.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-sm-1 .widget {
+    width: calc(8.33333333% - #{$wg-grid-gutter-width-base});
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .wg-md-1,
+  .wg-md-2,
+  .wg-md-3,
+  .wg-md-4,
+  .wg-md-5,
+  .wg-md-6,
+  .wg-md-7,
+  .wg-md-8,
+  .wg-md-9,
+  .wg-md-10,
+  .wg-md-11,
+  .wg-md-12 {
+    .widget {
+      float: left;
+    }
+  }
+  .wg-md-12 .widget {
+    width: calc(100% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-11 .widget {
+    width: calc(91.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-10 .widget {
+    width: calc(83.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-9 .widget {
+    width: calc(75% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-8 .widget {
+    width: calc(66.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-7 .widget {
+    width: calc(58.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-6 .widget {
+    width: calc(50% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-5 .widget {
+    width: calc(41.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-4 .widget {
+    width: calc(33.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-3 .widget {
+    width: calc(25% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-2 .widget {
+    width: calc(16.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-md-1 .widget {
+    width: calc(8.33333333% - #{$wg-grid-gutter-width-base});
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .wg-lg-1,
+  .wg-lg-2,
+  .wg-lg-3,
+  .wg-lg-4,
+  .wg-lg-5,
+  .wg-lg-6,
+  .wg-lg-7,
+  .wg-lg-8,
+  .wg-lg-9,
+  .wg-lg-10,
+  .wg-lg-11,
+  .wg-lg-12 {
+    .widget {
+      float: left;
+    }
+  }
+  .wg-lg-12 .widget {
+    width: calc(100% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-11 .widget {
+    width: calc(91.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-10 .widget {
+    width: calc(83.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-9 .widget {
+    width: calc(75% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-8 .widget {
+    width: calc(66.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-7 .widget {
+    width: calc(58.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-6 .widget {
+    width: calc(50% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-5 .widget {
+    width: calc(41.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-4 .widget {
+    width: calc(33.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-3 .widget {
+    width: calc(25% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-2 .widget {
+    width: calc(16.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-lg-1 .widget {
+    width: calc(8.33333333% - #{$wg-grid-gutter-width-base});
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .wg-xl-1,
+  .wg-xl-2,
+  .wg-xl-3,
+  .wg-xl-4,
+  .wg-xl-5,
+  .wg-xl-6,
+  .wg-xl-7,
+  .wg-xl-8,
+  .wg-xl-9,
+  .wg-xl-10,
+  .wg-xl-11,
+  .wg-xl-12 {
+    .widget {
+      float: left;
+    }
+  }
+  .wg-xl-12 .widget {
+    width: calc(100% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-11 .widget {
+    width: calc(91.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-10 .widget {
+    width: calc(83.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-9 .widget {
+    width: calc(75% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-8 .widget {
+    width: calc(66.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-7 .widget {
+    width: calc(58.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-6 .widget {
+    width: calc(50% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-5 .widget {
+    width: calc(41.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-4 .widget {
+    width: calc(33.33333333% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-3 .widget {
+    width: calc(25% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-2 .widget {
+    width: calc(16.66666667% - #{$wg-grid-gutter-width-base});
+  }
+  .wg-xl-1 .widget {
+    width: calc(8.33333333% - #{$wg-grid-gutter-width-base});
+  }
+}

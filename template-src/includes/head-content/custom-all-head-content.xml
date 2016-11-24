@@ -1,0 +1,20 @@
+<meta content='blogger' name='generator'/>
+
+<link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon'/>
+
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; » Atom&quot;' rel='alternate' type='application/atom+xml'/>
+
+<link expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;' expr:title='data:blog.title + &quot; » Comments Feed&quot;' rel='alternate' type='application/atom+xml'/>
+
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+  <link expr:href='data:blog.homepageUrl + &quot;feeds/&quot; + data:blog.postId + &quot;/comments/default&quot;' expr:title='data:blog.title + &quot; » &quot; + data:blog.pageName + &quot; Comments Feed&quot;' rel='alternate' type='application/atom+xml'/>
+</b:if>
+
+<b:if cond='data:blog.searchLabel'>
+  <link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default/-/&quot; + data:blog.pageName' expr:title='data:blog.title + &quot; » &quot; + data:blog.pageName' rel='alternate' type='application/atom+xml'/>
+</b:if>
+
+<b:if cond='data:blog.pageType not in [&quot;item&quot;, &quot;static_page&quot;, &quot;archive&quot;]'>
+  <link href='https://www.blogger.com/openid-server.g' rel='openid.server'/>
+  <link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+</b:if>

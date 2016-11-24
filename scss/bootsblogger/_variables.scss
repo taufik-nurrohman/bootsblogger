@@ -1,0 +1,292 @@
+// Table of Contents
+//
+// Colors
+// Posts
+// Widget basic
+// Widget box
+// Widget panel
+// Widget columns
+// Widget grid
+// Navmenu
+
+
+//
+// Colors
+//
+
+$color-faded:         $gray-lightest !default;
+$color-blue:          #3b83c0 !default;
+$color-green:         #5bbd72 !default;
+$color-teal:          #00b5ad !default;
+$color-red:           #d95c5c !default;
+$color-orange:        #ef6c00 !default;
+$color-purple:        #564f8a !default;
+$color-yellow:        #f2c61f !default;
+$color-pink:          #d9499a !default;
+$color-gray:          $gray !default;
+$color-brown:         #a5673f !default;
+$color-black:         #222 !default;
+$color-white:         #fff !default;
+
+
+//
+// Posts
+//
+
+$post-spacer-y:             1rem !default;
+$post-content-padding:      1.25rem !default;
+$post-bg-color:             #fff !default;
+$post-border-color:         rgba(0,0,0,.125) !default;
+$post-border-width:         1px !default;
+$post-border-radius:        $border-radius !default;
+$post-border-radius-inner:  calc(#{$post-border-radius} - #{$post-border-width}) !default;
+$post-box-shadow:           0 1px 1px rgba(0,0,0,.05) !default;
+
+$post-columns-sm-up-column-gap:   1rem !default;
+$post-columns-md-up-column-gap:   1.25rem !default;
+
+$post-title-link-color:           inherit !default;
+$post-title-link-hover-color:     #3f77a8 !default;
+
+$post-header-padding:             .75rem $post-content-padding !default;
+$post-header-bg-color:            #f5f5f5 !default;
+$post-header-color:               $gray-light !default;
+
+$post-footer-padding:             .75rem $post-content-padding !default;
+$post-footer-bg-color:            #f5f5f5 !default;
+$post-footer-color:               $gray-light !default;
+
+$post-meta-color:                 $gray-light !default;
+
+$post-faded-bg:       $color-faded !default;
+$post-faded-border:   darken($post-faded-bg, 3%) !default;
+
+$post-blue-bg:        $color-blue !default;
+$post-blue-border:    darken($post-blue-bg, 3%) !default;
+
+$post-green-bg:       $color-green !default;
+$post-green-border:   darken($post-green-bg, 3%) !default;
+
+$post-teal-bg:        $color-teal !default;
+$post-teal-border:    darken($post-teal-bg, 3%) !default;
+
+$post-red-bg:         $color-red !default;
+$post-red-border:     darken($post-red-bg, 3%) !default;
+
+$post-orange-bg:      $color-orange !default;
+$post-orange-border:  darken($post-orange-bg, 3%) !default;
+
+$post-purple-bg:      $color-purple !default;
+$post-purple-border:  darken($post-purple-bg, 3%) !default;
+
+$post-yellow-bg:      $color-yellow !default;
+$post-yellow-border:  darken($post-yellow-bg, 3%) !default;
+
+$post-pink-bg:        $color-pink !default;
+$post-pink-border:    darken($post-pink-bg, 3%) !default;
+
+$post-gray-bg:        $color-gray !default;
+$post-gray-border:    darken($post-gray-bg, 3%) !default;
+
+$post-brown-bg:       $color-brown !default;
+$post-brown-border:   darken($post-brown-bg, 3%) !default;
+
+$post-black-bg:       $color-black !default;
+$post-black-border:   darken($post-black-bg, 3%) !default;
+
+
+//
+// Widget basic
+//
+
+$wg-basic-spacer-y:            $spacer-y !default;
+$wg-basic-heading-font-size:   1rem !default;
+$wg-basic-heading-font-weight: $font-weight-bold !default;
+
+$wg-basic-faded:      $color-faded !default;
+$wg-basic-blue:       $color-blue !default;
+$wg-basic-green:      $color-green !default;
+$wg-basic-teal:       $color-teal !default;
+$wg-basic-red:        $color-red !default;
+$wg-basic-orange:     $color-orange !default;
+$wg-basic-purple:     $color-purple !default;
+$wg-basic-yellow:     $color-yellow !default;
+$wg-basic-pink:       $color-pink !default;
+$wg-basic-gray:       $color-gray !default;
+$wg-basic-brown:      $color-brown !default;
+$wg-basic-black:      $color-black !default;
+$wg-basic-white:      $color-white !default;
+
+
+//
+// Widget box
+//
+
+$wg-box-spacer-y:              $spacer-y !default;
+$wg-box-padding:               .75rem !default;
+$wg-box-heading-font-size:     1rem !default;
+$wg-box-heading-font-weight:   $font-weight-bold !default;
+$wg-box-border-width:          1px !default;
+$wg-box-border-radius:         $border-radius !default;
+$wg-box-box-shadow:            0 1px 1px rgba(0,0,0,.05) !default;
+
+$wg-box-faded-text:            $gray-dark !default;
+$wg-box-faded-bg:              $color-faded !default;
+$wg-box-faded-border:          #eee !default;
+
+$wg-box-blue-text:             #fff !default;
+$wg-box-blue-bg:               $color-blue !default;
+$wg-box-blue-border:           darken($wg-box-blue-bg, 3%) !default;
+
+$wg-box-green-text:            #fff !default;
+$wg-box-green-bg:              $color-green !default;
+$wg-box-green-border:          darken($wg-box-green-bg, 3%) !default;
+
+$wg-box-teal-text:             #fff !default;
+$wg-box-teal-bg:               $color-teal !default;
+$wg-box-teal-border:           darken($wg-box-teal-bg, 3%) !default;
+
+$wg-box-red-text:              #fff !default;
+$wg-box-red-bg:                $color-red !default;
+$wg-box-red-border:            darken($wg-box-red-bg, 3%) !default;
+
+$wg-box-orange-text:           #fff !default;
+$wg-box-orange-bg:             $color-orange !default;
+$wg-box-orange-border:         darken($wg-box-orange-bg, 3%) !default;
+
+$wg-box-purple-text:           #fff !default;
+$wg-box-purple-bg:             $color-purple !default;
+$wg-box-purple-border:         darken($wg-box-purple-bg, 3%) !default;
+
+$wg-box-yellow-text:           #fff !default;
+$wg-box-yellow-bg:             $color-yellow !default;
+$wg-box-yellow-border:         darken($wg-box-yellow-bg, 3%) !default;
+
+$wg-box-pink-text:             #fff !default;
+$wg-box-pink-bg:               $color-pink !default;
+$wg-box-pink-border:           darken($wg-box-pink-bg, 3%) !default;
+
+$wg-box-gray-text:             #fff !default;
+$wg-box-gray-bg:               $color-gray !default;
+$wg-box-gray-border:           darken($wg-box-gray-bg, 3%) !default;
+
+$wg-box-brown-text:            #fff !default;
+$wg-box-brown-bg:              $color-brown !default;
+$wg-box-brown-border:          darken($wg-box-brown-bg, 3%) !default;
+
+$wg-box-black-text:            #fff !default;
+$wg-box-black-bg:              $color-black !default;
+$wg-box-black-border:          darken($wg-box-black-bg, 3%) !default;
+
+$wg-box-white-text:            $gray-dark !default;
+$wg-box-white-bg:              $color-white !default;
+$wg-box-white-border:          rgba(0,0,0,.125) !default;
+
+
+//
+// Widget panel
+//
+
+$wg-panel-spacer-y:              $spacer-y !default;
+$wg-panel-content-padding:       .75rem !default;
+$wg-panel-heading-padding:       .5rem $wg-panel-content-padding !default;
+$wg-panel-heading-font-size:     1rem !default;
+$wg-panel-heading-font-weight:   $font-weight-bold !default;
+$wg-panel-content-bg:            #fff !default;
+$wg-panel-border-width:          1px !default;
+$wg-panel-border-radius:         $border-radius !default;
+$wg-panel-box-shadow:            0 1px 1px rgba(0,0,0,.05) !default;
+
+$wg-panel-faded-text:            $gray-dark !default;
+$wg-panel-faded-bg:              $color-faded !default;
+$wg-panel-faded-border:          #eee !default;
+
+$wg-panel-blue-text:             #fff !default;
+$wg-panel-blue-bg:               $color-blue !default;
+$wg-panel-blue-border:           darken($wg-panel-blue-bg, 3%) !default;
+
+$wg-panel-green-text:            #fff !default;
+$wg-panel-green-bg:              $color-green !default;
+$wg-panel-green-border:          darken($wg-panel-green-bg, 3%) !default;
+
+$wg-panel-teal-text:             #fff !default;
+$wg-panel-teal-bg:               $color-teal !default;
+$wg-panel-teal-border:           darken($wg-panel-teal-bg, 3%) !default;
+
+$wg-panel-red-text:              #fff !default;
+$wg-panel-red-bg:                $color-red !default;
+$wg-panel-red-border:            darken($wg-panel-red-bg, 3%) !default;
+
+$wg-panel-orange-text:           #fff !default;
+$wg-panel-orange-bg:             $color-orange !default;
+$wg-panel-orange-border:         darken($wg-panel-orange-bg, 3%) !default;
+
+$wg-panel-purple-text:           #fff !default;
+$wg-panel-purple-bg:             $color-purple !default;
+$wg-panel-purple-border:         darken($wg-panel-purple-bg, 3%) !default;
+
+$wg-panel-yellow-text:           #fff !default;
+$wg-panel-yellow-bg:             $color-yellow !default;
+$wg-panel-yellow-border:         darken($wg-panel-yellow-bg, 3%) !default;
+
+$wg-panel-pink-text:             #fff !default;
+$wg-panel-pink-bg:               $color-pink !default;
+$wg-panel-pink-border:           darken($wg-panel-pink-bg, 3%) !default;
+
+$wg-panel-gray-text:             #fff !default;
+$wg-panel-gray-bg:               $color-gray !default;
+$wg-panel-gray-border:           darken($wg-panel-gray-bg, 3%) !default;
+
+$wg-panel-brown-text:            #fff !default;
+$wg-panel-brown-bg:              $color-brown !default;
+$wg-panel-brown-border:          darken($wg-panel-brown-bg, 3%) !default;
+
+$wg-panel-black-text:            #fff !default;
+$wg-panel-black-bg:              $color-black !default;
+$wg-panel-black-border:          darken($wg-panel-black-bg, 3%) !default;
+
+$wg-panel-white-text:            $gray-dark !default;
+$wg-panel-white-bg:              $color-white !default;
+$wg-panel-white-border:          rgba(0,0,0,.125) !default;
+
+
+//
+// Widget columns
+//
+
+$wg-columns-sm-up-column-gap:    1rem !default;
+$wg-columns-md-up-column-gap:    1.25rem !default;
+
+
+//
+// Widget grid
+//
+
+$wg-grid-gutter-width-base:      30px !default;
+
+
+//
+// Navmenu
+//
+
+$navmenu-spacer-y:               $spacer-y;
+$navmenu-padding-x:              1.25rem !default;
+$navmenu-padding-y:              1.25rem !default;
+$navmenu-border-radius:          $border-radius !default;
+
+$navmenu-brand-padding-x:        1.25rem !default;
+$navmenu-brand-padding-y:        .5rem !default;
+$navmenu-brand-font-size:        $font-size-lg !default;
+
+$navmenu-link-padding-x:         1.25rem !default;
+$navmenu-link-padding-y:         .5rem !default;
+
+$navmenu-light-color:            rgba(0,0,0,.3) !default;
+$navmenu-light-hover-color:      rgba(0,0,0,.6) !default;
+$navmenu-light-active-color:     rgba(0,0,0,.8) !default;
+$navmenu-light-disabled-color:   rgba(0,0,0,.15) !default;
+
+$navmenu-dark-color:             rgba(255,255,255,.5) !default;
+$navmenu-dark-hover-color:       rgba(255,255,255,.75) !default;
+$navmenu-dark-active-color:      rgba(255,255,255,1) !default;
+$navmenu-dark-disabled-color:    rgba(255,255,255,.25) !default;

@@ -1,0 +1,337 @@
+// scss-lint:disable QualifyingElement
+
+.wg-panel > .widget {
+  margin-bottom: $wg-panel-spacer-y;
+  @include border-radius($wg-panel-border-radius);
+  @include box-shadow($wg-panel-box-shadow);
+}
+
+
+//
+// Widget title
+//
+
+.wg-panel > .widget > h2 {
+  padding: $wg-panel-heading-padding;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $wg-panel-heading-font-size;
+  font-weight: $wg-panel-heading-font-weight;
+  line-height: 1.1;
+  border: $wg-panel-border-width solid transparent;
+  @include border-top-radius($wg-panel-border-radius);
+
+  // Title only
+  &:last-child {
+    @include border-bottom-radius($wg-panel-border-radius);
+  }
+}
+
+
+//
+// Widget content
+//
+
+.wg-panel > .widget > .widget-content {
+  padding: $wg-panel-content-padding;
+  border: $wg-panel-border-width solid transparent;
+  @include border-radius($wg-panel-border-radius);
+}
+
+// Remove margin top and bottom for first and last element in widget content.
+.wg-panel > .widget .widget-content {
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Widget with title (title + .widget-content)
+.wg-panel > .widget > h2 + .widget-content {
+  border-top-width: 0;
+  @include border-top-radius(0);
+}
+
+
+//
+// Support for `.wg-title-hidden`
+//
+
+.wg-panel.wg-title-hidden > .widget > .widget-content {
+  border-width: $wg-panel-border-width;
+  @include border-radius($wg-panel-border-radius);
+}
+
+
+//
+// Group
+//
+
+.wg-panel-group {
+  margin-bottom: $wg-panel-spacer-y;
+  @include border-radius($wg-panel-border-radius);
+  @include box-shadow($wg-panel-box-shadow);
+}
+
+.wg-panel-group > .widget {
+  margin-bottom: 0 !important;
+  @include border-radius(0);
+  @include box-shadow(none !important);
+
+  // Title
+  &:not(:first-child) > h2 {
+    @include border-top-radius(0);
+  }
+  // Title only
+  &:not(:last-child) > h2:last-child {
+    @include border-bottom-radius(0);
+  }
+  // Content
+  &:not(:last-child) > .widget-content {
+    border-bottom-width: 0;
+    @include border-bottom-radius(0);
+  }
+}
+
+
+//
+// Bootstrap list group flush in widget panel
+//
+
+.wg-panel .list-group-flush {
+  margin: -$wg-panel-content-padding !important;
+
+  > .list-group-item {
+    border-width: 1px 0;
+  }
+  > .list-group-item:first-child {
+    border-top-width: 0;
+    @include border-top-radius(calc(#{$wg-panel-border-radius} - #{$wg-panel-border-width}));
+  }
+  > .list-group-item:last-child {
+    border-bottom-width: 0;
+    @include border-bottom-radius(calc(#{$wg-panel-border-radius} - #{$wg-panel-border-width}));
+  }
+}
+
+// Within `.wg-title-hidden`
+.wg-panel.wg-title-hidden .list-group-flush > .list-group-item:first-child {
+  border-top-width: 0;
+  @include border-top-radius(calc(#{$wg-panel-border-radius} - #{$wg-panel-border-width}));
+}
+
+// Widget with title (title + .widget-content) and (title + .widget-collapse)
+.wg-panel h2 + .widget-content .list-group-flush > .list-group-item:first-child,
+.wg-panel h2 + .widget-collapse .list-group-flush > .list-group-item:first-child {
+  border-top-width: 0;
+  @include border-top-radius(0);
+}
+
+
+//
+// Collapse
+//
+
+// Styling content
+
+.wg-panel.wg-collapse > .widget > .widget-collapse,
+.wg-panel.wg-accordion > .widget > .widget-collapse {
+  border-style: solid;
+  border-width: $wg-panel-border-width;
+  @include border-radius($wg-panel-border-radius);
+
+  > .widget-content {
+    padding: $wg-panel-content-padding;
+    @include border-radius(calc(#{$wg-panel-border-radius} - #{$wg-panel-border-width}));
+  }
+}
+
+// Widget with title (title + .widget-collapse)
+.wg-panel.wg-collapse > .widget > h2 + .widget-collapse,
+.wg-panel.wg-accordion > .widget > h2 + .widget-collapse {
+  border-top-width: 0;
+  @include border-top-radius(0);
+
+  > .widget-content {
+    @include border-top-radius(0);
+  }
+}
+
+// Group
+.wg-panel-group {
+  > .widget:not(:last-child) > .widget-collapse {
+    border-bottom-width: 0;
+    @include border-bottom-radius(0);
+
+    > .widget-content {
+      @include border-bottom-radius(0);
+    }
+  }
+}
+
+// Collapse support
+
+// Collapsed title
+.wg-panel.wg-collapse > .widget > h2.collapsed:not(.wg-title-hide-collapsing),
+.wg-panel.wg-accordion > .widget > h2.collapsed:not(.wg-title-hide-collapsing) {
+  @include border-bottom-radius($wg-panel-border-radius);
+}
+
+// Group
+.wg-panel-group {
+  // Collapsed title
+  > .widget:not(:last-child) > h2.collapsed:not(.wg-title-hide-collapsing) {
+    border-bottom-width: 0;
+    @include border-bottom-radius(0 !important);
+  }
+}
+
+// Card reset
+.wg-panel > .card {
+  background-color: transparent;
+  border: 0;
+}
+
+
+//
+// Transparent content
+//
+
+.wg-panel-transparent > .widget > .widget-content,
+.wg-panel-transparent > .widget > .widget-collapse > .widget-content {
+  background-color: transparent !important;
+}
+
+
+//
+// No rounded
+//
+
+.wg-panel-norounded {
+  &.wg-panel-group,
+  > .widget,
+  > .widget > h2,
+  > .widget > .widget-content,
+  > .widget > .widget-collapse,
+  > .widget > .widget-collapse > .widget-content {
+    @include border-radius(0 !important);
+  }
+}
+
+
+//
+// Background variants
+//
+
+// Faded
+.wg-panel-faded {
+  @include wg-panel-variant($wg-panel-faded-border, $wg-panel-faded-text, $wg-panel-faded-bg);
+}
+// Blue
+.wg-panel-blue {
+  @include wg-panel-variant($wg-panel-blue-border, $wg-panel-blue-text, $wg-panel-blue-bg);
+}
+// Green
+.wg-panel-green {
+  @include wg-panel-variant($wg-panel-green-border, $wg-panel-green-text, $wg-panel-green-bg);
+}
+// Teal
+.wg-panel-teal {
+  @include wg-panel-variant($wg-panel-teal-border, $wg-panel-teal-text, $wg-panel-teal-bg);
+}
+// Red
+.wg-panel-red {
+  @include wg-panel-variant($wg-panel-red-border, $wg-panel-red-text, $wg-panel-red-bg);
+}
+// Orange
+.wg-panel-orange {
+  @include wg-panel-variant($wg-panel-orange-border, $wg-panel-orange-text, $wg-panel-orange-bg);
+}
+// Purple
+.wg-panel-purple {
+  @include wg-panel-variant($wg-panel-purple-border, $wg-panel-purple-text, $wg-panel-purple-bg);
+}
+// Yellow
+.wg-panel-yellow {
+  @include wg-panel-variant($wg-panel-yellow-border, $wg-panel-yellow-text, $wg-panel-yellow-bg);
+}
+// Pink
+.wg-panel-pink {
+  @include wg-panel-variant($wg-panel-pink-border, $wg-panel-pink-text, $wg-panel-pink-bg);
+}
+// gray
+.wg-panel-gray {
+  @include wg-panel-variant($wg-panel-gray-border, $wg-panel-gray-text, $wg-panel-gray-bg);
+}
+// Brown
+.wg-panel-brown {
+  @include wg-panel-variant($wg-panel-brown-border, $wg-panel-brown-text, $wg-panel-brown-bg);
+}
+// Black
+.wg-panel-black {
+  @include wg-panel-variant($wg-panel-black-border, $wg-panel-black-text, $wg-panel-black-bg);
+}
+// White
+.wg-panel-white {
+  @include wg-panel-variant($wg-panel-white-border, $wg-panel-white-text, $wg-panel-white-bg);
+}
+
+
+//
+// Outline variants
+//
+
+// Faded
+.wg-panel-outline-faded {
+  @include wg-panel-outline-variant($wg-panel-faded-bg);
+}
+// Blue
+.wg-panel-outline-blue {
+  @include wg-panel-outline-variant($wg-panel-blue-bg);
+}
+// Green
+.wg-panel-outline-green {
+  @include wg-panel-outline-variant($wg-panel-green-bg);
+}
+// Teal
+.wg-panel-outline-teal {
+  @include wg-panel-outline-variant($wg-panel-teal-bg);
+}
+// Red
+.wg-panel-outline-red {
+  @include wg-panel-outline-variant($wg-panel-red-bg);
+}
+// Orange
+.wg-panel-outline-orange {
+  @include wg-panel-outline-variant($wg-panel-orange-bg);
+}
+// Purple
+.wg-panel-outline-purple {
+  @include wg-panel-outline-variant($wg-panel-purple-bg);
+}
+// Yellow
+.wg-panel-outline-yellow {
+  @include wg-panel-outline-variant($wg-panel-yellow-bg);
+}
+// Pink
+.wg-panel-outline-pink {
+  @include wg-panel-outline-variant($wg-panel-pink-bg);
+}
+// gray
+.wg-panel-outline-gray {
+  @include wg-panel-outline-variant($wg-panel-gray-bg);
+}
+// Brown
+.wg-panel-outline-brown {
+  @include wg-panel-outline-variant($wg-panel-brown-bg);
+}
+// Black
+.wg-panel-outline-black {
+  @include wg-panel-outline-variant($wg-panel-black-bg);
+}
+// White
+.wg-panel-outline-white {
+  @include wg-panel-outline-variant($wg-panel-white-bg);
+}

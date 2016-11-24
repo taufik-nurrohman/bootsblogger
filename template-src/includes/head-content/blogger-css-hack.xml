@@ -1,0 +1,85 @@
+<!-- Remove Blogger's default CSS -->
+<!-- And create grid system for Blogger layout. -->
+<!-- For more information, see: (https://bootsblogger.github.io/core-template/head/#remove-bloggers-default-css). -->
+&lt;style type=&quot;text/css&quot;&gt;
+&lt;!--/*<b:skin><![CDATA[
+
+ul, ol, hr { display: none; }
+
+.blogger-container:after,
+.blogger-container:before,
+.blogger-row:after,
+.blogger-row:before {
+  display: table;
+  content: "";
+}
+.blogger-container:after,
+.blogger-row:after {
+  clear: both;
+}
+
+.blogger-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.blogger-row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.blogger-col-1,
+.blogger-col-2,
+.blogger-col-3,
+.blogger-col-4,
+.blogger-col-5,
+.blogger-col-6,
+.blogger-col-7,
+.blogger-col-8,
+.blogger-col-9,
+.blogger-col-10,
+.blogger-col-11,
+.blogger-col-12 {
+  float: left;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.blogger-col-1 {
+  width: 8.33333333%;
+}
+.blogger-col-2 {
+  width: 16.66666667%;
+}
+.blogger-col-3 {
+  width: 25%;
+}
+.blogger-col-4 {
+  width: 33.33333333%;
+}
+.blogger-col-5 {
+  width: 41.66666667%;
+}
+.blogger-col-6 {
+width: 50%;
+}
+.blogger-col-7 {
+  width: 58.33333333%;
+}
+.blogger-col-8 {
+  width: 66.66666667%;
+}
+.blogger-col-9 {
+  width: 75%;
+}
+.blogger-col-10 {
+  width: 83.33333333%;
+}
+.blogger-col-11 {
+  width: 91.66666667%;
+}
+.blogger-col-12 {
+  width: 100%;
+}
+
+*/]]></b:skin>

@@ -1,0 +1,26 @@
+//
+// Item control
+// ---------------------------------------------------
+
+.item-control {
+  display: none;
+}
+
+.widget-item-control {
+  z-index: 10;
+  float: right;
+  width: 18px;
+  height: 18px;
+}
+
+.widget-item-control .item-control {
+  a > img {
+    display: block;
+  }
+
+  &,
+  a > img {
+    width: 18px;
+    height: 18px;
+  }
+}
