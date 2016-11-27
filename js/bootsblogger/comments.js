@@ -12,7 +12,6 @@
         var a = document.getElementById(id)
         if (!a) return
         var b = a.innerHTML
-        var c = '//cdn.rawgit.com/tovic/dte-project/0ef9de902cf286a77272f9b3c6f8168c17ab61c6/emoticon/'
         // Link
         b = b.replace(/\[url=(.*?)\](.*?)\[\/url\]/ig, '<a href="$1">$2</a>')
         // Images
