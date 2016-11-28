@@ -1,6 +1,6 @@
-<header class='navbar navbar-full navbar-dark bg-orange navbar-static-top' role='banner'>
+<header class='navbar navbar-full navbar-dark bg-orange navbar-static-top'>
   <div class='container'>
-    <nav role='navigation'>
+    <nav>
       <div class='clearfix float-md-left'>
         <button class='navbar-toggler float-xs-right hidden-md-up' type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation'></button>
         <a class='navbar-brand' expr:href='data:blog.homepageUrl'>

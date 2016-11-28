@@ -39,7 +39,7 @@ Gunakan `.post` sebagai kelas utama, dan di dalamnya bungkus konten seperti judu
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content -->
     <div class='post-content'>
       <!-- Post title -->
@@ -78,7 +78,7 @@ Dengan `.post-title-link`.
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content -->
     <div class='post-content'>
       <!-- Post title -->
@@ -116,7 +116,7 @@ Gunakan `.post-meta` dan tempatkan di dalam `.post-content`, untuk membuat list 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content -->
     <div class='post-content'>
       <!-- Post title -->
@@ -186,7 +186,7 @@ Gunakan `.post-img-only`.
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <div class='post-img-only' itemprop='thumbnail'>
       <b:include name='include-thumbnail'/>
@@ -214,7 +214,7 @@ Gunakan `.post-img-top`.
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <div class='post-img-top' itemprop='thumbnail'>
       <b:include name='include-thumbnail'/>
@@ -229,7 +229,7 @@ Gunakan `.post-img-top`.
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
   </article><!-- /.post -->
 </b:loop>
@@ -254,7 +254,7 @@ Gunakan `.post-img-bottom`.
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content -->
     <div class='post-content'>
       <!-- Post title -->
@@ -265,7 +265,7 @@ Gunakan `.post-img-bottom`.
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
     <!-- Image -->
     <div class='post-img-bottom' itemprop='thumbnail'>
@@ -296,7 +296,7 @@ Gunakan `.post-img-left` dan bungkus thumbnail dan konten dengan `.post-horizont
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Image -->
       <div class='post-img-left' itemprop='thumbnail'>
@@ -312,7 +312,7 @@ Gunakan `.post-img-left` dan bungkus thumbnail dan konten dengan `.post-horizont
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-horizontal -->
   </article><!-- /.post -->
@@ -340,7 +340,7 @@ Gunakan `.post-img-right` dan bungkus thumbnail dan konten dengan `.post-horizon
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Content -->
       <div class='post-content'>
@@ -352,7 +352,7 @@ Gunakan `.post-img-right` dan bungkus thumbnail dan konten dengan `.post-horizon
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
       <!-- Image -->
       <div class='post-img-right' itemprop='thumbnail'>
@@ -384,7 +384,7 @@ Gunakan `.post-img-overlay` dan bungkus thumbnail dan konten dengan `.post-overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post post-inverse' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post post-inverse' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-overlay'>
       <!-- Image -->
       <div class='post-img-overlay' itemprop='thumbnail'>
@@ -400,7 +400,7 @@ Gunakan `.post-img-overlay` dan bungkus thumbnail dan konten dengan `.post-overl
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-overlay -->
   </article><!-- /.post -->
@@ -434,7 +434,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -501,7 +501,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -566,7 +566,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -606,7 +606,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
     <!-- Footer -->
     <b:if cond='data:top.showPostLabels'>
@@ -643,7 +643,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -679,7 +679,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
     <!-- Image -->
     <div class='post-img-bottom' itemprop='thumbnail'>
@@ -722,7 +722,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -763,7 +763,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-horizontal -->
     <!-- Footer -->
@@ -803,7 +803,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -840,7 +840,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
       <!-- Image -->
       <div class='post-img-right' itemprop='thumbnail'>
@@ -884,7 +884,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>
@@ -925,7 +925,7 @@ Gunakan `.post-header` dan `.post-footer`. Tempatkan header pada posisi pertama 
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-overlay -->
     <!-- Footer -->
@@ -952,7 +952,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <b:if cond='data:post.firstImageUrl'>
       <div class='post-img-only post-img-cover' expr:style='&quot;min-height: 350px; background-image: url(&quot; + data:post.firstImageUrl + &quot;);&quot;'></div><!-- /.post-img-only -->
@@ -979,7 +979,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <b:if cond='data:post.firstImageUrl'>
       <div class='post-img-top post-img-cover' expr:style='&quot;min-height: 350px; background-image: url(&quot; + data:post.firstImageUrl + &quot;);&quot;'></div><!-- /.post-img-top -->
@@ -997,7 +997,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
   </article><!-- /.post -->
 </b:loop>
@@ -1018,7 +1018,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content -->
     <div class='post-content'>
       <!-- Post title -->
@@ -1029,7 +1029,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
     <!-- Image -->
     <b:if cond='data:post.firstImageUrl'>
@@ -1059,7 +1059,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Image -->
       <b:if cond='data:post.firstImageUrl'>
@@ -1078,7 +1078,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-horizontal -->
   </article><!-- /.post -->
@@ -1102,7 +1102,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Content -->
       <div class='post-content'>
@@ -1114,7 +1114,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
       <!-- Image -->
       <b:if cond='data:post.firstImageUrl'>
@@ -1145,7 +1145,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-overlay'>
       <!-- Image -->
       <b:if cond='data:post.firstImageUrl'>
@@ -1164,7 +1164,7 @@ Tambahkan `.post-img-cover` ke `.post-img-{only, top, bottom, left, right, overl
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-overlay -->
   </article><!-- /.post -->
@@ -1187,7 +1187,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <div class='post-img-only post-img-padding' itemprop='thumbnail'>
       <b:include name='include-thumbnail'/>
@@ -1213,7 +1213,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <div class='post-img-top post-img-padding' itemprop='thumbnail'>
       <b:include name='include-thumbnail'/>
@@ -1228,7 +1228,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
   </article><!-- /.post -->
 </b:loop>
@@ -1251,7 +1251,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content -->
     <div class='post-content'>
       <!-- Post title -->
@@ -1262,7 +1262,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
       </b:if>
       <!-- Post snippet -->
       <p itemprop='articleBody description'><data:post.snippet/></p>
-      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div><!-- /.post-content -->
     <!-- Image -->
     <div class='post-img-bottom post-img-padding' itemprop='thumbnail'>
@@ -1291,7 +1291,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Image -->
       <div class='post-img-left post-img-padding' itemprop='thumbnail'>
@@ -1307,7 +1307,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-horizontal -->
   </article><!-- /.post -->
@@ -1333,7 +1333,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Content -->
       <div class='post-content'>
@@ -1345,7 +1345,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
       <!-- Image -->
       <div class='post-img-right post-img-padding' itemprop='thumbnail'>
@@ -1375,7 +1375,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post post-inverse' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post post-inverse' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-overlay'>
       <!-- Image -->
       <div class='post-img-overlay post-img-padding' itemprop='thumbnail'>
@@ -1391,7 +1391,7 @@ Tambahkan `.post-img-padding` ke `.post-img-{only, top, bottom, left, right, ove
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-overlay -->
   </article><!-- /.post -->
@@ -1428,7 +1428,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <!-- Content -->
       <div class='post-content'>
         <!-- Post title -->
@@ -1465,7 +1465,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <!-- Image -->
       <div class='post-img-only' itemprop='thumbnail'>
         <b:include name='include-thumbnail'/>
@@ -1505,7 +1505,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <!-- Image -->
       <div class='post-img-top' itemprop='thumbnail'>
         <b:include name='include-thumbnail'/>
@@ -1520,7 +1520,7 @@ Bungkus semua `.post` dengan `.post-group`.
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </article><!-- /.post -->
   </b:loop>
@@ -1557,7 +1557,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <!-- Content -->
       <div class='post-content'>
         <!-- Post title -->
@@ -1568,7 +1568,7 @@ Bungkus semua `.post` dengan `.post-group`.
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
       <!-- Image -->
       <div class='post-img-bottom' itemprop='thumbnail'>
@@ -1613,7 +1613,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <div class='post-horizontal'>
         <!-- Image -->
         <div class='post-img-left' itemprop='thumbnail'>
@@ -1629,7 +1629,7 @@ Bungkus semua `.post` dengan `.post-group`.
           </b:if>
           <!-- Post snippet -->
           <p itemprop='articleBody description'><data:post.snippet/></p>
-          <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+          <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
         </div><!-- /.post-content -->
       </div><!-- /.post-horizontal -->
     </article><!-- /.post -->
@@ -1671,7 +1671,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <div class='post-horizontal'>
         <!-- Content -->
         <div class='post-content'>
@@ -1683,7 +1683,7 @@ Bungkus semua `.post` dengan `.post-group`.
           </b:if>
           <!-- Post snippet -->
           <p itemprop='articleBody description'><data:post.snippet/></p>
-          <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+          <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
         </div><!-- /.post-content -->
         <!-- Image -->
         <div class='post-img-right' itemprop='thumbnail'>
@@ -1729,7 +1729,7 @@ Bungkus semua `.post` dengan `.post-group`.
 {% highlight html %}
 <div class='post-group'>
   <b:loop values='data:posts' var='post'>
-    <article class='post post-inverse' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post post-inverse' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <div class='post-overlay'>
         <!-- Image -->
         <div class='post-img-overlay' itemprop='thumbnail'>
@@ -1745,7 +1745,7 @@ Bungkus semua `.post` dengan `.post-group`.
           </b:if>
           <!-- Post snippet -->
           <p itemprop='articleBody description'><data:post.snippet/></p>
-          <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+          <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
         </div><!-- /.post-content -->
       </div><!-- /.post-overlay -->
     </article><!-- /.post -->
@@ -2201,7 +2201,7 @@ Urutan widget dimulai dari atas ke bawah dan dari kiri ke kanan.
 {% highlight html %}
 <div class='post-columns'>
   <b:loop values='data:posts' var='post'>
-    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+    <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
       <!-- Content -->
       <div class='post-content'>
         <!-- Post title -->
@@ -2261,7 +2261,7 @@ Menggunakan [Bootstrap grid system](https://v4-alpha.getbootstrap.com/layout/gri
 <div class='row'>
   <b:loop values='data:posts' var='post'>
     <div class='col-sm-6 col-md-4'>
-      <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+      <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
         <!-- Content -->
         <div class='post-content'>
           <!-- Post title -->
@@ -2303,7 +2303,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
@@ -2318,7 +2318,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2345,7 +2345,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content image -->
     <div class='post-content'>
       <div class='post-img-only' itemprop='thumbnail'>
@@ -2365,7 +2365,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2390,7 +2390,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title and snippet -->
     <div class='post-content'>
       <!-- Post title -->
@@ -2410,7 +2410,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2431,7 +2431,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
@@ -2465,7 +2465,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content image -->
     <div class='post-content'>
       <div class='post-img-only' itemprop='thumbnail'>
@@ -2503,7 +2503,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Image -->
     <div class='post-img-top' itemprop='thumbnail'>
       <b:include name='include-thumbnail'/>
@@ -2521,7 +2521,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2546,7 +2546,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
@@ -2565,7 +2565,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2588,7 +2588,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title and snippet -->
     <div class='post-content'>
       <!-- Post title -->
@@ -2602,7 +2602,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
     <!-- Image -->
     <div class='post-img-bottom' itemprop='thumbnail'>
@@ -2629,7 +2629,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title and snippet -->
     <div class='post-content'>
       <!-- Post title -->
@@ -2647,7 +2647,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div><!-- /.post-img-bottom -->
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2678,7 +2678,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
@@ -2703,7 +2703,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2732,7 +2732,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
@@ -2757,7 +2757,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2843,7 +2843,7 @@ Hanya pada gambar:
 
 {% highlight html %}
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Image -->
       <b:if cond='data:post.firstImageUrl'>
@@ -2862,7 +2862,7 @@ Hanya pada gambar:
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
     </div><!-- /.post-horizontal -->
   </article><!-- /.post -->

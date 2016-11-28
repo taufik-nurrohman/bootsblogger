@@ -1,5 +1,5 @@
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <div class='post-horizontal'>
       <!-- Content -->
       <div class='post-content'>
@@ -36,7 +36,7 @@
         </b:if>
         <!-- Post snippet -->
         <p itemprop='articleBody description'><data:post.snippet/></p>
-        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more</a></p>
+        <p><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
       </div><!-- /.post-content -->
       <!-- Image -->
       <b:if cond='data:post.firstImageUrl'>

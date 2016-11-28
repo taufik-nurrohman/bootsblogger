@@ -1,5 +1,5 @@
 <b:loop values='data:posts' var='post'>
-  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting' role='article'>
+  <article class='post' expr:id='"post-" + data:post.id' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <!-- Header -->
     <b:if cond='data:top.showAuthor or data:top.showTimestamp or data:post.allowComments'>
       <header class='post-header'>

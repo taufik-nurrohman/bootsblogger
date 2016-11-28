@@ -79,14 +79,14 @@
     <div class='container blogger-container'>
       <div class='row blogger-row'>
         <!-- Main -->
-        <main class='main col-md-9 blogger-col-8' id='main' role='main' tabindex='-1'>
+        <main class='main col-md-9 blogger-col-8' id='main' tabindex='-1'>
           <b:section id='main-section' maxwidgets='1' showaddelement='no'>
             <!--(bake /includes/blog-posts.xml)-->
           </b:section>
         </main><!-- /.main -->
 
         <!-- Sidebar -->
-        <aside class='sidebar col-md-3 blogger-col-4' id='sidebar' role='complementary'>
+        <aside class='sidebar col-md-3 blogger-col-4' id='sidebar'>
           <b:section class='wg-box wg-box-faded wg-md-12 wg-sm-6' id='sidebar-section'>
             <b:widget id='HTML1' locked='false' title='Bootsblogger' type='HTML'>
               <b:includable id='main'>
@@ -115,7 +115,7 @@
                     <li><strong>Accessibility</strong></li>
                     <li><a href='http://wave.webaim.org/report#/https://bootsblogger-demo.blogspot.co.id/'>Test accessibility</a></li>
                     <li><strong>Validation</strong></li>
-                    <li><a href='https://validator.w3.org/nu/?doc=https%3A%2F%2Fbootsblogger-demo.blogspot.com%2F'>Test validation</a> (you'll receive a warning, read <a href='http://a11yproject.com/checklist.html#aria-roles'>this article</a>).</li>
+                    <li><a href='https://validator.w3.org/nu/?doc=https%3A%2F%2Fbootsblogger-demo.blogspot.com%2F'>Test validation</a></li>
                   </ul>
                 </div>
               </b:includable>
@@ -189,7 +189,7 @@
 
     <!-- FOOTER
     ================================================== -->
-    <footer class='footer' id='footer' role='contentinfo'>
+    <footer class='footer' id='footer'>
       <div class='container'>
         <!--(bake /includes/foot-content/foot-info.xml)-->
       </div>
