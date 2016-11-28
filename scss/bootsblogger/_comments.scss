@@ -224,8 +224,8 @@
 // Wrapper for add comment and cancel reply button
 //
 
-.comment-add,
-.comment-cancel {
+.comment-add-wrapper,
+.comment-cancel-wrapper {
   display: none;
 
   &.open {

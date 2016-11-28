@@ -67,7 +67,7 @@
 
     $('.comment-form-container-original').addClass('active')
 
-    $('.comment-reply, .comment-add, .comment-cancel').on('click', function () {
+    $('.js-comment-action').on('click', function () {
       $('.comment-form-container-original, .comment-form-container-reply').each(function () {
         if ($(this).find('.comment-form').length) {
           $(this).addClass('active')
@@ -80,19 +80,19 @@
 
     // Add/remove `.open` for `add comment` and `cancel reply` wrapper
 
-    $('.comment-reply, .comment-add, .comment-cancel').on('click', function () {
+    $('.js-comment-action').on('click', function () {
       $('.comment-form-container-original').each(function () {
         if ($(this).find('.comment-form').length) {
-          $('body').find('.comment-add').removeClass('open')
+          $('body').find('.comment-add-wrapper').removeClass('open')
         } else {
-          $('body').find('.comment-add').addClass('open')
+          $('body').find('.comment-add-wrapper').addClass('open')
         }
       })
       $('.comment-form-container-reply').each(function () {
         if ($(this).find('.comment-form').length) {
-          $('body').find('.comment-cancel').addClass('open')
+          $('body').find('.comment-cancel-wrapper').addClass('open')
         } else {
-          $('body').find('.comment-cancel:not(.open)').removeClass('open')
+          $('body').find('.comment-cancel-wrapper:not(.open)').removeClass('open')
         }
       })
     })
@@ -106,7 +106,7 @@
       $('.comment-form').removeClass('comment-form-loading')
     })
 
-    $('.comment-reply, .comment-add, .comment-cancel').on('click', function () {
+    $('.js-comment-action').on('click', function () {
       $('.comment-form').addClass('comment-form-loading')
 
       $('#comment-editor').on('load', function () {

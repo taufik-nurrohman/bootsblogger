@@ -22,8 +22,8 @@
     <!-- Comment form -->
     <b:if cond='data:post.allowNewComments'>
       <div class='comment-form-container-original active' id='comment-form-container-original'>
-        <div class='comment-add mb-1'>
-          <a class='btn btn-block btn-success' href='#comment-form-container-original' onclick='javascript:reply(&quot;cancel&quot;);' role='button'><i aria-hidden='true' class='fa fa-comment'/> Add comment</a>
+        <div class='comment-add-wrapper mb-1'>
+          <a class='btn btn-block btn-success js-comment-action' href='#comment-form-container-original' onclick='javascript:reply(&quot;cancel&quot;);' role='button'><i aria-hidden='true' class='fa fa-comment'/> Add comment</a>
         </div>
         <div class='card card-block comment-form comment-form-loading mb-0' id='comment-form'>
           <data:blogTeamBlogMessage/>
@@ -170,7 +170,7 @@
                 <div class='media-body-footer mt-1'>
                   <ul class='list-inline'>
                     <li class='list-inline-item'>
-                      <a class='comment-reply' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' expr:onclick='&quot;javascript:reply(&amp;quot;&quot; + data:comment.id + &quot;&amp;quot;);&quot;'><i aria-hidden='true' class='fa fa-reply'/> Reply</a>
+                      <a class='comment-reply js-comment-action' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' expr:onclick='&quot;javascript:reply(&amp;quot;&quot; + data:comment.id + &quot;&amp;quot;);&quot;'><i aria-hidden='true' class='fa fa-reply'/> Reply</a>
                     </li>
                   </ul>
                 </div>
@@ -179,8 +179,8 @@
               <!-- Reply form -->
               <b:if cond='!data:comment.isDeleted and data:post.allowNewComments'>
                 <div class='comment-form-container-reply' expr:id='&quot;comment-form-container-reply-&quot; + data:comment.id'>
-                  <div class='comment-cancel mt-1 mb-1'>
-                    <a class='btn btn-sm btn-danger' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' onclick='javascript:reply(&quot;cancel&quot;);' role='button'>Cancel reply</a>
+                  <div class='comment-cancel-wrapper mt-1 mb-1'>
+                    <a class='btn btn-sm btn-danger js-comment-action' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' onclick='javascript:reply(&quot;cancel&quot;);' role='button'>Cancel reply</a>
                   </div>
                 </div>
               </b:if>
