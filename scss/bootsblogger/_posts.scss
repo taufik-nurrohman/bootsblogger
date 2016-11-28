@@ -281,7 +281,7 @@
   }
 }
 
-// Image padded
+// Image padding
 
 .post-img-padding {
   padding: $post-content-padding !important;
@@ -317,7 +317,7 @@
     }
   }
 
-  // Image padded with image overlays
+  // Image padding with image overlays
   &.post-img-overlay + .post-content {
     margin: $post-content-padding;
     @include border-radius($post-border-radius);
