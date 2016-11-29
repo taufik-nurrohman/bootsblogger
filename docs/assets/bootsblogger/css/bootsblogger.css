@@ -2497,12 +2497,12 @@
   display: none;
 }
 
-.comment-add,
-.comment-cancel {
+.comment-add-wrapper,
+.comment-cancel-wrapper {
   display: none;
 }
-.comment-add.open,
-.comment-cancel.open {
+.comment-add-wrapper.open,
+.comment-cancel-wrapper.open {
   display: block;
 }
 
