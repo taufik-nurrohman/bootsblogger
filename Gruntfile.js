@@ -408,8 +408,7 @@ module.exports = function(grunt) {
   grunt.registerTask('compile-sass-docs', ['sass:docs', 'cssmin:docs', 'postcss:docs']);
   grunt.registerTask('test-js-docs', ['jscs:docs']);
   grunt.registerTask('compile-js-docs', ['concat:docs', 'uglify:docs']);
-  grunt.registerTask('compile-jekyll-docs', ['jekyll:docs']);
-  grunt.registerTask('validate-html-docs', ['compile-jekyll-docs', 'htmllint:docs', 'htmlhint:docs']);
+  grunt.registerTask('validate-html-docs', ['jekyll:docs', 'htmllint:docs', 'htmlhint:docs']);
   grunt.registerTask('docs-github', ['jekyll:github']);
   grunt.registerTask('docs', ['test-sass-docs', 'test-js-docs', 'compile-sass-docs', 'compile-js-docs', 'clean:docs', 'copy:docs']);
 
@@ -420,9 +419,11 @@ module.exports = function(grunt) {
     testSubtasks = testSubtasks.concat([
       'test-sass-bootstrap',
       'test-sass-bootsblogger',
-      'test-sass-docs',
       'test-js-bootsblogger',
-      'test-js-docs',
+      'dist-css',
+      'dist-js',
+      'dist-template',
+      'docs'
     ]);
   }
   // Skip HTML validation if running a different subset of the test suite
@@ -434,26 +435,11 @@ module.exports = function(grunt) {
   }
   grunt.registerTask('test', testSubtasks);
 
-  // Compile all.
-  grunt.registerTask('compile', [
-    'clean:dist',
-    'clean:templateAssets',
-    'clean:docs',
-    'compile-sass-bootstrap',
-    'compile-sass-bootsblogger',
-    'compile-sass-docs',
-    'compile-js-bootstrap',
-    'compile-js-bootsblogger',
-    'compile-js-docs',
-    'compile-template',
-    'copy:docs'
-  ]);
-
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['test-sass-bootstrap', 'test-sass-bootsblogger', 'compile-sass-bootstrap', 'compile-sass-bootsblogger']);
+  grunt.registerTask('dist-css', ['compile-sass-bootstrap', 'compile-sass-bootsblogger']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['test-js-bootsblogger', 'compile-js-bootstrap', 'compile-js-bootsblogger']);
+  grunt.registerTask('dist-js', ['compile-js-bootstrap', 'compile-js-bootsblogger']);
 
   // Template distribution task.
   grunt.registerTask('dist-template', ['compile-template']);
@@ -462,7 +448,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['clean:dist', 'clean:templateAssets', 'dist-css', 'dist-js', 'dist-template']);
 
   // Default task.
-  grunt.registerTask('default', ['test', 'compile']);
+  grunt.registerTask('default', ['clean:dist', 'clean:templateAssets', 'test']);
 
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
 

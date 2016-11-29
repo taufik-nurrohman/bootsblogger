@@ -15,7 +15,7 @@
   "homepage": "https://bootsblogger.github.io",
   "author": "Igoy Nawamreh (@igoynawamreh)",
   "scripts": {
-    "test": "grunt test compile"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
