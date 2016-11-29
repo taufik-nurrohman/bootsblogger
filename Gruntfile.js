@@ -4,6 +4,8 @@ module.exports = function(grunt) {
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
 
+  var isTravis = require('is-travis');
+
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
@@ -380,6 +382,13 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
   require('time-grunt')(grunt);
 
+  var runSubset = function (subset) {
+    return !process.env.BOOTSBLOGGER_TEST || process.env.BOOTSBLOGGER_TEST === subset;
+  };
+  var isUndefOrNonZero = function (val) {
+    return val === undefined || val !== '0';
+  };
+
   // CSS task.
   grunt.registerTask('test-sass-bootstrap', ['scsslint:bootstrap']);
   grunt.registerTask('test-sass-bootsblogger', ['scsslint:bootsblogger']);
@@ -404,15 +413,26 @@ module.exports = function(grunt) {
   grunt.registerTask('docs-github', ['jekyll:github']);
   grunt.registerTask('docs', ['test-sass-docs', 'test-js-docs', 'compile-sass-docs', 'compile-js-docs', 'clean:docs', 'copy:docs']);
 
-  // Test all.
-  grunt.registerTask('test', [
-    'test-sass-bootstrap',
-    'test-sass-bootsblogger',
-    'test-sass-docs',
-    'test-js-bootsblogger',
-    'test-js-docs',
-    'validate-html-docs'
-  ]);
+  // Test task.
+  var testSubtasks = [];
+  // Skip core tests if running a different subset of the test suite
+  if (runSubset('core')) {
+    testSubtasks = testSubtasks.concat([
+      'test-sass-bootstrap',
+      'test-sass-bootsblogger',
+      'test-sass-docs',
+      'test-js-bootsblogger',
+      'test-js-docs',
+    ]);
+  }
+  // Skip HTML validation if running a different subset of the test suite
+  if (runSubset('validate-html-docs') &&
+      isTravis &&
+      // Skip HTML5 validator when [skip validator] is in the commit message
+      isUndefOrNonZero(process.env.BOOTSBLOGGER_DO_VALIDATOR)) {
+    testSubtasks.push('validate-html-docs');
+  }
+  grunt.registerTask('test', testSubtasks);
 
   // Compile all.
   grunt.registerTask('compile', [

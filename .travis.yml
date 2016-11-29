@@ -13,6 +13,7 @@ before_install:
   - rvm use 2.2 --fuzzy
   - npm install -g npm@3
   - "export TRAVIS_COMMIT_MSG=\"$(git log --format=%B --no-merges -n 1)\""
+  - echo "$TRAVIS_COMMIT_MSG" | grep '\[skip validator\]'; export BOOTSBLOGGER_DO_VALIDATOR=$?; true
 install:
   - bundle install --deployment --jobs=3
   - npm install
@@ -20,7 +21,14 @@ cache:
   directories:
     - node_modules
     - vendor/bundle
-    - "$HOME/google-cloud-sdk"
 env:
   global:
     - NPM_CONFIG_PROGRESS="false"
+  matrix:
+    - BOOTSBLOGGER_TEST=core
+    - BOOTSBLOGGER_TEST=validate-html-docs
+matrix:
+  fast_finish: true
+  exclude:
+    - node_js: "4"
+      env: BOOTSBLOGGER_TEST=validate-html-docs
