@@ -369,7 +369,7 @@ module.exports = function(grunt) {
       },
       docsJs: {
         files: 'docs/assets/js/src/*.js',
-        tasks: ['compile-js-docs']
+        tasks: ['test-js-docs', 'compile-js-docs']
       },
       bake: {
         files: ['template-src/**/*.xml', 'template-src/**/*.css', 'template-src/**/*.js', '!template-src/**/bootsblogger/**/*', '!template-src/**/bootstrap/**/*', 'template-src/config.json'],
