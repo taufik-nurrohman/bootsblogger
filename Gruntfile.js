@@ -361,7 +361,7 @@ module.exports = function(grunt) {
       },
       bootstrapJs: {
         files: 'js/bootstrap/js/*.js',
-        tasks: ['copy:bootstrapJs', 'copy:docs', 'compile-template']
+        tasks: ['copy-js-bootstrap', 'copy:docs', 'compile-template']
       },
       bootsbloggerJs: {
         files: 'js/bootsblogger/**/*.js',
@@ -397,7 +397,7 @@ module.exports = function(grunt) {
 
   // JS task.
   grunt.registerTask('test-js-bootsblogger', ['jscs:bootsblogger']);
-  grunt.registerTask('compile-js-bootstrap', ['copy:bootstrapJs']); // Just copy
+  grunt.registerTask('copy-js-bootstrap', ['copy:bootstrapJs']);
   grunt.registerTask('compile-js-bootsblogger', ['concat:bootsblogger', 'stamp:bootsblogger', 'uglify:bootsblogger', 'concat:bootsbloggerJSON', 'stamp:bootsbloggerJSON', 'uglify:bootsbloggerJSON']);
 
   // Template task.
@@ -439,7 +439,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-css', ['compile-sass-bootstrap', 'compile-sass-bootsblogger']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['compile-js-bootstrap', 'compile-js-bootsblogger']);
+  grunt.registerTask('dist-js', ['copy-js-bootstrap', 'compile-js-bootsblogger']);
 
   // Template distribution task.
   grunt.registerTask('dist-template', ['compile-template']);
