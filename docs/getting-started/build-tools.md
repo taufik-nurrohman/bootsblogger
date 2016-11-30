@@ -23,18 +23,11 @@ Perintah Grunt yang tersedia:
 
 | Task | Description |
 | --- | --- |
-| `grunt` | Perintah `grunt` akan menjalankan pengujian, kompilasi, dan kompresi; kompilasi dan kompresi CSS dan JavaScript Bootsblogger dan Bootstrap ke dalam `/template/includes/assets`; kompilasi template ke dalam`/dist`; kompilasi dan kompresi berkas-berkas dokumentasi. **Menggunakan [Sass](https://github.com/gruntjs/grunt-contrib-sass), [UglifyJS](https://github.com/gruntjs/grunt-contrib-uglify), [Bake](https://github.com/MathiasPaumgarten/grunt-bake), dan [Grunt Jekyll plugin](https://github.com/dannygarcia/grunt-jekyll).** |
-| `grunt dist` | Kompilasi dan kompresi CSS dan JavaScript Bootsblogger dan Bootstrap ke dalam `/template/includes/assets`; dan kemudian kompilasi template ke dalam direktori `/dist`. |
-| `grunt test` | Menguji CSS, HTML, dan JavaScript untuk disesuaikan dengan aturan yang telah ditentukan. **Menggunakan [scss-lint](https://github.com/ahmednuaman/grunt-scss-lint), [JSCS](https://github.com/jscs-dev/grunt-jscs), [HTML validation](https://github.com/jzaefferer/grunt-html), dan [HTMLHint](https://github.com/yaniswang/grunt-htmlhint)**. |
-| `grunt docs` | Pengujian, kompilasi, dan kompresi CSS, JavaScript, dan asset lainnya yang digunakan dalam menjalankan dokumentasi secara lokal dengan `jekyll serve`. |
-| `grunt watch` | Gunakan perintah ini untuk kenyamanan dalam bekerja pada kode sumber Bootsblogger. Dengan perintah ini, otomatis akan melakukan pengujian, kompilasi, dan kompresi CSS, JavaScript, template, dan Jekyll ketika Anda menyimpan perubahan yang Anda lakukan. |
-
-Untuk lebih jelas, berikut adalah cara kerja yang paling nyaman pada kode sumber Bootsblogger:
-
-1. Buka dua *command line*.
-2. Dari *command line*, pindah ke direktori `/bootsblogger` dan jalankan perintah `grunt watch` dan `bundle exec jekyll serve` pada masing-masing *command line*.
-3. Mulai bekerja dengan kode sumber.
-4. Dan setelah semuanya selesai, keluarkan perintah nomor 2, dan jalankan perintah `grunt test` dan terakhir `grunt`.
+| `grunt` | Jalankan perintah `grunt` untuk menjalankan pengujian secara lokal dan kompilasi CSS dan JavaScript Bootsblogger dan Bootstrap ke dalam `/template/includes/assets`; kompilasi template ke dalam`/dist`; dan kompilasi CSS dan JavaScript dokumentasi. **Menggunakan [Sass (grunt-contrib-sass)](https://github.com/gruntjs/grunt-contrib-sass), [Autoprefixer](https://github.com/postcss/autoprefixer), [UglifyJS (grunt-contrib-uglify)](https://github.com/gruntjs/grunt-contrib-uglify), dan [Bake (grunt-bake)](https://github.com/MathiasPaumgarten/grunt-bake).** |
+| `grunt dist` | Kompilasi CSS dan JavaScript Bootsblogger dan Bootstrap ke dalam `/template/includes/assets` dan kompilasi template ke dalam `/dist`. |
+| `grunt test` | Menjalankan [scss-lint (grunt-scss-lint)](https://github.com/ahmednuaman/grunt-scss-lint), [JSCS (grunt-jscs)](https://github.com/jscs-dev/grunt-jscs), [HTML validation (grunt-html)](https://github.com/jzaefferer/grunt-html), dan [HTML validation (grunt-htmlhint)](https://github.com/yaniswang/grunt-htmlhint) (digunakan untuk CI). |
+| `grunt docs` | Membangun dan menguji CSS, JavaScript, dan asset lainnya yang digunakan dalam menjalankan dokumentasi secara lokal dengan `jekyll serve`. |
+| `grunt watch` | Gunakan perintah ini untuk kenyamanan dalam bekerja pada kode sumber Bootsblogger. Dengan perintah ini, otomatis akan melakukan pengujian dan kompilasi CSS, JavaScript, dan template ketika Anda menyimpan perubahan yang Anda lakukan. |
 
 ## Local documentation
 
