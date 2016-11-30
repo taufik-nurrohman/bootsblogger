@@ -469,6 +469,15 @@
     padding-right: .25rem;
     padding-left: .25rem;
   }
+
+  @include media-breakpoint-down(xs) {
+    > li {
+      display: block;
+    }
+    > li + li {
+      margin-top: .65rem;
+    }
+  }
 }
 
 
@@ -502,6 +511,15 @@
     display: inline-block;
     padding-right: .25rem;
     padding-left: .25rem;
+  }
+
+  @include media-breakpoint-down(xs) {
+    > li {
+      display: block;
+    }
+    > li + li {
+      margin-top: .65rem;
+    }
   }
 }
 
