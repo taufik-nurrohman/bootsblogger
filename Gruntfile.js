@@ -349,15 +349,15 @@ module.exports = function(grunt) {
     watch: {
       bootstrapSass: {
         files: ['scss/bootstrap/**/*.scss', 'scss/_custom.scss'],
-        tasks: ['test-sass-bootstrap', 'compile-sass-bootstrap', 'copy:docs', 'compile-template']
+        tasks: ['test-scss-bootstrap', 'compile-sass-bootstrap', 'copy:docs', 'compile-template']
       },
       bootsbloggerSass: {
         files: ['scss/bootsblogger/**/*.scss', 'scss/_custom.scss'],
-        tasks: ['test-sass-bootsblogger', 'compile-sass-bootsblogger', 'copy:docs', 'compile-template']
+        tasks: ['test-scss-bootsblogger', 'compile-sass-bootsblogger', 'copy:docs', 'compile-template']
       },
       docsSass: {
         files: 'docs/assets/scss/**/*.scss',
-        tasks: ['test-sass-docs', 'compile-sass-docs']
+        tasks: ['test-scss-docs', 'compile-sass-docs']
       },
       bootstrapJs: {
         files: 'js/bootstrap/js/*.js',
@@ -390,8 +390,8 @@ module.exports = function(grunt) {
   };
 
   // CSS task.
-  grunt.registerTask('test-sass-bootstrap', ['scsslint:bootstrap']);
-  grunt.registerTask('test-sass-bootsblogger', ['scsslint:bootsblogger']);
+  grunt.registerTask('test-scss-bootstrap', ['scsslint:bootstrap']);
+  grunt.registerTask('test-scss-bootsblogger', ['scsslint:bootsblogger']);
   grunt.registerTask('compile-sass-bootstrap', ['sass:bootstrap', 'cssmin:bootstrap', 'postcss:bootstrap']);
   grunt.registerTask('compile-sass-bootsblogger', ['sass:bootsblogger', 'cssmin:bootsblogger', 'postcss:bootsblogger']);
 
@@ -404,21 +404,21 @@ module.exports = function(grunt) {
   grunt.registerTask('compile-template', ['bake:template']);
 
   // Docs task.
-  grunt.registerTask('test-sass-docs', ['scsslint:docs']);
+  grunt.registerTask('test-scss-docs', ['scsslint:docs']);
   grunt.registerTask('compile-sass-docs', ['sass:docs', 'cssmin:docs', 'postcss:docs']);
   grunt.registerTask('test-js-docs', ['jscs:docs']);
   grunt.registerTask('compile-js-docs', ['concat:docs', 'uglify:docs']);
   grunt.registerTask('validate-html-docs', ['jekyll:docs', 'htmllint:docs', 'htmlhint:docs']);
   grunt.registerTask('docs-github', ['jekyll:github']);
-  grunt.registerTask('docs', ['test-sass-docs', 'test-js-docs', 'compile-sass-docs', 'compile-js-docs', 'clean:docs', 'copy:docs']);
+  grunt.registerTask('docs', ['test-scss-docs', 'test-js-docs', 'compile-sass-docs', 'compile-js-docs', 'clean:docs', 'copy:docs']);
 
   // Test task.
   var testSubtasks = [];
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core')) {
     testSubtasks = testSubtasks.concat([
-      'test-sass-bootstrap',
-      'test-sass-bootsblogger',
+      'test-scss-bootstrap',
+      'test-scss-bootsblogger',
       'test-js-bootsblogger',
       'dist-css',
       'dist-js',
