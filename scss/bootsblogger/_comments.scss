@@ -118,19 +118,6 @@
   }
 }
 
-// Hide double `<br>` after block elements
-.comment-body {
-  div,
-  ul,
-  ol,
-  blockquote,
-  pre {
-    + br + br {
-      display: none;
-    }
-  }
-}
-
 
 //
 // Footer
