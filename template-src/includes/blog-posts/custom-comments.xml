@@ -103,160 +103,158 @@
       </div>
     </b:if>
 
-    <ul class='media-list mb-0'>
-      <b:loop values='data:post.comments' var='comment'>
-        <b:if cond='!data:comment.inReplyTo'>
+    <b:loop values='data:post.comments' var='comment'>
+      <b:if cond='!data:comment.inReplyTo'>
 
-          <!-- Parent -->
+        <!-- Parent -->
 
-          <li class='media media-parent mt-2' expr:id='data:comment.anchorName'>
+        <div class='media media-parent mt-2' expr:id='data:comment.anchorName'>
 
-            <div class='media-left comment-avatar'>
-              <b:if cond='data:blog.enabledCommentProfileImages'>
-                <data:comment.authorAvatarImage/>
+          <div class='media-left comment-avatar'>
+            <b:if cond='data:blog.enabledCommentProfileImages'>
+              <data:comment.authorAvatarImage/>
+            </b:if>
+          </div>
+
+          <div class='media-body'>
+            <!-- Header -->
+            <div class='media-body-header'>
+              <div class='clearfix'>
+                <div class='float-xs-left'>
+                  <ul class='list-inline mb-0'>
+                    <b:if cond='data:comment.authorUrl'>
+                      <li class='list-inline-item'><a class='comment-name comment-name-link' expr:href='data:comment.authorUrl'><data:comment.author/></a></li>
+                    <b:else/>
+                      <li class='list-inline-item'><span class='comment-name'><data:comment.author/></span></li>
+                    </b:if>
+                    <b:if cond='data:comment.author == data:post.author'>
+                      <li class='list-inline-item'><span class='tag tag-default comment-mod'>MOD</span></li>
+                    </b:if>
+                  </ul>
+                </div>
+                <div class='float-xs-right'>
+                  <div class='dropdown'>
+                    <a class='comment-dropdown' data-toggle='dropdown' href='javascript:;'><i aria-hidden='true' class='fa fa-ellipsis-v comment-dropdown-icon'/></a>
+                    <div class='dropdown-menu dropdown-menu-right'>
+                      <b:if cond='!data:comment.isDeleted'>
+                        <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:comment.id'><i aria-hidden='true' class='fa fa-trash'/> Delete</a>
+                      <b:else/>
+                        <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:comment.id'><i aria-hidden='true' class='fa fa-trash'/> Remove forever</a>
+                      </b:if>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='clearfix'>
+                <ul class='list-inline mb-0'>
+                  <li class='list-inline-item'><a class='comment-permalink' data-placement='top' data-toggle='tooltip' expr:href='data:comment.url' title='Permalink'>#</a> <span class='comment-timestamp'><data:comment.timestamp/></span></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class='comment-body-content mt-1'>
+              <b:if cond='data:comment.isDeleted'>
+                <div class='alert alert-danger mb-0' role='alert'>
+                  <a class='close' data-placement='top' data-toggle='tooltip' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:comment.id' title='Remove forever'><i aria-hidden='true' class='fa fa-remove'/></a>
+                  <data:comment.body/>
+                </div>
+              <b:else/>
+                <div class='comment-body'>
+                  <data:comment.body/>
+                </div>
               </b:if>
             </div>
+            <!-- Footer -->
+            <b:if cond='!data:comment.isDeleted and data:post.allowNewComments'>
+              <div class='media-body-footer mt-1'>
+                <ul class='list-inline mb-0'>
+                  <li class='list-inline-item'>
+                    <a class='comment-reply js-comment-action' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' expr:onclick='&quot;javascript:reply(&amp;quot;&quot; + data:comment.id + &quot;&amp;quot;);&quot;'><i aria-hidden='true' class='fa fa-reply'/> Reply</a>
+                  </li>
+                </ul>
+              </div>
+            </b:if>
 
-            <div class='media-body'>
-              <!-- Header -->
-              <div class='media-body-header'>
-                <div class='clearfix'>
-                  <div class='float-xs-left'>
-                    <ul class='list-inline'>
-                      <b:if cond='data:comment.authorUrl'>
-                        <li class='list-inline-item'><a class='comment-name comment-name-link' expr:href='data:comment.authorUrl'><data:comment.author/></a></li>
-                      <b:else/>
-                        <li class='list-inline-item'><span class='comment-name'><data:comment.author/></span></li>
-                      </b:if>
-                      <b:if cond='data:comment.author == data:post.author'>
-                        <li class='list-inline-item'><span class='tag tag-default comment-mod'>MOD</span></li>
-                      </b:if>
-                    </ul>
-                  </div>
-                  <div class='float-xs-right'>
-                    <div class='dropdown'>
-                      <a class='comment-dropdown' data-toggle='dropdown' href='javascript:;'><i aria-hidden='true' class='fa fa-ellipsis-v comment-dropdown-icon'/></a>
-                      <div class='dropdown-menu dropdown-menu-right'>
-                        <b:if cond='!data:comment.isDeleted'>
-                          <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:comment.id'><i aria-hidden='true' class='fa fa-trash'/> Delete</a>
-                        <b:else/>
-                          <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:comment.id'><i aria-hidden='true' class='fa fa-trash'/> Remove forever</a>
-                        </b:if>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class='clearfix'>
-                  <ul class='list-inline'>
-                    <li class='list-inline-item'><a class='comment-permalink' data-placement='top' data-toggle='tooltip' expr:href='data:comment.url' title='Permalink'>#</a> <span class='comment-timestamp'><data:comment.timestamp/></span></li>
-                  </ul>
+            <!-- Reply form -->
+            <b:if cond='!data:comment.isDeleted and data:post.allowNewComments'>
+              <div class='comment-form-container-reply' expr:id='&quot;comment-form-container-reply-&quot; + data:comment.id'>
+                <div class='comment-cancel-wrapper mt-1 mb-1'>
+                  <a class='btn btn-sm btn-danger js-comment-action' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' onclick='javascript:reply(&quot;cancel&quot;);' role='button'>Cancel reply</a>
                 </div>
               </div>
-              <!-- Content -->
-              <div class='comment-body-content mt-1'>
-                <b:if cond='data:comment.isDeleted'>
-                  <div class='alert alert-danger mb-0' role='alert'>
-                    <a class='close' data-placement='top' data-toggle='tooltip' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:comment.id' title='Remove forever'><i aria-hidden='true' class='fa fa-remove'/></a>
-                    <data:comment.body/>
+            </b:if>
+
+            <!-- Children -->
+
+            <b:loop values='data:post.comments' var='replies'>
+              <b:if cond='data:replies.inReplyTo == data:comment.id'>
+
+                <div class='media media-children mt-2' expr:id='data:replies.anchorName'>
+
+                  <div class='media-left comment-avatar'>
+                    <b:if cond='data:blog.enabledCommentProfileImages'>
+                      <data:replies.authorAvatarImage/>
+                    </b:if>
                   </div>
-                <b:else/>
-                  <div class='comment-body'>
-                    <data:comment.body/>
-                  </div>
-                </b:if>
-              </div>
-              <!-- Footer -->
-              <b:if cond='!data:comment.isDeleted and data:post.allowNewComments'>
-                <div class='media-body-footer mt-1'>
-                  <ul class='list-inline'>
-                    <li class='list-inline-item'>
-                      <a class='comment-reply js-comment-action' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' expr:onclick='&quot;javascript:reply(&amp;quot;&quot; + data:comment.id + &quot;&amp;quot;);&quot;'><i aria-hidden='true' class='fa fa-reply'/> Reply</a>
-                    </li>
-                  </ul>
-                </div>
-              </b:if>
 
-              <!-- Reply form -->
-              <b:if cond='!data:comment.isDeleted and data:post.allowNewComments'>
-                <div class='comment-form-container-reply' expr:id='&quot;comment-form-container-reply-&quot; + data:comment.id'>
-                  <div class='comment-cancel-wrapper mt-1 mb-1'>
-                    <a class='btn btn-sm btn-danger js-comment-action' expr:href='&quot;#comment-form-container-reply-&quot; + data:comment.id' onclick='javascript:reply(&quot;cancel&quot;);' role='button'>Cancel reply</a>
-                  </div>
-                </div>
-              </b:if>
-
-              <!-- Children -->
-
-              <b:loop values='data:post.comments' var='replies'>
-                <b:if cond='data:replies.inReplyTo == data:comment.id'>
-
-                  <div class='media media-children mt-2' expr:id='data:replies.anchorName'>
-
-                    <div class='media-left comment-avatar'>
-                      <b:if cond='data:blog.enabledCommentProfileImages'>
-                        <data:replies.authorAvatarImage/>
-                      </b:if>
-                    </div>
-
-                    <div class='media-body'>
-                      <!-- Header -->
-                      <div class='media-body-header'>
-                        <div class='clearfix'>
-                          <div class='float-xs-left'>
-                            <ul class='list-inline'>
-                              <b:if cond='data:replies.authorUrl'>
-                                <li class='list-inline-item'><a class='comment-name comment-name-link' expr:href='data:replies.authorUrl'><data:replies.author/></a></li>
+                  <div class='media-body'>
+                    <!-- Header -->
+                    <div class='media-body-header'>
+                      <div class='clearfix'>
+                        <div class='float-xs-left'>
+                          <ul class='list-inline mb-0'>
+                            <b:if cond='data:replies.authorUrl'>
+                              <li class='list-inline-item'><a class='comment-name comment-name-link' expr:href='data:replies.authorUrl'><data:replies.author/></a></li>
+                            <b:else/>
+                              <li class='list-inline-item'><span class='comment-name'><data:replies.author/></span></li>
+                            </b:if>
+                            <b:if cond='data:replies.author == data:post.author'>
+                              <li class='list-inline-item'><span class='tag tag-default comment-mod'>MOD</span></li>
+                            </b:if>
+                          </ul>
+                        </div>
+                        <div class='float-xs-right'>
+                          <div class='dropdown'>
+                            <a class='comment-dropdown' data-toggle='dropdown' href='javascript:;'><i aria-hidden='true' class='fa fa-ellipsis-v comment-dropdown-icon'/></a>
+                            <div class='dropdown-menu dropdown-menu-right'>
+                              <b:if cond='!data:replies.isDeleted'>
+                                <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:replies.id'><i aria-hidden='true' class='fa fa-trash'/> Delete</a>
                               <b:else/>
-                                <li class='list-inline-item'><span class='comment-name'><data:replies.author/></span></li>
+                                <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:replies.id'><i aria-hidden='true' class='fa fa-trash'/> Remove forever</a>
                               </b:if>
-                              <b:if cond='data:replies.author == data:post.author'>
-                                <li class='list-inline-item'><span class='tag tag-default comment-mod'>MOD</span></li>
-                              </b:if>
-                            </ul>
-                          </div>
-                          <div class='float-xs-right'>
-                            <div class='dropdown'>
-                              <a class='comment-dropdown' data-toggle='dropdown' href='javascript:;'><i aria-hidden='true' class='fa fa-ellipsis-v comment-dropdown-icon'/></a>
-                              <div class='dropdown-menu dropdown-menu-right'>
-                                <b:if cond='!data:replies.isDeleted'>
-                                  <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:replies.id'><i aria-hidden='true' class='fa fa-trash'/> Delete</a>
-                                <b:else/>
-                                  <a class='dropdown-item' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:replies.id'><i aria-hidden='true' class='fa fa-trash'/> Remove forever</a>
-                                </b:if>
-                              </div>
                             </div>
                           </div>
                         </div>
-                        <div class='clearfix'>
-                          <ul class='list-inline'>
-                            <li class='list-inline-item'><a class='comment-permalink' data-placement='top' data-toggle='tooltip' expr:href='data:replies.url' title='Permalink'>#</a> <span class='comment-timestamp'><data:replies.timestamp/></span></li>
-                          </ul>
+                      </div>
+                      <div class='clearfix'>
+                        <ul class='list-inline mb-0'>
+                          <li class='list-inline-item'><a class='comment-permalink' data-placement='top' data-toggle='tooltip' expr:href='data:replies.url' title='Permalink'>#</a> <span class='comment-timestamp'><data:replies.timestamp/></span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- Content -->
+                    <div class='comment-body-content mt-1'>
+                      <b:if cond='data:replies.isDeleted'>
+                        <div class='alert alert-danger mb-0' role='alert'>
+                          <a class='close' data-placement='top' data-toggle='tooltip' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:replies.id' title='Remove forever'><i aria-hidden='true' class='fa fa-remove'/></a>
+                          <data:replies.body/>
                         </div>
-                      </div>
-                      <!-- Content -->
-                      <div class='comment-body-content mt-1'>
-                        <b:if cond='data:replies.isDeleted'>
-                          <div class='alert alert-danger mb-0' role='alert'>
-                            <a class='close' data-placement='top' data-toggle='tooltip' expr:href='&quot;http://www.blogger.com/delete-comment.g?blogID=&quot; + data:blog.blogId + &quot;&amp;amp;postID=&quot; + data:replies.id' title='Remove forever'><i aria-hidden='true' class='fa fa-remove'/></a>
-                            <data:replies.body/>
-                          </div>
-                        <b:else/>
-                          <div class='comment-body'>
-                            <data:replies.body/>
-                          </div>
-                        </b:if>
-                      </div>
-                    </div><!-- /.media-body children -->
-                  </div><!-- /.media children -->
-                </b:if><!-- / replies.inReplyTo -->
-              </b:loop>
-              <!-- Replies END -->
+                      <b:else/>
+                        <div class='comment-body'>
+                          <data:replies.body/>
+                        </div>
+                      </b:if>
+                    </div>
+                  </div><!-- /.media-body children -->
+                </div><!-- /.media children -->
+              </b:if><!-- / replies.inReplyTo -->
+            </b:loop>
+            <!-- Replies END -->
 
-            </div><!-- /.media-body parent -->
-          </li><!-- /.media parent -->
-        </b:if><!-- / !comment.inReplyTo -->
-      </b:loop>
-    </ul>
+          </div><!-- /.media-body parent -->
+        </div><!-- /.media parent -->
+      </b:if><!-- / !comment.inReplyTo -->
+    </b:loop>
 
     <!-- Pagination -->
     <b:if cond='data:post.commentPagingRequired'>
