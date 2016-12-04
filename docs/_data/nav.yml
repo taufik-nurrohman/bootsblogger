@@ -4,6 +4,7 @@
     - title: Download
     - title: Contents
     - title: Build tools
+    - title: Best practices
 
 - title: Core template
   pages:
@@ -39,12 +40,6 @@
     - title: Labels custom
     - title: Labels select
     - title: Count
-
-- title: Best practices
-  pages:
-    - title: Template precompiled
-    - title: Template source code
-    - title: Sass files
 
 - title: About
   pages:
