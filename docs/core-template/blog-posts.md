@@ -238,7 +238,7 @@ Untuk **#1** sampai dengan **#12** harus menggunakan tag kondisional, karena ini
       </tr>
       <tr>
         <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>Ini adalah pengganti <em>backlinks</em>. Selain pada halaman item, kode ini hanya menampilkan <em>popover</em> yang berisi URL.</td>
+        <td>Ini adalah pengganti <em>backlinks</em>.</td>
       </tr>
     </tbody>
 
