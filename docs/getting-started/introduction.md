@@ -28,6 +28,6 @@ Bootsblogger dirancang menggunakan aturan standar *design* dan *development* ter
 
 ## Quick start
 
-Sebelum memulai pastikan Anda mengetahui apa itu Bootstrap, untuk mempelajarinya silahkan kunjungi halaman dokumentasi Bootstrap di <https://v4-alpha.getbootstrap.com>.
+Sebelum memulai pastikan Anda mengetahui apa itu Bootstrap, untuk mempelajarinya silakan kunjungi halaman dokumentasi Bootstrap di <https://v4-alpha.getbootstrap.com>.
 
 Masuk ke halaman [download]({{ site.baseurl }}/getting-started/download/) Bootsblogger.

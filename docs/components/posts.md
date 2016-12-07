@@ -2281,7 +2281,7 @@ Menggunakan [Bootstrap grid system](https://v4-alpha.getbootstrap.com/layout/gri
 
 ## Content block
 
-Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah ini hanya contoh, silahkan sesuaikan konten dengan kebutuhan Anda.
+Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah ini hanya contoh, silakan sesuaikan konten dengan kebutuhan Anda.
 
 ### Basic example
 

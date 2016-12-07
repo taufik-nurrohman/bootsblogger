@@ -53,7 +53,7 @@ Memuat konten atau berkas-berkas yang ada di dalam `includes/`:
 <!--(bake /includes/path/file)-->
 {% endhighlight %}
 
-Untuk penggunaan Bake lebih lanjut, silahkan baca dokumentasinya di [halaman projek Bake](https://github.com/MathiasPaumgarten/grunt-bake).
+Untuk penggunaan Bake lebih lanjut, silakan baca dokumentasinya di [halaman projek Bake](https://github.com/MathiasPaumgarten/grunt-bake).
 
 ## Code guide
 
