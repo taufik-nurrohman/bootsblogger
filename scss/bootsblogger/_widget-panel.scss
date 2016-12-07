@@ -335,3 +335,5 @@
 .wg-panel-outline-white {
   @include wg-panel-outline-variant($wg-panel-white-bg);
 }
+
+// scss-lint:enable QualifyingElement

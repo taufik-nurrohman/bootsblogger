@@ -183,3 +183,5 @@
 .wg-box-outline-white {
   @include wg-box-outline-variant($wg-box-white-bg);
 }
+
+// scss-lint:enable QualifyingElement
