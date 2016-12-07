@@ -33,11 +33,11 @@ Perintah Grunt yang tersedia:
 
 Menjalankan dokumentasi secara lokal membutuhkan Jekyll. Berikut adalah cara menjalankannya:
 
-1. Kembali ke [tooling setup](#tooling-setup) [No. 4] di atas untuk instalasi Jekyll dan dependensi Ruby lainnya dengan `bundle install`. (jika belum)
+1. Kembali ke [tooling setup](#tooling-setup) di atas untuk instalasi Jekyll dan dependensi Ruby lainnya dengan `bundle install`.
 2. Dari direktori `/bootsblogger`, jalankan perintah `bundle exec jekyll serve`.
-3. Buka <http://localhost:9001> pada *browser* Anda, selesai.
+3. Buka <http://localhost:9001> di *browser* Anda, selesai.
 
-Pelajari lebih lanjut tentang [Jekyll](https://jekyllrb.com/docs/home/).
+Pelajari lebih lanjut tentang penggunaan Jekyll dengan membaca [dokumentasinya](https://jekyllrb.com/docs/home/).
 
 ## Troubleshooting
 
