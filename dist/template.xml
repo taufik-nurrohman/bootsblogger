@@ -12,7 +12,6 @@
     ================================================= -->
     <!-- Remove Blogger's default CSS -->
     <!-- And create grid system for Blogger layout. -->
-    <!-- For more information, see: (https://bootsblogger.github.io/core-template/head/#remove-bloggers-default-css). -->
     &lt;style type=&quot;text/css&quot;&gt;
     &lt;!--/*<b:skin><![CDATA[
 
@@ -1901,7 +1900,7 @@
     //]]>
     </script>
 
-     <!-- Bootsblogger JavaScript -->
+    <!-- Bootsblogger JavaScript -->
     <script>
     //<![CDATA[
     /*!
