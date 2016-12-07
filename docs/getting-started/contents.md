@@ -11,7 +11,7 @@ Bootsblogger tersedia dalam dua pilihan, yaitu terkompilasi atau kode sumber.
 
 Bootsblogger yang terkompilasi hanya berisi template dasar Bootsblogger hasil kompilasi dari kode sumber.
 
-{% highlight bash %}
+{% highlight plaintext %}
 bootsblogger/
 └── dist/
     └── template.xml
@@ -23,7 +23,7 @@ Pilihan ini tersedia untuk Anda yang ingin membangun template dengan hanya mengg
 
 Kode sumber Bootsblogger berisi CSS, JavaScript, dan template yang terkompilasi. Dan juga kode sumber Sass, JavaScript, template, dan berkas-berkas dokumentasi. Untuk lebih jelas lihat struktur di bawah ini: 
 
-{% highlight bash %}
+{% highlight plaintext %}
 bootsblogger/
 ├── dist/
 │   └── template.xml

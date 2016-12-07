@@ -30,7 +30,7 @@ Untuk membangun template di dalam kode sumber Anda harus memahami dasar-dasar **
 
 ### Struktur direktori
 
-{% highlight bash %}
+{% highlight plaintext %}
 bootsblogger/
 └── template-src/
     ├── includes/ # semua konten template disimpan di dalam `includes/`.
