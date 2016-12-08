@@ -44,6 +44,6 @@ bootsblogger/
 
 Di dalam direktori `scss/` dan `js/` terdapat kode sumber untuk CSS dan JavaScript Bootstrap dan Bootsblogger yang akan dikompilasi ke dalam `template-src/includes/assets/`.
 
-Berkas `scss/_custom.scss` digunakan untuk [mengubahsuaikan]({{ site.baseurl }}/getting-started/options/) variabel Sass Bootstrap dan Bootsblogger.
+Berkas `scss/_custom.scss` digunakan untuk [mengubahsuaikan variabel Sass]({{ site.baseurl }}/getting-started/options/) Bootstrap dan Bootsblogger.
 
 Berkas `template-src/template-src.xml` adalah berkas utama template yang akan dikompilasi ke dalam `dist/`, ini menggunakan **[Bake](https://github.com/MathiasPaumgarten/grunt-bake)**—untuk mengurai template menjadi beberapa bagian sehingga akan mempermudah proses pembuatan dan pengeditan template, juga memanfaatkan fitur-fitur Bake yang tersedia, seperti dengan adanya `config.json` dan lainnya.

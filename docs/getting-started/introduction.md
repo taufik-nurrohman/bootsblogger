@@ -20,7 +20,7 @@ Sass Bootstrap dapat disesuaikan dan dikompilasi langsung di dalam kode sumber B
 
 #### Keindahan
 
-Dari banyaknya komponen yang tersedia, Anda dapat dengan mudah mendesain ulang semua komponen sesuai dengan desain yang Anda inginkan—baik itu komponen Bootstrap maupun Bootsblogger—dengan mengubah nilai-nilai variabel Sass, atau Anda dapat menciptakan sebuah komponen baru.
+Dari banyaknya komponen yang tersedia, Anda dapat dengan mudah mendesain ulang semua komponen sesuai dengan yang Anda inginkan—baik itu komponen Bootstrap maupun Bootsblogger—dengan [mengubahsuaikan variabel Sass]({{ site.baseurl }}/getting-started/options/), atau Anda dapat menciptakan sebuah komponen baru.
 
 #### Kekinian
 
