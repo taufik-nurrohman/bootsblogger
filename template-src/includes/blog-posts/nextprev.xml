@@ -1,4 +1,4 @@
-<nav class='text-xs-center mb-1'>
+<nav class='blog-pagination'>
   <b:if cond='data:newerPageUrl'>
     <a class='btn btn-secondary float-xs-left' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' role='button'>Newer</a>
   <b:else/>

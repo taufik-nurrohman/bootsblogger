@@ -66,6 +66,20 @@ body {}
 
 
 /*
+ * Pagination
+ */
+
+.blog-pagination {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+
+/*
  * Footer
  */
 
