@@ -1,6 +1,6 @@
 {
   "name": "bootsblogger",
-  "description": "Bootsblogger adalah sebuah template dasar, dengan fitur-fitur yang luar biasa, untuk menciptakan template Blogger yang luar biasa.",
+  "description": "A Starter Template for Blogger using Bootstrap.",
   "version": "1.0.0-alpha.1",
   "keywords": [
     "css",
