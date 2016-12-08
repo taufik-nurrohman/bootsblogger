@@ -79,14 +79,14 @@
     <div class='container blogger-container'>
       <div class='row blogger-row'>
         <!-- Main -->
-        <main class='main col-md-9 blogger-col-8' id='main' tabindex='-1'>
+        <main class='blog-main col-md-9 blogger-col-8' id='blog-main' tabindex='-1'>
           <b:section id='main-section' maxwidgets='1' showaddelement='no'>
             <!--(bake /includes/blog-posts.xml)-->
           </b:section>
-        </main><!-- /.main -->
+        </main><!-- /.blog-main -->
 
         <!-- Sidebar -->
-        <aside class='sidebar col-md-3 blogger-col-4' id='sidebar'>
+        <aside class='blog-sidebar col-md-3 blogger-col-4' id='blog-sidebar'>
           <b:section class='wg-box wg-box-faded wg-md-12 wg-sm-6' id='sidebar-section'>
             <b:widget id='HTML1' locked='false' title='Bootsblogger' type='HTML'>
               <b:includable id='main'>
@@ -121,7 +121,7 @@
               </b:includable>
             </b:widget>
           </b:section>
-        </aside><!-- /.sidebar -->
+        </aside><!-- /.blog-sidebar -->
       </div><!-- /.row -->
     </div><!-- /.container -->
 
@@ -189,7 +189,7 @@
 
     <!-- FOOTER
     ================================================== -->
-    <footer class='footer' id='footer'>
+    <footer class='blog-footer' id='blog-footer'>
       <div class='container'>
         <!--(bake /includes/foot-content/foot-info.xml)-->
       </div>
