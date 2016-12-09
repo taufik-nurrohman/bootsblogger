@@ -204,5 +204,4 @@
   <!-- Remove Blogger's default JavaScript -->
   &lt;!--</body>--&gt;
   &lt;/body&gt;
-  <!-- Or you can use normal `</body>` tag -->
 </HTML>
