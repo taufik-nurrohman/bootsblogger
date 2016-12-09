@@ -1,7 +1,7 @@
 // scss-lint:disable QualifyingElement
 
 .wg-panel > .widget {
-  margin-bottom: $wg-panel-spacer-y;
+  margin-bottom: $wg-panel-margin-bottom;
   @include border-radius($wg-panel-border-radius);
   @include box-shadow($wg-panel-box-shadow);
 }
@@ -70,7 +70,7 @@
 //
 
 .wg-panel-group {
-  margin-bottom: $wg-panel-spacer-y;
+  margin-bottom: $wg-panel-margin-bottom;
   @include border-radius($wg-panel-border-radius);
   @include box-shadow($wg-panel-box-shadow);
 }
