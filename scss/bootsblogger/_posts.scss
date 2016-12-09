@@ -4,7 +4,7 @@
 
 .post {
   position: relative;
-  margin-bottom: $post-spacer-y;
+  margin-bottom: $post-margin-bottom;
   background-color: $post-bg-color;
   border: $post-border-width solid $post-border-color;
   @include border-radius($post-border-radius);
@@ -41,7 +41,7 @@
 
 .post-title {
   margin-top: 0;
-  margin-bottom: ($post-spacer-y / 2);
+  margin-bottom: ($post-margin-bottom / 2);
 
   .post-title-link {
     color: $post-title-link-color;
@@ -339,7 +339,7 @@
 //
 
 .post-group {
-  margin-bottom: $post-spacer-y;
+  margin-bottom: $post-margin-bottom;
   @include border-radius($post-border-radius);
   @include box-shadow($post-box-shadow);
 
@@ -444,7 +444,7 @@
 //
 
 .post-meta {
-  margin-bottom: ($post-spacer-y / 2);
+  margin-bottom: ($post-margin-bottom / 2);
   clear: both;
   font-size: $font-size-sm;
   color: $post-meta-color;
