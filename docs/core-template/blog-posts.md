@@ -104,7 +104,7 @@ Tampilan posting untuk halaman arsip.
 
 ## Includes
 
-[Includes](https://support.google.com/blogger/answer/46995?hl=en&ref_topic=6321969) sangat berguna ketika kita ingin menggunakan kode yang sama, tanpa harus menulis ulang kode tersebut, cukup dengan:
+[Includes](https://support.google.com/blogger/answer/46995?hl=en&ref_topic=6321969) sangat berguna ketika kita ingin menggunakan kode yang sama, tanpa harus menulis ulang kode tersebut, cukup panggil bagian yang sudah didefinisikan menggunakan `b:includable` dengan:
 
 {% highlight html %}
 <b:include name='includable-id'/>
@@ -112,7 +112,7 @@ Tampilan posting untuk halaman arsip.
 
 *Includes* di bawah ini adalah untuk memudahkan dalam menampilkan data dan informasi posting seperti penulis, tanggal, jumlah komentar, label, dan yang lainnya. Nama *includes* selalu dimulai dengan `include-*`.
 
-Untuk **#1** sampai dengan **#12** harus menggunakan tag kondisional, karena ini berhubungan dengan opsi posting [ <a href="javascript:;" data-toggle="modal" data-target=".image-post-options">lihat gambar</a> ]. Untuk mengetahui bagian opsinya samakan nomor pada tabel dengan nomor pada gambar.
+Untuk **#1** sampai dengan **#12** harus menggunakan tag kondisional, karena ini berhubungan dengan opsi posting [ <a href="javascript:;" data-toggle="modal" data-target=".image-post-options">lihat gambar</a> ]. Untuk mengetahui bagian opsinya samakan nomor pada tabel di bawah dengan nomor pada gambar.
 
 <div class="table-responsive">
   <table class="table table-bordered table-includes">
