@@ -444,7 +444,7 @@
 //
 
 .post-meta {
-  margin-bottom: ($post-margin-bottom / 2);
+  margin-bottom: $post-meta-margin-bottom;
   clear: both;
   font-size: $font-size-sm;
   color: $post-meta-color;
