@@ -41,7 +41,7 @@
 
 .post-title {
   margin-top: 0;
-  margin-bottom: ($post-margin-bottom / 2);
+  margin-bottom: $post-title-margin-bottom;
 
   .post-title-link {
     color: $post-title-link-color;
