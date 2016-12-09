@@ -2,7 +2,7 @@
 
 .wg-box > .widget {
   padding: $wg-box-padding;
-  margin-bottom: $wg-box-spacer-y;
+  margin-bottom: $wg-box-margin-bottom;
   border: $wg-box-border-width solid transparent;
   @include border-radius($wg-box-border-radius);
   @include box-shadow($wg-box-box-shadow);
