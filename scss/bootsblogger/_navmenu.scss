@@ -4,7 +4,7 @@
 
 .navmenu {
   padding: $navmenu-padding-y $navmenu-padding-x;
-  margin-bottom: $navmenu-spacer-y;
+  margin-bottom: $navmenu-margin-bottom;
   @include border-radius($navmenu-border-radius);
 }
 
