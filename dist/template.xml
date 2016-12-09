@@ -435,7 +435,7 @@
      * Skip navigation
      */
 
-    #main:focus {
+    #blog-main:focus {
       outline: none;
     }
 
@@ -471,10 +471,24 @@
 
 
     /*
+     * Pagination
+     */
+
+    .blog-pagination {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .blog-pagination > .btn {
+      border-radius: 2rem;
+    }
+
+
+    /*
      * Footer
      */
 
-    .footer {
+    .blog-footer {
       padding-top: 3rem;
       padding-bottom: 3rem;
       font-size: 85%;
@@ -483,27 +497,27 @@
       background-color: #eee;
     }
 
-    .footer p {
+    .blog-footer p {
       margin-bottom: 0;
     }
 
-    .footer a {
+    .blog-footer a {
       font-weight: 500;
       color: #333;
     }
-    .footer a:hover,
-    .footer a:focus {
+    .blog-footer a:hover,
+    .blog-footer a:focus {
       color: #0275d8;
     }
 
-    .footer-links {
+    .blog-footer-links {
       padding-left: 0;
       margin-bottom: 1rem;
     }
-    .footer-links li {
+    .blog-footer-links li {
       display: inline-block;
     }
-    .footer-links li + li {
+    .blog-footer-links li + li {
       margin-left: 1rem;
     }
     </style>
@@ -625,7 +639,7 @@
     <div class='container blogger-container'>
       <div class='row blogger-row'>
         <!-- Main -->
-        <main class='main col-md-9 blogger-col-8' id='main' tabindex='-1'>
+        <main class='blog-main col-md-9 blogger-col-8' id='blog-main' tabindex='-1'>
           <b:section id='main-section' maxwidgets='1' showaddelement='no'>
             <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
               <b:includable id='main' var='top'>
@@ -1266,7 +1280,7 @@
               </b:includable>
               <b:includable id='nextprev'>
 
-                <nav class='text-xs-center mb-1'>
+                <nav class='blog-pagination'>
                   <b:if cond='data:newerPageUrl'>
                     <a class='btn btn-secondary float-xs-left' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' role='button'>Newer</a>
                   <b:else/>
@@ -1753,10 +1767,10 @@
               </b:includable>
             </b:widget>
           </b:section>
-        </main><!-- /.main -->
+        </main><!-- /.blog-main -->
 
         <!-- Sidebar -->
-        <aside class='sidebar col-md-3 blogger-col-4' id='sidebar'>
+        <aside class='blog-sidebar col-md-3 blogger-col-4' id='blog-sidebar'>
           <b:section class='wg-box wg-box-faded wg-md-12 wg-sm-6' id='sidebar-section'>
             <b:widget id='HTML1' locked='false' title='Bootsblogger' type='HTML'>
               <b:includable id='main'>
@@ -1791,7 +1805,7 @@
               </b:includable>
             </b:widget>
           </b:section>
-        </aside><!-- /.sidebar -->
+        </aside><!-- /.blog-sidebar -->
       </div><!-- /.row -->
     </div><!-- /.container -->
 
@@ -1859,9 +1873,9 @@
 
     <!-- FOOTER
     ================================================== -->
-    <footer class='footer' id='footer'>
+    <footer class='blog-footer' id='blog-footer'>
       <div class='container'>
-        <ul class='footer-links'>
+        <ul class='blog-footer-links'>
           <li><a href='#'>About</a></li>
           <li><a href='#'>Twitter</a></li>
           <li><a href='#'>Google+</a></li>
