@@ -1,3 +1,4 @@
 <b:if cond='data:post.showBacklinks'>
-  <i aria-hidden='true' class='fa fa-link icon-link-post'/> <a expr:href='&quot;https://www.blogger.com/blog-this.g?n=&quot; + data:blog.title + &quot;: &quot; + data:post.title + &quot;&amp;u=&quot; + data:post.url + &quot;&amp;t=&quot;' target='_blank'><data:top.backlinkLabel/></a>
+  <i aria-hidden='true' class='fa fa-link icon-link-post'/>
+  <a expr:onclick='&quot;window.open(&amp;quot;https://www.blogger.com/blog-this.g?n=&quot; + data:blog.title + &quot;: &quot; + data:post.title + &quot;&amp;u=&quot; + data:post.url + &quot;&amp;t=&amp;quot;, &amp;quot;_blank&amp;quot;, &amp;quot;directories=no, titlebar=no, toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=800, height=600&amp;quot;);&quot;' href='javascript:;'><data:top.backlinkLabel/></a>
 </b:if>
