@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
     banner: '/*!\n' +
             ' * Bootsblogger v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Copyright 2016-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license %> (https://github.com/bootsblogger/bootsblogger/blob/master/LICENSE)\n' +
             ' */\n',
 
