@@ -18,7 +18,7 @@
     },
 
     "meta": {
-      "_comment_": "!! Title and description is used in `meta-tags-default.xml`, `meta-tags-facebook.xml, and `meta-tags-twitter.xml` !!",
+      "_comment_": "!! Title and description is used in `meta-tags-default.xml`, `meta-tags-facebook.xml`, and `meta-tags-twitter.xml` !!",
       "title": {
         "homePage": "data:blog.title",
         "_output_": "Blog Title",
