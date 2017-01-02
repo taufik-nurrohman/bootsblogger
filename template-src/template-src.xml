@@ -87,40 +87,7 @@
 
         <!-- Sidebar -->
         <aside class='blog-sidebar col-md-3 blogger-col-4' id='blog-sidebar'>
-          <b:section class='wg-box wg-box-faded wg-md-12 wg-sm-6' id='sidebar-section'>
-            <b:widget id='HTML1' locked='false' title='Bootsblogger' type='HTML'>
-              <b:includable id='main'>
-                <!-- only display title if it's non-empty -->
-                <b:if cond='data:title != &quot;&quot;'>
-                  <h2 class='title'><data:title/></h2>
-                </b:if>
-                <div class='widget-content'>
-                  <p><a href='https://bootsblogger.github.io'>Currently v1.0.0-alpha.1</a></p>
-                </div>
-              </b:includable>
-            </b:widget>
-            <b:widget id='HTML2' locked='false' title='Tested' type='HTML'>
-              <b:includable id='main'>
-                <!-- only display title if it's non-empty -->
-                <b:if cond='data:title != &quot;&quot;'>
-                  <h2 class='title'><data:title/></h2>
-                </b:if>
-                <div class='widget-content'>
-                  <ul class='list-unstyled'>
-                    <li><strong>PageSpeed Insights</strong></li>
-                    <li><span class='tag tag-success'>100/100</span> Speed (Mobile).</li>
-                    <li><span class='tag tag-success'>100/100</span> User Experience (Mobile).</li>
-                    <li><span class='tag tag-success'>100/100</span> Suggestions Summary (Desktop).</li>
-                    <li><a href='https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbootsblogger-demo.blogspot.co.id%2F'>Analyze</a></li>
-                    <li><strong>Accessibility</strong></li>
-                    <li><a href='http://wave.webaim.org/report#/https://bootsblogger-demo.blogspot.co.id/'>Test accessibility</a></li>
-                    <li><strong>Validation</strong></li>
-                    <li><a href='https://validator.w3.org/nu/?doc=https%3A%2F%2Fbootsblogger-demo.blogspot.com%2F'>Test validation</a></li>
-                  </ul>
-                </div>
-              </b:includable>
-            </b:widget>
-          </b:section>
+          <b:section class='wg-box wg-box-faded wg-md-12 wg-sm-6' id='sidebar-section'></b:section>
         </aside><!-- /.blog-sidebar -->
       </div><!-- /.row -->
     </div><!-- /.container -->
@@ -130,59 +97,7 @@
     ================================================== -->
     <div class='widget-1' id='widget-1'>
       <div class='container'>
-        <b:section class='wg-box wg-box-white wg-md-4 wg-sm-6' id='widget-1-section'>
-          <b:widget id='HTML3' locked='false' title='HTML/JavaScript' type='HTML'>
-            <b:includable id='main'>
-              <!-- only display title if it's non-empty -->
-              <b:if cond='data:title != &quot;&quot;'>
-                <h2 class='title'><data:title/></h2>
-              </b:if>
-              <div class='widget-content'>
-                <ul class='nav'>
-                  <li class='nav-item'><a class='nav-link' href="#">Cras justo odio</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Dapibus ac facilisis in</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Morbi leo risus</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Porta ac consectetur ac</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Vestibulum at eros</a></li>
-                </ul>
-              </div>
-            </b:includable>
-          </b:widget>
-          <b:widget id='HTML4' locked='false' title='HTML/JavaScript' type='HTML'>
-            <b:includable id='main'>
-              <!-- only display title if it's non-empty -->
-              <b:if cond='data:title != &quot;&quot;'>
-                <h2 class='title'><data:title/></h2>
-              </b:if>
-              <div class='widget-content'>
-                <ul class='nav'>
-                  <li class='nav-item'><a class='nav-link' href="#">Cras justo odio</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Dapibus ac facilisis in</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Morbi leo risus</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Porta ac consectetur ac</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Vestibulum at eros</a></li>
-                </ul>
-              </div>
-            </b:includable>
-          </b:widget>
-          <b:widget id='HTML5' locked='false' title='HTML/JavaScript' type='HTML'>
-            <b:includable id='main'>
-              <!-- only display title if it's non-empty -->
-              <b:if cond='data:title != &quot;&quot;'>
-                <h2 class='title'><data:title/></h2>
-              </b:if>
-              <div class='widget-content'>
-                <ul class='nav'>
-                  <li class='nav-item'><a class='nav-link' href="#">Cras justo odio</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Dapibus ac facilisis in</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Morbi leo risus</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Porta ac consectetur ac</a></li>
-                  <li class='nav-item'><a class='nav-link' href="#">Vestibulum at eros</a></li>
-                </ul>
-              </div>
-            </b:includable>
-          </b:widget>
-        </b:section>
+        <b:section class='wg-box wg-box-white wg-md-4 wg-sm-6' id='widget-1-section'></b:section>
       </div>
     </div>
 
