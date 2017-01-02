@@ -865,10 +865,7 @@
 .navmenu-light .navmenu-nav .nav-link:focus, .navmenu-light .navmenu-nav .nav-link:hover {
   color: rgba(0, 0, 0, 0.6);
 }
-.navmenu-light .navmenu-nav .nav-link[data-toggle="collapse"]:not(.collapsed), .navmenu-light .navmenu-nav .nav-link[data-toggle="collapse"]:not(.collapsed):focus, .navmenu-light .navmenu-nav .nav-link[data-toggle="collapse"]:not(.collapsed):hover,
-.navmenu-light .navmenu-nav .nav-link.active,
-.navmenu-light .navmenu-nav .nav-link.active:focus,
-.navmenu-light .navmenu-nav .nav-link.active:hover {
+.navmenu-light .navmenu-nav .nav-link.active, .navmenu-light .navmenu-nav .nav-link.active:focus, .navmenu-light .navmenu-nav .nav-link.active:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 .navmenu-light .navmenu-nav .nav-link.disabled, .navmenu-light .navmenu-nav .nav-link.disabled:focus, .navmenu-light .navmenu-nav .nav-link.disabled:hover {
@@ -887,10 +884,7 @@
 .navmenu-dark .navmenu-nav .nav-link:focus, .navmenu-dark .navmenu-nav .nav-link:hover {
   color: rgba(255, 255, 255, 0.75);
 }
-.navmenu-dark .navmenu-nav .nav-link[data-toggle="collapse"]:not(.collapsed), .navmenu-dark .navmenu-nav .nav-link[data-toggle="collapse"]:not(.collapsed):focus, .navmenu-dark .navmenu-nav .nav-link[data-toggle="collapse"]:not(.collapsed):hover,
-.navmenu-dark .navmenu-nav .nav-link.active,
-.navmenu-dark .navmenu-nav .nav-link.active:focus,
-.navmenu-dark .navmenu-nav .nav-link.active:hover {
+.navmenu-dark .navmenu-nav .nav-link.active, .navmenu-dark .navmenu-nav .nav-link.active:focus, .navmenu-dark .navmenu-nav .nav-link.active:hover {
   color: white;
 }
 .navmenu-dark .navmenu-nav .nav-link.disabled, .navmenu-dark .navmenu-nav .nav-link.disabled:focus, .navmenu-dark .navmenu-nav .nav-link.disabled:hover {
