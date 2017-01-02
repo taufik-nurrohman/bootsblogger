@@ -128,7 +128,6 @@
         color: $navmenu-light-hover-color;
       }
     }
-    .nav-link[data-toggle="collapse"]:not(.collapsed),
     .nav-link.active {
       @include plain-hover-focus {
         color: $navmenu-light-active-color;
@@ -160,7 +159,6 @@
         color: $navmenu-dark-hover-color;
       }
     }
-    .nav-link[data-toggle="collapse"]:not(.collapsed),
     .nav-link.active {
       @include plain-hover-focus {
         color: $navmenu-dark-active-color;
