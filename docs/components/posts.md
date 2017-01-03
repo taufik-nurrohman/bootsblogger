@@ -2868,3 +2868,117 @@ Hanya pada gambar:
   </article><!-- /.post -->
 </b:loop>
 {% endhighlight %}
+
+## Mix and match
+
+<div class="bd-example">
+  <div class="post">
+    <div class="post-horizontal">
+      <div class="post-img-left post-img-padding post-orange">
+        <a href="#"><img data-src="holder.js/100px180/?auto=yes&text=Image" alt="Image"/></a>
+      </div>
+      <div class="post-content">
+        <h2 class="post-title"><a class="post-title-link" href="#">Post title</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+        <p><a class="btn btn-primary" href="#">Read more</a></p>
+      </div>
+    </div>
+  </div>
+</div><!-- /.bd-example -->
+
+{% highlight html %}
+<div class="post">
+  <div class="post-horizontal">
+    <div class="post-img-left post-img-padding post-orange">
+      ...
+    </div>
+    <div class="post-content">
+      ...
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bd-example">
+  <div class="post">
+    <div class="post-horizontal">
+      <div class="post-img-left post-img-padding">
+        <a href="#"><img data-src="holder.js/100px180/?auto=yes&text=Image" alt="Image"/></a>
+      </div>
+      <div class="post-content post-inverse post-orange">
+        <h2 class="post-title"><a class="post-title-link" href="#">Post title</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+        <p><a class="btn btn-primary" href="#">Read more</a></p>
+      </div>
+    </div>
+  </div>
+</div><!-- /.bd-example -->
+
+{% highlight html %}
+<div class="post">
+  <div class="post-horizontal">
+    <div class="post-img-left post-img-padding">
+      ...
+    </div>
+    <div class="post-content post-inverse post-orange">
+      ...
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bd-example">
+  <div class="post">
+    <div class="post-horizontal">
+      <div class="post-img-left post-img-padding post-gray">
+        <a href="#"><img data-src="holder.js/100px180/?auto=yes&text=Image" alt="Image"/></a>
+      </div>
+      <div class="post-content post-inverse post-orange">
+        <h2 class="post-title"><a class="post-title-link" href="#">Post title</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+        <p><a class="btn btn-primary" href="#">Read more</a></p>
+      </div>
+    </div>
+  </div>
+</div><!-- /.bd-example -->
+
+{% highlight html %}
+<div class="post">
+  <div class="post-horizontal">
+    <div class="post-img-left post-img-padding post-gray">
+      ...
+    </div>
+    <div class="post-content post-inverse post-orange">
+      ...
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bd-example">
+  <div class="post post-inverse post-red">
+    <div class="post-horizontal">
+      <div class="post-img-left post-img-padding post-gray">
+        <a href="#"><img data-src="holder.js/100px180/?auto=yes&text=Image" alt="Image"/></a>
+      </div>
+      <div class="post-content post-orange">
+        <h2 class="post-title"><a class="post-title-link" href="#">Post title</a></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+        <p><a class="btn btn-primary" href="#">Read more</a></p>
+      </div>
+    </div>
+  </div>
+</div><!-- /.bd-example -->
+
+{% highlight html %}
+<div class="post post-inverse post-red">
+  <div class="post-horizontal">
+    <div class="post-img-left post-img-padding post-gray">
+      ...
+    </div>
+    <div class="post-content post-orange">
+      ...
+    </div>
+  </div>
+</div>
+{% endhighlight %}
