@@ -83,13 +83,11 @@ Tag meta adalah elemen HTML yang digunakan untuk membentuk struktur metadata dar
 
 ### Required meta tags <small class="text-muted">meta-tags-required.xml</small>
 
-- Set charset dengan `utf-8`
-- Paksa Internet Explorer agar menggunakan mode render terbaru ([baca lebih lanjut](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do))
-- Dan, gunakan tag meta responsif `viewport`.
+- Set charset dengan `utf-8`.
+- Gunakan tag meta responsif `viewport`.
 
 {% highlight html %}
 <meta charset='utf-8'/>
-<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {% endhighlight %}
 
