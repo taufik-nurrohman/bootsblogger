@@ -2139,7 +2139,7 @@ Posting berwarna, tetapi bukan pada latar belakang, hanya mengubah `border-color
 
 ## Columns
 
-Bungkus semua `.post` dengan `.post-columns`. **Perhatian!** Ini **tidak bekerja di IE9 ke bawah**, karena mereka tidak mendukung properti CSS `column-*`.
+Bungkus semua `.post` dengan `.post-columns`.
 
 Hanya diterapkan pada perangkat kecil ke atas. Pada perangkat kecil ke atas (&ge;576px) akan tampil dua kolom dan pada perangkat sedang ke atas (&ge;768px) akan tampil tiga kolom, pada perangkat sangat kecil (&lt;576px) hanya tampil satu kolom.
 

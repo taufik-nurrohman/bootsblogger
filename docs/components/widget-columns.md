@@ -14,7 +14,7 @@ Tampilan kolom widget seperti [Masonry](http://masonry.desandro.com/) dengan han
 
 ## Examples
 
-Gunakan `.wg-columns`. **Perhatian!** Ini **tidak bekerja di IE9 ke bawah**, karena mereka tidak mendukung properti CSS `column-*`.
+Gunakan `.wg-columns`.
 
 Hanya diterapkan pada perangkat kecil ke atas. Pada perangkat kecil ke atas (&ge;576px) akan tampil dua kolom dan pada perangkat sedang ke atas (&ge;768px) akan tampil tiga kolom, pada perangkat sangat kecil (&lt;576px) hanya tampil satu kolom.
 
