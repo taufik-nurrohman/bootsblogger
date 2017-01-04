@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 
     cssmin: {
       options: {
-        compatibility: 'ie9,-properties.zeroUnits',
+        compatibility: 'ie10,-properties.zeroUnits',
         keepSpecialComments: '*',
         sourceMap: true,
         advanced: false
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
               // For example, at the time of writing, Edge 20 on an up-to-date system uses EdgeHTML 12.
               // See also https://github.com/Fyrd/caniuse/issues/1928
               'Edge >= 12',
-              'Explorer >= 9',
+              'Explorer >= 10',
               // Out of leniency, we prefix these 1 version further back than the official policy.
               'iOS >= 8',
               'Safari >= 8',
