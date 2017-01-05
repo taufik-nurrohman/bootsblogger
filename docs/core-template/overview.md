@@ -3,6 +3,7 @@ layout: docs
 title: Overview
 description: Template dasar Bootsblogger yang dirancang untuk memberikan kemudahan dan fitur-fitur yang luar biasa.
 group: core-template
+redirect_from: "/core-template/"
 ---
 
 Template dasar Bootsblogger yang dirancang untuk memberikan kemudahan dan fitur-fitur yang luar biasa.

@@ -3,6 +3,7 @@ layout: docs
 title: Colors
 description: Kelas-kelas untuk mengubah warna teks.
 group: utilities
+redirect_from: "/utilities/"
 ---
 
 Kelas-kelas untuk mengubah warna teks.

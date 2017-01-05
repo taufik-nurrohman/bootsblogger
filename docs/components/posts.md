@@ -3,6 +3,7 @@ layout: docs
 title: Posts
 description: Bootsblogger menyediakan komponen untuk tampilan posting, dengan beragam tampilan, warna, dan fitur.
 group: components
+redirect_from: "/components/"
 ---
 
 Bootsblogger menyediakan komponen untuk tampilan posting, dengan beragam tampilan, warna, dan fitur.
