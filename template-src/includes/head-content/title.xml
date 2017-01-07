@@ -12,7 +12,7 @@
 
 <b:elseif cond='data:blog.searchQuery'/>
   <!-- Search results page -->
-  <title>Search Results for -<data:blog.searchQuery/>- | <data:blog.title/></title>
+  <title>Search Results for &amp;ldquo;<data:blog.searchQuery/>&amp;rdquo; | <data:blog.title/></title>
 
 <b:elseif cond='data:blog.pageType == &quot;archive&quot;'/>
   <!-- Archive page -->

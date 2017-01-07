@@ -4,5 +4,5 @@
   <li><a href='#'>Google+</a></li>
   <li><a href='#'>Facebook</a></li>
 </ul>
-<p>&#169; 2017 <data:blog.title/>.</p>
+<p>&amp;copy; 2017 <data:blog.title/>.</p>
 <p>Template by <a href='{{ blog.about.templateAuthorURI }}'>{{ blog.about.templateAuthorName }}</a>. Built with <a href='https://bootsblogger.github.io'>Bootsblogger</a>. Powered by <a href='https://blogger.com'>Blogger</a>.</p>
