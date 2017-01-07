@@ -19,7 +19,7 @@ function labelsLists(json) {
       ul: 'Add class to ul',
       li: 'Add class to li',
       a: 'Add class to a',
-      badge: 'tag tag-default tag-pill'
+      badge: 'badge badge-default badge-pill'
     }
   }
   */

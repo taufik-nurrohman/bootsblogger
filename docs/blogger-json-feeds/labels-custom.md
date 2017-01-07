@@ -17,7 +17,7 @@ var config = {
   classes: {
     base: 'Base class',
     item: 'Item class',
-    badge: 'tag tag-default tag-pill'
+    badge: 'badge badge-default badge-pill'
   }
 }
 </script>
@@ -41,7 +41,7 @@ var config = {
   classes: {
     base: 'list-group',
     item: 'list-group-item list-group-item-action',
-    badge: 'tag tag-default tag-pill float-xs-right'
+    badge: 'badge badge-default badge-pill float-right'
   }
 }
 </script>
@@ -62,7 +62,7 @@ Menggunakan [Bootstrap dropdowns](https://v4-alpha.getbootstrap.com/components/d
     classes: {
       base: 'dropdown-menu',
       item: 'dropdown-item',
-      badge: 'tag tag-default tag-pill'
+      badge: 'badge badge-default badge-pill'
     }
   }
   </script>
@@ -80,7 +80,7 @@ var config = {
   classes: {
     base: 'nav nav-inline',
     item: 'nav-link',
-    badge: 'tag tag-default tag-pill'
+    badge: 'badge badge-default badge-pill'
   }
 }
 </script>

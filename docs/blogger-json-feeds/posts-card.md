@@ -94,7 +94,7 @@ Nama fungsi `postsCard`.
 
 {% example html %}
 <div class="" id="example-result-container">
-  <div class="text-xs-center">Loading...</div>
+  <div class="text-center">Loading...</div>
 </div>
 <script>
 var config = {

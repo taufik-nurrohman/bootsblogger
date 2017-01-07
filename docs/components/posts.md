@@ -2297,7 +2297,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
     </div>
     <div class="post-content">
-      <p class="text-xs-right"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-right"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2319,7 +2319,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2339,7 +2339,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
     </div>
     <div class="post-content">
-      <p class="text-xs-right"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-right"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2366,7 +2366,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2384,7 +2384,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       </div>
     </div>
     <div class="post-content">
-      <p class='text-xs-center'><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class='text-center'><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2411,7 +2411,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2420,7 +2420,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
 <div class="bd-example">
   <div class="post">
     <div class="post-content">
-      <h2 class="post-title text-xs-center"><a class="post-title-link" href="#">Post title</a></h2>
+      <h2 class="post-title text-center"><a class="post-title-link" href="#">Post title</a></h2>
     </div>
     <div class="post-content">
       <div class="post-img-only">
@@ -2436,7 +2436,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
-        <h2 class='post-title text-xs-center' itemprop='name headline'>
+        <h2 class='post-title text-center' itemprop='name headline'>
           <a class='post-title-link' expr:href='data:post.url' itemprop='url'><data:post.title/></a>
         </h2>
       </b:if>
@@ -2459,7 +2459,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       </div>
     </div>
     <div class="post-content">
-      <h2 class="post-title text-xs-center"><a class="post-title-link" href="#">Post title</a></h2>
+      <h2 class="post-title text-center"><a class="post-title-link" href="#">Post title</a></h2>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2476,7 +2476,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     <!-- Content title -->
     <div class='post-content'>
       <b:if cond='data:post.title'>
-        <h2 class='post-title text-xs-center' itemprop='name headline'>
+        <h2 class='post-title text-center' itemprop='name headline'>
           <a class='post-title-link' expr:href='data:post.url' itemprop='url'><data:post.title/></a>
         </h2>
       </b:if>
@@ -2497,7 +2497,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
     </div>
     <div class="post-content">
-      <p class="text-xs-right"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-right"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2522,7 +2522,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2540,7 +2540,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
     </div>
     <div class="post-content">
-      <p class="text-xs-right"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-right"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2566,7 +2566,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2579,7 +2579,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
     </div>
     <div class="post-content">
-      <p class="text-xs-center"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-center"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
     <div class="post-img-bottom">
       <a href="#"><img data-src="holder.js/100px350/?auto=yes&text=Image" alt="Image"/></a>
@@ -2603,7 +2603,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
     <!-- Image -->
     <div class='post-img-bottom' itemprop='thumbnail'>
@@ -2623,7 +2623,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       <a href="#"><img data-src="holder.js/100px350/?auto=yes&text=Image" alt="Image"/></a>
     </div>
     <div class="post-content">
-      <p class="text-xs-center"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-center"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2648,7 +2648,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div><!-- /.post-img-bottom -->
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-center'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2672,7 +2672,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       </div>
     </div>
     <div class="post-content">
-      <p class="text-xs-right"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-right"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2704,7 +2704,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>
@@ -2726,7 +2726,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
       </div>
     </div>
     <div class="post-content">
-      <p class="text-xs-right"><a class="btn btn-primary" href="#">Read more</a></p>
+      <p class="text-right"><a class="btn btn-primary" href="#">Read more</a></p>
     </div>
   </div>
 </div><!-- /.bd-example -->
@@ -2758,7 +2758,7 @@ Gunakan `.post-content` lebih dari satu untuk membungkus setiap konten. Di bawah
     </div>
     <!-- Content button -->
     <div class='post-content'>
-      <p class='text-xs-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
+      <p class='text-right'><a class='btn btn-primary' expr:href='data:post.url' itemprop='url' role='button'>Read more <span class='sr-only'>read more <data:post.id/></span></a></p>
     </div>
   </article><!-- /.post -->
 </b:loop>

@@ -18,7 +18,7 @@ function labelsCustom(json) {
     classes: {
       base: 'Base class',
       item: 'Item class',
-      badge: 'tag tag-default tag-pill'
+      badge: 'badge badge-default badge-pill'
     }
   }
   */

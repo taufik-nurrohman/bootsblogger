@@ -42,11 +42,11 @@
       })
     })
 
-    $('.wg-collapse.open-all > .widget > .widget-collapse').addClass('in')
+    $('.wg-collapse.open-all > .widget > .widget-collapse').addClass('show')
     $('.wg-collapse.open-all > .widget > h2').removeClass('collapsed')
     $('.wg-collapse.open-all > .widget > h2 .indicator').removeClass('fa-plus-circle').addClass('fa-minus-circle')
 
-    $('.wg-collapse.open-first > .widget:first-child > .widget-collapse').addClass('in')
+    $('.wg-collapse.open-first > .widget:first-child > .widget-collapse').addClass('show')
     $('.wg-collapse.open-first > .widget:first-child > h2').removeClass('collapsed')
     $('.wg-collapse.open-first > .widget:first-child > h2 .indicator').removeClass('fa-plus-circle').addClass('fa-minus-circle')
 
@@ -93,7 +93,7 @@
       })
     })
 
-    $('.wg-accordion.open-first > .widget:first-child > .widget-collapse').addClass('in')
+    $('.wg-accordion.open-first > .widget:first-child > .widget-collapse').addClass('show')
     $('.wg-accordion.open-first > .widget:first-child > h2').removeClass('collapsed')
     $('.wg-accordion.open-first > .widget:first-child > h2 .indicator').removeClass('fa-chevron-right').addClass('fa-chevron-down')
 

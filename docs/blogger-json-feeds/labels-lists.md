@@ -18,7 +18,7 @@ var config = {
     ul: 'Add class to ul',
     li: 'Add class to li',
     a: 'Add class to a',
-    badge: 'tag tag-default tag-pill'
+    badge: 'badge badge-default badge-pill'
   }
 }
 </script>
@@ -41,7 +41,7 @@ var config = {
     ul: 'nav',
     li: 'nav-item',
     a: 'nav-link',
-    badge: 'tag tag-default tag-pill'
+    badge: 'badge badge-default badge-pill'
   }
 }
 </script>

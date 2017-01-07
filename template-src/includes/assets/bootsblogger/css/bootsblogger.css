@@ -395,7 +395,7 @@
   margin-bottom: 0.5rem;
   clear: both;
   font-size: 0.875rem;
-  color: #818a91;
+  color: #636c72;
 }
 .post-meta > :first-child {
   margin-top: 0;
@@ -465,7 +465,7 @@
 
 .post-header {
   padding: 0.75rem 1.25rem;
-  color: #818a91;
+  color: #636c72;
   background-color: #f5f5f5;
   border-color: rgba(0, 0, 0, 0.125);
   border-width: 0 0 1px;
@@ -475,7 +475,7 @@
 
 .post-footer {
   padding: 0.75rem 1.25rem;
-  color: #818a91;
+  color: #636c72;
   background-color: #f5f5f5;
   border-color: rgba(0, 0, 0, 0.125);
   border-width: 1px 0 0;
@@ -697,8 +697,8 @@
 }
 
 .post-gray {
-  background-color: #55595c;
-  border-color: #4e5154;
+  background-color: #464a4c;
+  border-color: #3f4244;
 }
 
 .post-black {
@@ -758,7 +758,7 @@
 
 .post-outline-gray {
   background-color: transparent;
-  border-color: #55595c;
+  border-color: #464a4c;
 }
 
 .post-outline-black {
@@ -976,7 +976,7 @@
 }
 
 .wg-basic-gray > .widget > h2 {
-  color: #55595c;
+  color: #464a4c;
 }
 
 .wg-basic-brown > .widget > h2 {
@@ -1036,7 +1036,7 @@
   border-color: #eee;
 }
 .wg-box-faded > .widget > h2 {
-  color: #373a3c;
+  color: #292b2c;
 }
 
 .wg-box-blue > .widget {
@@ -1104,8 +1104,8 @@
 }
 
 .wg-box-gray > .widget {
-  background-color: #55595c;
-  border-color: #4e5154;
+  background-color: #464a4c;
+  border-color: #3f4244;
 }
 .wg-box-gray > .widget > h2 {
   color: #fff;
@@ -1132,7 +1132,7 @@
   border-color: rgba(0, 0, 0, 0.125);
 }
 .wg-box-white > .widget > h2 {
-  color: #373a3c;
+  color: #292b2c;
 }
 
 .wg-box-outline-faded > .widget {
@@ -1209,10 +1209,10 @@
 
 .wg-box-outline-gray > .widget {
   background-color: transparent;
-  border-color: #55595c;
+  border-color: #464a4c;
 }
 .wg-box-outline-gray > .widget > h2 {
-  color: #55595c;
+  color: #464a4c;
 }
 
 .wg-box-outline-brown > .widget {
@@ -1411,7 +1411,7 @@
   background-color: #fff;
 }
 .wg-panel-faded > .widget > h2 {
-  color: #373a3c;
+  color: #292b2c;
   background-color: #f7f7f9;
   border-color: #eee;
 }
@@ -1530,7 +1530,7 @@
 
 .wg-panel-gray > .widget > .widget-content,
 .wg-panel-gray > .widget > .widget-collapse {
-  border-color: #4e5154;
+  border-color: #3f4244;
 }
 .wg-panel-gray > .widget > .widget-content,
 .wg-panel-gray > .widget > .widget-collapse > .widget-content {
@@ -1538,8 +1538,8 @@
 }
 .wg-panel-gray > .widget > h2 {
   color: #fff;
-  background-color: #55595c;
-  border-color: #4e5154;
+  background-color: #464a4c;
+  border-color: #3f4244;
 }
 
 .wg-panel-brown > .widget > .widget-content,
@@ -1579,7 +1579,7 @@
   background-color: #fff;
 }
 .wg-panel-white > .widget > h2 {
-  color: #373a3c;
+  color: #292b2c;
   background-color: #fff;
   border-color: rgba(0, 0, 0, 0.125);
 }
@@ -1712,16 +1712,16 @@
 
 .wg-panel-outline-gray > .widget > .widget-content,
 .wg-panel-outline-gray > .widget > .widget-collapse {
-  border-color: #55595c;
+  border-color: #464a4c;
 }
 .wg-panel-outline-gray > .widget > .widget-content,
 .wg-panel-outline-gray > .widget > .widget-collapse > .widget-content {
   background-color: transparent;
 }
 .wg-panel-outline-gray > .widget > h2 {
-  color: #55595c;
+  color: #464a4c;
   background-color: transparent;
-  border-color: #55595c;
+  border-color: #464a4c;
 }
 
 .wg-panel-outline-brown > .widget > .widget-content,
@@ -1960,8 +1960,8 @@
 .wg-xl-10::after,
 .wg-xl-11::after,
 .wg-xl-12::after {
+  display: block;
   content: "";
-  display: table;
   clear: both;
 }
 .wg-xs-1 .widget,
@@ -2583,11 +2583,11 @@ a.text-pink:focus, a.text-pink:hover {
 }
 
 .text-gray {
-  color: #55595c !important;
+  color: #464a4c !important;
 }
 
 a.text-gray:focus, a.text-gray:hover {
-  color: #3d3f41 !important;
+  color: #2e3031 !important;
 }
 
 .text-brown {
@@ -2687,11 +2687,11 @@ a.bg-pink:focus, a.bg-pink:hover {
 }
 
 .bg-gray {
-  background-color: #55595c !important;
+  background-color: #464a4c !important;
 }
 
 a.bg-gray:focus, a.bg-gray:hover {
-  background-color: #3d3f41 !important;
+  background-color: #2e3031 !important;
 }
 
 .bg-brown {
@@ -2890,7 +2890,7 @@ a.bg-white:focus, a.bg-white:hover {
 
 .BlogArchive .post-count {
   font-size: 12px;
-  color: #818a91;
+  color: #636c72;
 }
 
 .BlogArchive ul.flat {
@@ -2900,7 +2900,7 @@ a.bg-white:focus, a.bg-white:hover {
 }
 
 .BlogArchive ul.flat .archivedate {
-  color: #818a91;
+  color: #636c72;
 }
 
 .BlogArchive select {
@@ -2966,7 +2966,7 @@ a.bg-white:focus, a.bg-white:hover {
 }
 .BlogList ul > li > .blog-content > .item-content > .item-time {
   font-size: 12px;
-  color: #818a91;
+  color: #636c72;
   margin-top: 2px;
 }
 
@@ -3023,7 +3023,7 @@ a.bg-white:focus, a.bg-white:hover {
 .Feed ul > li > .item-date,
 .Feed ul > li > .item-author {
   font-size: 12px;
-  color: #818a91;
+  color: #636c72;
 }
 
 .Image img,
@@ -3044,7 +3044,7 @@ a.bg-white:focus, a.bg-white:hover {
   display: block;
   margin-top: 5px;
   font-size: 90%;
-  color: #818a91;
+  color: #636c72;
   text-align: center;
 }
 

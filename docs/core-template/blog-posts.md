@@ -114,384 +114,382 @@ Tampilan posting untuk halaman arsip.
 
 Untuk **#1** sampai dengan **#12** harus menggunakan tag kondisional, karena ini berhubungan dengan opsi posting [ <a href="javascript:;" data-toggle="modal" data-target=".image-post-options">lihat gambar</a> ]. Untuk mengetahui bagian opsinya samakan nomor pada tabel di bawah dengan nomor pada gambar.
 
-<div class="table-responsive">
-  <table class="table table-bordered table-includes">
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#1</th>
-        <td><strong>Tanggal / date header</strong> <br>Pengelompokan posting berdasarkan tanggal diterbitkannya posting.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>None</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>None</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>
+<table class="table table-bordered table-responsive table-includes">
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#1</th>
+      <td><strong>Tanggal / date header</strong> <br>Pengelompokan posting berdasarkan tanggal diterbitkannya posting.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>
 {% highlight html %}
 <!-- Gunakan kode di bawah ini -->
 <b:if cond='data:post.dateHeader'>
   <h2 class='date-header'><data:post.dateHeader/></h2>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#2</th>
-        <td><strong>Penulis</strong> <br>Untuk menambahkan nama penulis.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-author'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#2</th>
+      <td><strong>Penulis</strong> <br>Untuk menambahkan nama penulis.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-author'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:top.showAuthor'>
   <b:include name='include-author'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#3</th>
-        <td><strong>Tanggal dan waktu</strong> <br>Untuk menambahkan tanggal dan/atau waktu diterbitkannya posting.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-timestamp'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#3</th>
+      <td><strong>Tanggal dan waktu</strong> <br>Untuk menambahkan tanggal dan/atau waktu diterbitkannya posting.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-timestamp'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:top.showTimestamp'>
   <b:include name='include-timestamp'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#4</th>
-        <td><strong>Jumlah komentar</strong> <br>Untuk menambahkan jumlah komentar.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-num-comments'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#4</th>
+      <td><strong>Jumlah komentar</strong> <br>Untuk menambahkan jumlah komentar.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-num-comments'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:post.allowComments'>
   <b:include name='include-num-comments'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#5</th>
-        <td><strong>Link</strong> <br>Buat tautan ke posting ini.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-link-post'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#5</th>
+      <td><strong>Link</strong> <br>Buat tautan ke posting ini.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-link-post'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:post.showBacklinks'>
   <b:include name='include-link-post'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>Ini adalah pengganti <em>backlinks</em>.</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>Ini adalah pengganti <em>backlinks</em>.</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#6</th>
-        <td><strong>Daftar label</strong> <br>Untuk menambahkan daftar label.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-labels'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#6</th>
+      <td><strong>Daftar label</strong> <br>Untuk menambahkan daftar label.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-labels'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:top.showPostLabels'>
   <b:include name='include-labels'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#7</th>
-        <td><strong>Reaksi</strong> <br>Untuk menambahkan daftar reaksi terhadap posting.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-reactions'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#7</th>
+      <td><strong>Reaksi</strong> <br>Untuk menambahkan daftar reaksi terhadap posting.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-reactions'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:top.showReactions'>
   <b:include name='include-reactions'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#8</th>
-        <td><strong>Edit</strong> <br>Tautan untuk edit posting.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-edit-post'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#8</th>
+      <td><strong>Edit</strong> <br>Tautan untuk edit posting.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-edit-post'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:post.editUrl'>
   <b:include name='include-edit-post'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#9</th>
-        <td><strong>Email</strong> <br>Tautan untuk email posting.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-email-post'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#9</th>
+      <td><strong>Email</strong> <br>Tautan untuk email posting.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-email-post'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:post.emailPostUrl'>
   <b:include name='include-email-post'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#10</th>
-        <td><strong>Tombol berbagi</strong> <br>Untuk menambahkan tombol berbagi.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-share-buttons'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#10</th>
+      <td><strong>Tombol berbagi</strong> <br>Untuk menambahkan tombol berbagi.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-share-buttons'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:post.sharePostUrl'>
   <b:include name='include-share-buttons'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#11</th>
-        <td><strong>Lokasi</strong> <br>Untuk menambahkan informasi lokasi diterbitkannya posting.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-location'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#11</th>
+      <td><strong>Lokasi</strong> <br>Untuk menambahkan informasi lokasi diterbitkannya posting.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-location'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:top.showLocation'>
   <b:include name='include-location'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#12</th>
-        <td><strong>Tentang penulis</strong> <br>Untuk menambahkan kolom tentang penulis.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-about-author'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#12</th>
+      <td><strong>Tentang penulis</strong> <br>Untuk menambahkan kolom tentang penulis.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-about-author'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:if cond='data:post.authorAboutMe'>
   <b:include name='include-about-author'/>
 </b:if>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>None</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#13</th>
-        <td><strong>Thumbnail</strong> <br>Untuk menambahkan gambar posting.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-thumbnail'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#13</th>
+      <td><strong>Thumbnail</strong> <br>Untuk menambahkan gambar posting.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-thumbnail'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:include name='include-thumbnail'/>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>Akan mengambil gambar pertama. Jika tidak tersedia akan menampilkan gambar keterangan bahwa gambar tidak tersedia, lihat di bagian <em>includable</em>.</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>Akan mengambil gambar pertama. Jika tidak tersedia akan menampilkan gambar keterangan bahwa gambar tidak tersedia, lihat di bagian <em>includable</em>.</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">#14</th>
-        <td><strong>Ringkasan posting</strong> <br>Untuk menambahkan ringkasan posting.</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-summary'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">#14</th>
+      <td><strong>Ringkasan posting</strong> <br>Untuk menambahkan ringkasan posting.</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-summary'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <p><b:include name='include-summary'/></p>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr class="bg-faded">
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>Alternatif untuk membuat ringkasan posting menggunakan JavaScript. Kode ini tetap menampilkan posting sesuai aslinya, hanya saja dipotong menggunakan JavaScript. Panjang ringkasan posting dapat berbeda-beda di setiap tipe halaman, atur dengan cara mengubah nilai variabel <code>summary</code> (lihat di bagian <em>includable</em>).</td>
-      </tr>
-    </tbody>
+      </td>
+    </tr>
+    <tr class="bg-faded">
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>Alternatif untuk membuat ringkasan posting menggunakan JavaScript. Kode ini tetap menampilkan posting sesuai aslinya, hanya saja dipotong menggunakan JavaScript. Panjang ringkasan posting dapat berbeda-beda di setiap tipe halaman, atur dengan cara mengubah nilai variabel <code>summary</code> (lihat di bagian <em>includable</em>).</td>
+    </tr>
+  </tbody>
 
-    <tbody>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">#15</th>
-        <td><strong>Breadcrumb</strong> <br>Untuk menambahkan breadcrumb.</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Includable</th>
-        <td>{% highlight html %}<b:includable id='include-breadcrumb'>...</b:includable>{% endhighlight %}</td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Penggunaan</th>
-        <td>
+  <tbody>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">#15</th>
+      <td><strong>Breadcrumb</strong> <br>Untuk menambahkan breadcrumb.</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Includable</th>
+      <td>{% highlight html %}<b:includable id='include-breadcrumb'>...</b:includable>{% endhighlight %}</td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Penggunaan</th>
+      <td>
 {% highlight html %}
 <b:include name='include-breadcrumb'/>
 {% endhighlight %}
-        </td>
-      </tr>
-      <tr>
-        <th class="text-nowrap text-xs-right" scope="row">Catatan</th>
-        <td>
+      </td>
+    </tr>
+    <tr>
+      <th class="text-nowrap text-right" scope="row">Catatan</th>
+      <td>
 {% highlight html %}
 <!-- Gunakan di dalam includable main -->
 <b:includable id='main' var='top'>...</b:includable>
 {% endhighlight %}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Conditional example
 

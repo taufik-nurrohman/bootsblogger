@@ -40,7 +40,7 @@
           <!-- Help and converter -->
           <div class='card comment-form-help'>
             <div class='card-header'>
-              <ul class='nav nav-tabs card-header-tabs float-xs-left' role='tablist'>
+              <ul class='nav nav-tabs card-header-tabs float-left' role='tablist'>
                 <li class='nav-item'>
                   <a class='nav-link' data-toggle='tab' href='#tab-comment-tags' role='tab'>Supported tags</a>
                 </li>
@@ -68,7 +68,7 @@
               </div>
               <div class='card-block tab-pane' id='tab-comment-converter' role='tabpanel'>
                 <textarea class='form-control' id='js-comment-textarea-convert' style='height: 200px;'></textarea>
-                <div class='text-xs-center mt-1 mb-0'>
+                <div class='text-center mt-1 mb-0'>
                   <button type='button' class='btn btn-sm btn-secondary' id='js-comment-btn-convert'>Convert</button>
                   <button type='button' class='btn btn-sm btn-danger' id='js-comment-btn-convert-clear' style='display: none;'>Clear</button>
                 </div>
@@ -89,7 +89,7 @@
     <!-- Pagination -->
     <b:if cond='data:post.commentPagingRequired'>
       <div class='mt-1 mb-1'>
-        <div class='text-xs-center'>
+        <div class='text-center'>
           <div class='btn-group'>
             <a class='btn btn-secondary' expr:href='data:post.oldestLinkUrl' role='button'><data:post.oldestLinkText/></a>
             <a class='btn btn-secondary' expr:href='data:post.olderLinkUrl' role='button'><data:post.olderLinkText/></a>
@@ -120,7 +120,7 @@
             <!-- Header -->
             <div class='media-body-header'>
               <div class='clearfix'>
-                <div class='float-xs-left'>
+                <div class='float-left'>
                   <ul class='list-inline mb-0'>
                     <b:if cond='data:comment.authorUrl'>
                       <li class='list-inline-item'><a class='comment-name comment-name-link' expr:href='data:comment.authorUrl'><data:comment.author/></a></li>
@@ -132,7 +132,7 @@
                     </b:if>
                   </ul>
                 </div>
-                <div class='float-xs-right'>
+                <div class='float-right'>
                   <div class='dropdown'>
                     <a class='comment-dropdown' data-toggle='dropdown' href='javascript:;'><i aria-hidden='true' class='fa fa-ellipsis-v comment-dropdown-icon'/></a>
                     <div class='dropdown-menu dropdown-menu-right'>
@@ -201,7 +201,7 @@
                     <!-- Header -->
                     <div class='media-body-header'>
                       <div class='clearfix'>
-                        <div class='float-xs-left'>
+                        <div class='float-left'>
                           <ul class='list-inline mb-0'>
                             <b:if cond='data:replies.authorUrl'>
                               <li class='list-inline-item'><a class='comment-name comment-name-link' expr:href='data:replies.authorUrl'><data:replies.author/></a></li>
@@ -213,7 +213,7 @@
                             </b:if>
                           </ul>
                         </div>
-                        <div class='float-xs-right'>
+                        <div class='float-right'>
                           <div class='dropdown'>
                             <a class='comment-dropdown' data-toggle='dropdown' href='javascript:;'><i aria-hidden='true' class='fa fa-ellipsis-v comment-dropdown-icon'/></a>
                             <div class='dropdown-menu dropdown-menu-right'>
@@ -259,7 +259,7 @@
     <!-- Pagination -->
     <b:if cond='data:post.commentPagingRequired'>
       <div class='mt-2'>
-        <div class='text-xs-center'>
+        <div class='text-center'>
           <div class='btn-group'>
             <a class='btn btn-secondary' expr:href='data:post.oldestLinkUrl' role='button'><data:post.oldestLinkText/></a>
             <a class='btn btn-secondary' expr:href='data:post.olderLinkUrl' role='button'><data:post.olderLinkText/></a>
