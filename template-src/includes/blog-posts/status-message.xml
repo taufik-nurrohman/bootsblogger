@@ -2,16 +2,16 @@
 <script>
 //<![CDATA[
 function labelMsg(json) {
-  'use strict';
+  "use strict";
 
-  var tr = json.feed.openSearch$totalResults.$t
+  var tr = json.feed.openSearch$totalResults.$t;
 
   if (tr == 1) {
-    document.write(tr + ' post')
+    document.write(tr + ' post');
+  } else if (tr > 1) {
+    document.write(tr + ' posts');
   }
-  if (tr > 1) {
-    document.write(tr + ' posts')
-  }
+
 }
 //]]>
 </script>
@@ -21,16 +21,16 @@ function labelMsg(json) {
 <script>
 //<![CDATA[
 function searchMsg(json) {
-  'use strict';
+  "use strict";
 
-  var tr = json.feed.openSearch$totalResults.$t
+  var tr = json.feed.openSearch$totalResults.$t;
 
   if (tr == 1) {
-    document.write(tr + ' result')
+    document.write(tr + ' result');
+  } else if (tr > 1) {
+    document.write(tr + ' results');
   }
-  if (tr > 1) {
-    document.write(tr + ' results')
-  }
+
 }
 //]]>
 </script>
@@ -64,7 +64,7 @@ function searchMsg(json) {
     <div class='alert alert-warning' role='alert'>
       <i aria-hidden='true' class='fa fa-search-minus'/> Your search <strong>&quot;<data:blog.searchQuery/>&quot;</strong> did not match any documents.
     </div>
-  	<!-- Search form -->
+    <!-- Search form -->
     <div class='card'>
       <div class='card-block'>
         <form action='/search' method='get' role='search'>

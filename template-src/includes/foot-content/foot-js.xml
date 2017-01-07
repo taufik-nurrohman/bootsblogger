@@ -21,18 +21,18 @@
 <!-- Template JavaScript -->
 <script>
 //<![CDATA[
-(function ($) {
-  'use strict';
+(function($) {
+  "use strict";
 
-  $(function () {
+  $(function() {
 
-    // Initialize Bootstrap tooltip with `data-toggle="tooltip"`.
-    $('[data-toggle="tooltip"]').tooltip()
+    // Initialize Bootstrap tooltip with `data-toggle="tooltip"`
+    $('[data-toggle="tooltip"]').tooltip();
 
-    // Initialize Bootstrap popover with `data-toggle="popover"`.
-    $('[data-toggle="popover"]').popover()
+    // Initialize Bootstrap popover with `data-toggle="popover"`
+    $('[data-toggle="popover"]').popover();
 
-  })
+  });
 
 }(jQuery));
 //]]>

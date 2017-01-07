@@ -3,30 +3,30 @@
 <script>
 //<![CDATA[
 function removeHtmlTag(strx, chop) {
-  'use strict';
+  "use strict";
 
   if (strx.indexOf('<') != -1) {
-    var s = strx.split('<')
+    var s = strx.split('<');
     for (var i = 0; i < s.length; i++) {
       if (s[i].indexOf('>') != -1) {
-        s[i] = s[i].substring(s[i].indexOf('>') + 1, s[i].length)
+        s[i] = s[i].substring(s[i].indexOf('>') + 1, s[i].length);
       }
     }
-    strx = s.join(' ')
+    strx = s.join(' ');
   }
-  chop = (chop < strx.length - 1) ? chop : strx.length - 2
-  while (strx.charAt(chop - 1) != ' ' && strx.indexOf(' ', chop) != -1) chop++
-  strx = strx.substring(0, chop - 1)
-  return strx + '...'
+  chop = (chop < strx.length - 1) ? chop : strx.length - 2;
+  while (strx.charAt(chop - 1) != ' ' && strx.indexOf(' ', chop) != -1) chop++;
+  strx = strx.substring(0, chop - 1);
+  return strx + '&hellip;';
 }
 
 function createSummary(id) {
-  'use strict';
+  "use strict";
 
-  var content = document.getElementById(id)
-  var newContent = '<p>' + removeHtmlTag(content.innerHTML, summary) + '</p>'
+  var content = document.getElementById(id);
+  var newContent = '<p>' + removeHtmlTag(content.innerHTML, summary) + '</p>';
 
-  content.innerHTML = newContent
+  content.innerHTML = newContent;
 }
 //]]>
 </script>
