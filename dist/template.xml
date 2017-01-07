@@ -4,7 +4,7 @@
   <head>
     <!-- Required meta tags always come first -->
     <meta charset='utf-8'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name='viewport' content='width=device-width,initial-scale=1,shrink-to-fit=no'/>
 
 
     <!-- BLOGGER CSS HACK
@@ -378,7 +378,7 @@
     <!-- CSS
     ================================================= -->
     <!-- Bootstrap Core CSS -->
-    <style type='text/css'>
+    <style>
     /*!
      * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
      * Copyright 2011-2017 The Bootstrap Authors
@@ -389,7 +389,7 @@
     </style>
 
     <!-- Bootsblogger Core CSS -->
-    <style type='text/css'>
+    <style>
     /*!
      * Bootsblogger v1.0.0-alpha.1 (https://bootsblogger.github.io)
      * Copyright 2016-2017 Igoy Nawamreh (@igoynawamreh)
@@ -401,7 +401,7 @@
 
     <!-- MAIN CSS
     ================================================= -->
-    <style type='text/css'>
+    <style>
     /*
     -------------------------------------------------
     Template details
@@ -747,7 +747,7 @@
                             <div class='card-header'>
                               <ul class='nav nav-tabs card-header-tabs float-left' role='tablist'>
                                 <li class='nav-item'>
-                                  <a class='nav-link' data-toggle='tab' href='#tab-comment-tags' role='tab'>Supported tags</a>
+                                  <a class='nav-link active' data-toggle='tab' href='#tab-comment-tags' role='tab'>Supported HTML</a>
                                 </li>
                                 <li class='nav-item'>
                                   <a class='nav-link' data-toggle='tab' href='#tab-comment-emo' role='tab'>Emoticons</a>
@@ -762,20 +762,36 @@
                                 <table class='table table-sm table-bordered mb-0'>
                                   <tbody>
                                     <tr>
-                                      <td>Lorem</td>
-                                      <td>Ipsum</td>
+                                      <td><code>&lt;b&gt;</code></td>
+                                      <td>Make text bold.</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>&lt;i&gt;</code></td>
+                                      <td>Make text italic.</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>&lt;strong&gt;</code></td>
+                                      <td>Strong text.</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>&lt;em&gt;</code></td>
+                                      <td>Emphasize text.</td>
+                                    </tr>
+                                    <tr>
+                                      <td><code>&lt;a&gt;</code></td>
+                                      <td>Insert URL.</td>
                                     </tr>
                                   </tbody>
                                 </table>
                               </div>
                               <div class='card-block tab-pane' id='tab-comment-emo' role='tabpanel'>
-                                <p class='mb-0'>Emo lists</p>
+                                <p class='mb-0'>:) :( :\ :| :D :P :* :S</p>
                               </div>
                               <div class='card-block tab-pane' id='tab-comment-converter' role='tabpanel'>
                                 <textarea class='form-control' id='js-comment-textarea-convert' style='height: 200px;'></textarea>
                                 <div class='text-center mt-1 mb-0'>
-                                  <button type='button' class='btn btn-sm btn-secondary' id='js-comment-btn-convert'>Convert</button>
-                                  <button type='button' class='btn btn-sm btn-danger' id='js-comment-btn-convert-clear' style='display: none;'>Clear</button>
+                                  <button type='button' class='btn btn-sm btn-primary' id='js-comment-btn-convert'>Convert</button>
+                                  <button type='button' class='btn btn-sm btn-default' id='js-comment-btn-convert-clear' style='display: none;'>Clear</button>
                                 </div>
                               </div>
                             </div>
@@ -1844,10 +1860,10 @@
       $(function () {
 
         // Initialize Bootstrap tooltip with `data-toggle="tooltip"`.
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
 
         // Initialize Bootstrap popover with `data-toggle="popover"`.
-        $('[data-toggle="popover"]').popover()
+        $('[data-toggle="popover"]').popover();
 
       })
 
