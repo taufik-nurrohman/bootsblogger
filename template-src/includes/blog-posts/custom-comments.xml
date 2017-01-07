@@ -42,7 +42,7 @@
             <div class='card-header'>
               <ul class='nav nav-tabs card-header-tabs float-left' role='tablist'>
                 <li class='nav-item'>
-                  <a class='nav-link' data-toggle='tab' href='#tab-comment-tags' role='tab'>Supported tags</a>
+                  <a class='nav-link active' data-toggle='tab' href='#tab-comment-tags' role='tab'>Supported HTML</a>
                 </li>
                 <li class='nav-item'>
                   <a class='nav-link' data-toggle='tab' href='#tab-comment-emo' role='tab'>Emoticons</a>
@@ -56,15 +56,31 @@
               <div class='card-block tab-pane' id='tab-comment-tags' role='tabpanel'>
                 <table class='table table-sm table-bordered mb-0'>
                   <tbody>
-                    <tr>
-                      <td>Lorem</td>
-                      <td>Ipsum</td>
-                    </tr>
+                  <tr>
+                    <td><code>&lt;b&gt;</code></td>
+                    <td>Make text bold.</td>
+                  </tr>
+                  <tr>
+                    <td><code>&lt;i&gt;</code></td>
+                    <td>Make text italic.</td>
+                  </tr>
+                  <tr>
+                    <td><code>&lt;strong&gt;</code></td>
+                    <td>Strong text.</td>
+                  </tr>
+                  <tr>
+                    <td><code>&lt;em&gt;</code></td>
+                    <td>Emphasize text.</td>
+                  </tr>
+                  <tr>
+                    <td><code>&lt;a&gt;</code></td>
+                    <td>Insert URL.</td>
+                  </tr>
                   </tbody>
                 </table>
               </div>
               <div class='card-block tab-pane' id='tab-comment-emo' role='tabpanel'>
-                <p class='mb-0'>Emo lists</p>
+                <p class='mb-0'>:) :( :\ :| :D :P :* :S</p>
               </div>
               <div class='card-block tab-pane' id='tab-comment-converter' role='tabpanel'>
                 <textarea class='form-control' id='js-comment-textarea-convert' style='height: 200px;'></textarea>
